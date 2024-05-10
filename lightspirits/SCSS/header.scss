@@ -1,0 +1,281 @@
+@import "variables";
+@import "_burger";
+
+.header {
+    padding: 30px 0;
+    // background-color: $headerColor;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav {
+        ul {
+            display: flex;
+            column-gap: 30px;
+
+            li {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $primaryColor;
+                    bottom: -10px;
+                    transform: scaleX(0);
+                    transform-origin: center;
+                    transition: transform 0.4s;
+                    border-radius: 20px;
+                }
+
+                &:hover::before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+    &__phone {
+        transition: all 0.2s;
+        &:hover {
+            color: #8e8a8a;
+        }
+    }
+    &__socials {
+        display: flex;
+        column-gap: 20px;
+        &-item {
+            --button-width: 35px;
+            width: var(--button-width);
+            height: var(--button-width);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 100%;
+            background-color: #fff;
+
+            transition: all 0.3s;
+
+            img {
+                width: calc(var(--button-width) / 2);
+                height: calc(var(--button-width) / 2);
+            }
+
+            &:hover {
+                background-color: rgb(191, 187, 187);
+            }
+        }
+        
+    }
+    &__languages {
+        display: flex;
+        height: 30px;
+
+        button {
+            background: none;
+            border: none;
+            color: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            padding: 0 20px;
+            transition: all 0.3s;
+            box-sizing: border-box;
+
+            &:hover {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }
+    &__mobile {
+        background-color: $headerColor;
+        position: fixed;
+        z-index: 9;
+        top: 0;
+        right: 0;
+        height: 100%;
+        max-width: 400px;
+        width: 100%;
+        padding: 100px 40px 60px 40px;
+        overflow-y: auto;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        @include transform(translateX(100%));
+        @include transition(transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86));
+
+        &.show {
+            @include transform(translateX(0px));
+
+            ul.main {
+                li {
+                    @include transform(translateX(0px));
+                    opacity: 1;
+
+                    @for $i from 1 to 10 {
+                        &:nth-child(#{$i}) {
+                            transition-delay: $i * 0.15s;
+                        }
+                    }
+                }
+            }
+
+            .about,
+            .social,
+            ul.sub {
+                @include transform(translateY(0px));
+                opacity: 1;
+                transition-delay: 0.85s;
+            }
+        }
+
+        &__nav {
+            display: block !important;
+            ul {
+                flex-direction: column;
+                align-items: center;
+                row-gap: 25px;
+
+                li {
+                    font-size: 22px;
+                    width: max-content;
+
+                    &::before {
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        &__phone {
+            font-size: 22px !important;
+            display: block !important;
+        }
+
+        &__socials {
+            display: flex !important;
+            justify-content: center;
+
+            &-item {
+                --button-width: 50px !important;
+            }
+        }
+
+        &__languages {
+            display: flex !important;
+            justify-content: center;
+            height: 40px;
+
+            button {
+                padding: 0 40px !important;
+            }
+        }
+    }
+    &__burger {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        border-radius: 4px;
+        z-index: 10;
+        display: none;
+
+        span {
+            @include burger(30px, 2px, 6px, #ffffff);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -15px;
+            margin-top: -1.5px;
+        }
+
+        &.clicked {
+            span {
+                @include burger-to-cross;
+
+                &:before,
+                &:after {
+                    background-color: #ffffff;
+                }
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .header {
+        .container {
+            justify-content: space-around;
+        }
+        &__phone {
+            font-size: 14px;
+        }
+        &__socials {
+            &-item {
+                --button-width: 30px;
+            }
+        }
+        &__languages {
+            button {
+                padding: 0 10px;
+            }
+        }
+        &__coming-soon {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        .container {
+            justify-content: space-evenly;
+        }
+        &__phone {
+            display: none;
+        }
+        &__socials {
+            display: none;
+        }
+        &__languages {
+            button {
+                padding: 0 10px;
+            }
+        }
+        &__burger {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        .container {
+            justify-content: left;
+        }
+        &__languages {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        background: none;
+        padding: 0;
+        &__nav {
+            display: none;
+        }
+    }
+}
