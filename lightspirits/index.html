@@ -28,11 +28,11 @@
         <div class="container">
           <nav class="header__nav">
             <ul>
-              <li><a href="">Про нас</a></li>
-              <li><a href="">Проекти</a></li>
+              <li><a href="#aboutus__page">Про нас</a></li>
+              <li><a href="#photos__page">Проекти</a></li>
               <li><a href="">Переваги</a></li>
               <li class="header__coming-soon"><a href="">Coming soon</a></li>
-              <li><a href="">Контакти</a></li>
+              <li><a href="#footer">Контакти</a></li>
             </ul>
           </nav>
           <div class="header__phone">
@@ -58,13 +58,11 @@
         <div class="header__mobile">
           <nav class="header__nav header__mobile__nav">
             <ul>
-              <li><a href="">Про нас</a></li>
-              <li><a href="">Проекти</a></li>
-              <li><a href="">Переваги</a></li>
-              <li class="header__coming-soon header__mobile__coming-soon">
-                <a href="">Coming soon</a>
-              </li>
-              <li><a href="">Контакти</a></li>
+              <li><a class="header__mobile__nav_link" href="#aboutus__page">Про нас</a></li>
+              <li><a class="header__mobile__nav_link" href="#photos__page">Проекти</a></li>
+              <li><a class="header__mobile__nav_link" href="">Переваги</a></li>
+              <li class="header__coming-soon header__mobile__coming-soon header__mobile__nav_link"><a href="">Coming soon</a></li>
+              <li><a class="header__mobile__nav_link" href="#footer">Контакти</a></li>
             </ul>
           </nav>
           <div class="header__phone header__mobile__phone">
@@ -88,7 +86,7 @@
       </header>
 
       <main class="main">
-        <section class="title__page">
+        <section class="title__page" id="title__page">
           <div class="title__page-texts container">
             <div class="title__page-title">
               <img src="img/icons/logo.jpg" alt="" />
@@ -109,7 +107,7 @@
           </div>
           <img src="img/gifs/bg1.gif" class="title__page-bg" />
         </section>
-        <section class="aboutus__page container">
+        <section class="aboutus__page container" id="aboutus__page">
           <div class="aboutus__page__title title-text">Про нас</div>
           <div class="aboutus__page__subtitle">
             З 2013 року ми розпочали захоплюючу подорож у світ шоу-театру з
@@ -135,7 +133,7 @@
             <img src="img/icons/arrow_right.png" alt="" />
           </a>
         </section>
-        <section class="journey__page">
+        <section class="journey__page" id="journey__page">
           <div class="journey__page__title title-text">Наш творчий шлях</div>
           <div class="journey__page__items container">
             <div class="journey__page__item">
@@ -195,7 +193,7 @@
           </div>
           <img src="img/backgrounds/1.PNG" alt="" class="journey__page-bg" />
         </section>
-        <section class="photos__page">
+        <section class="photos__page" id="photos__page">
           <div class="container">
             <div class="photos__page__title title-text">Наші фото</div>
             <div class="photos__page__items">
@@ -272,7 +270,7 @@
           </div>
           <div class="photos__page-overlay"></div>
         </section>
-        <section class="innovations__page">
+        <section class="innovations__page" id="innovations__page">
           <div class="container">
             <div class="title-text">НОВИНКА</div>
             <div class="innovations__page__blocks">
@@ -307,7 +305,7 @@
         </section>
       </main>
 
-      <footer class="footer">
+      <footer class="footer" id="footer">
         <div class="container">
           <div class="footer__title title-text">Контакти</div>
           <div class="footer__contact">
