@@ -29,3 +29,19 @@ form.addEventListener('submit', e => {
     });
 });
 
+
+const programBlocks = document.querySelectorAll('.course-program__page-block')
+const faqBlocks = document.querySelectorAll('.faq__page-item-question')
+
+programBlocks.forEach(block => {
+    block.addEventListener('click', e => {
+        
+        block.children[1].classList.toggle('active')
+    })
+})
+
+faqBlocks.forEach(block => {
+    block.addEventListener('click', e => {
+        block.parentElement.children[1].classList.toggle('active')
+    })
+})

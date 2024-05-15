@@ -30,9 +30,7 @@
             background: $primaryGradient;
             border-radius: 33px;
             max-height: calc(var(--block-padding) * 2 + 50px);
-
-            
-
+            cursor: pointer;
             span {
                 &:first-child {
                     white-space: nowrap;
@@ -68,7 +66,11 @@
                 font-size: 18px;
             }
         }
+
+        
+
         &-texts {
+            display: none;
             font-size: 18px;
             span {
                 font-weight: bold;
@@ -77,6 +79,10 @@
                 margin-top: 15px;
             }
             margin-left: var(--block-padding);
+
+            &.active {
+                display: block;
+            }
         }
     }
 
