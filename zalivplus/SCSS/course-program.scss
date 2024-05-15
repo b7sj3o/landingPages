@@ -1,0 +1,268 @@
+@import "variables";
+
+.course-program__page {
+    --block-padding: 25px;
+    margin-top: 130px;
+    &-title {
+        margin-bottom: 75px;
+    }
+    &-blocks {
+        display: flex;
+        justify-content: space-between;
+
+        &-half {
+            flex: 0 1 47.5%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+        }
+
+        &-mobile {
+            display: none;
+        }
+    }
+
+    &-block {
+        &-title {
+            padding: var(--block-padding);
+            display: flex;
+            align-items: center;
+            background: $primaryGradient;
+            border-radius: 33px;
+            max-height: calc(var(--block-padding) * 2 + 50px);
+
+            
+
+            span {
+                &:first-child {
+                    white-space: nowrap;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        &-full {
+            display: flex;
+            flex-direction: column;
+
+            width: 90%;
+            margin: 30px auto 0 auto;
+            padding: var(--block-padding);
+
+            background: $primaryGradient;
+            border-radius: 40px;
+
+            &-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &-texts {
+                display: flex;
+                justify-content: space-between;
+                max-width: 80%;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+
+            &-text {
+                font-size: 18px;
+            }
+        }
+        &-texts {
+            font-size: 18px;
+            span {
+                font-weight: bold;
+            }
+            p {
+                margin-top: 15px;
+            }
+            margin-left: var(--block-padding);
+        }
+    }
+
+    &-button {
+        margin-top: 75px;
+        width: 33.3%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .course-program__page {
+
+        &-block {
+            &-full {
+                width: 100%;
+                &-header {
+                   
+                }
+                &-texts {
+                }
+    
+                &-text {
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .course-program__page {
+        --block-padding: 20px;
+        margin-top: 100px;
+        &-title {
+            margin-bottom: 60px;
+        }
+        &-blocks {
+            justify-content: center;
+            column-gap: 30px;
+
+            &-half {
+                flex: 0 1 50%;
+            }
+        }
+
+        &-block {
+            &-title {
+                span {
+                    font-size: 18px;
+                }
+            }
+            &-texts {
+                font-size: 16px;
+            }
+            &-full {
+                &-header {
+                   
+                }
+                &-texts {
+                    max-width: 90%;
+                }
+    
+                &-text {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-button {
+            width: 66.6%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .course-program__page {
+        &-blocks {
+            &-half {
+                display: none;
+            }
+            &-mobile {
+                display: flex;
+                flex-direction: column;
+                row-gap: 30px;
+            }
+        }
+        &-block {
+            flex: 1 1 100%;
+
+            &-title {
+                span {
+                    &:first-child {
+                    }
+                    &:last-child {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &-full {
+                &-header {
+                   
+                }
+                &-texts {
+                    max-width: 95%;
+                    
+                    &:first-child {
+                        margin-top: 40px;
+                    }
+                }
+    
+                &-text {
+                    font-size: 14px;
+
+                    &:last-child {
+                        text-align: right;
+                    }
+                }
+
+                span {
+                    font-size: 18px;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -20px;
+                        left: 0;
+                        width: 30%;
+                        height: 2px;
+                        background-color: #fff;
+                    }
+                }
+
+                .divider-v {
+                    display: none;
+                }
+            }
+        }
+        &-button {
+            margin-top: 100px;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .course-program__page {
+        --block-padding: 20px;
+        &-block {
+            &-title {
+                padding: var(--block-padding) 40px;
+                text-align: center;
+                margin: 0 auto;
+                justify-content: center;
+                span {
+                    font-weight: lighter;
+                    &:first-child {
+                        font-size: 16px;
+                    }
+                    &:last-child {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            &-full {
+                padding: 20px 50px;
+                &-header {
+                   justify-content: start;
+                }
+                &-texts {
+                    max-width: 100%;
+                    column-gap: 10px;
+                }
+    
+                &-text {
+                    font-size: 12px;
+                }
+
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .divider-v {
+        margin: 0 15px;
+    }
+}

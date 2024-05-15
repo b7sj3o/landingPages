@@ -1,0 +1,221 @@
+@import "variables";
+
+.about-speaker__page {
+    margin-top: 130px;
+    &-title {
+        margin-bottom: 75px;
+    }
+    &-body {
+        display: flex;
+        align-items: center;
+        &-texts {
+            display: flex;
+            flex-direction: column;
+            row-gap: 80px;
+            width: 60%;
+        }
+        &-name {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        &-info {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            &-text {
+                display: flex;
+                align-items: center;
+                column-gap: 15px;
+                font-weight: bold;
+                font-size: 30px;
+                
+                span {
+                    white-space: nowrap;
+                }
+            }
+        }
+        &-img {
+            width: 40%;
+            z-index: -2;
+            position: relative;
+
+            margin-left: -150px;
+
+            img {
+                width: 700px;
+            }
+
+            p {
+                display: none;
+                font-size: 16px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                font-weight: bold;
+                span {
+                    color: $primaryColor;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.circle-border,
+.rect-border {
+    --border: 3px;
+    --size: 66px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: var(--size);
+    min-height: var(--size);
+
+    position: relative;
+
+    color: #fff;
+    background: #000;
+    background-clip: padding-box; /* !importanté */
+    border: solid var(--border) transparent; /* !importanté */
+    border-radius: 100%;
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        margin: calc(var(--border) * -1); /* !importanté */
+
+        border-radius: inherit; /* !importanté */
+        background: $primaryGradient;
+    }
+}
+
+.rect-border {
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+    .about-speaker__page {
+        &-body {
+            &-texts {
+                row-gap: 60px;
+            }
+            &-name {
+                font-size: 34px;
+            }
+            &-info {
+                &-text {
+                    font-size: 26px;
+                }
+            }
+            &-img {
+                img {
+                    width: 700px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .about-speaker__page {
+        &-body {
+            &-name {
+                font-size: 32px;
+            }
+            &-info {
+                &-text {
+                    font-size: 22px;
+                }
+            }
+            &-img {
+                img {
+                    width: 600px;
+                }
+            }
+        }
+    }
+    .circle-border {
+        --size: 50px;
+    }
+    .rect-border {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-speaker__page {
+        &-body {
+            &-name {
+                font-size: 30px;
+            }
+            &-info {
+                &-text {
+                    font-size: 18px;
+                }
+            }
+            &-img {
+                margin-left: -100px;
+                img {
+                    width: 500px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-speaker__page {
+        margin-top: 100px;
+
+        &-title {
+            margin-bottom: 30px;
+        }
+
+        &-body {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            &-name {
+                display: none;
+            }
+
+            &-texts {
+                width: 100%;
+            }
+            &-info {
+                margin-top: -100px;
+                row-gap: 15px;
+                &-text {
+                    margin: 0 auto;
+                    font-size: 16px;
+                }
+            }
+
+            &-img {
+                width: 100%;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                }
+                p {
+                    display: block;
+                }
+            }
+        }
+    }
+    .circle-border,
+    .rect-border {
+        --border: 2px;
+    }
+}
+

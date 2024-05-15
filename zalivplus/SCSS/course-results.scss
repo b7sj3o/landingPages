@@ -1,0 +1,136 @@
+@import "variables";
+
+.course-results__page {
+    &-upper {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+
+        img {
+            margin-bottom: 30px;
+        }
+    }
+    &-title {
+        margin: 130px 0 75px 0;
+    }
+    &-text {
+        font-size: 30px;
+        font-weight: bold;
+        max-width: 860px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    &-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 0;
+        justify-content: space-between;
+    }
+    &-item {
+        width: 47.5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 20px;
+
+        box-shadow: $innerGrayShadows;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 33px;
+        padding: 45px 50px;
+
+        &-dot {
+            min-width: 20px;
+            min-height: 20px;
+            border-radius: 100%;
+            background: $primaryGradient;
+
+            box-shadow: 0 0 12px $secondaryOrange;
+        }
+        &-text {
+            font-size: 30px;
+            white-space: nowrap;
+            span {
+                color: $primaryColor;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 1024px) {
+    .course-results__page {
+        &-title {
+            margin: 100px 0 60px 0;
+        }
+        &-text {
+            font-size: 24px;
+        }
+
+        &-item {
+            padding: 20px 30px;
+            border-radius: 20px;
+            &-text {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .course-results__page {
+        &-title {
+            margin-bottom: 20px;
+        }
+        &-upper {
+
+            img {
+                width: 45px;
+                margin-bottom: 0;
+            }
+        }
+
+        &-text {
+            font-size: 18px;
+        }
+
+        &-item {
+            width: 60%;
+            padding: 30px;
+            
+            &:nth-child(even) {
+                margin-left: auto;
+            }
+
+            &-dot {
+                min-width: 16px;
+                min-height: 16px;
+            }
+
+            &-text {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .course-results__page {
+        &-text {
+            font-size: 16px;
+        }
+        &-item {
+            width: 75%;
+            
+            &-dot {
+                min-width: 13px;
+                min-height: 13px;
+            }
+
+            &-text {
+                font-size: 16px;
+            }
+        }
+    }
+}

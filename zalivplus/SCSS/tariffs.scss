@@ -1,0 +1,244 @@
+@import "variables";
+
+.tariff-not-included {
+    opacity: 0.5;
+}
+
+.tariff__page {
+    margin-top: 140px;
+    &-title {
+        margin-bottom: 75px;
+    }
+    &-tariffs {
+        display: flex;
+        justify-content: center;
+        column-gap: 25px;
+    }
+    &-tariff {
+        min-width: 400px;
+
+        &-header {
+            box-shadow: $innerGrayShadows;
+            border-radius: 47px;
+            padding: 40px;
+            font-size: 18px;
+
+            &-title {
+                text-shadow: $orangeTextShadows;
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 24px;
+            }
+            &-texts {
+                display: flex;
+                flex-direction: column;
+                row-gap: 30px;
+            }
+            &-text {
+                span {
+                    font-weight: bold;
+                    margin-right: 5px;
+                }
+
+                ul {
+                    margin-left: 30px;
+                    margin-top: 10px;
+                    li {
+                        list-style-type: initial;
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+
+        &-body {
+            
+            &-title {
+                margin: 50px 0 30px 0;
+                font-size: 24px;
+                text-align: center;
+            }
+            &-items {
+                margin-left: 25px;
+                li {
+                    list-style-type: initial;
+                    line-height: 170%;
+                    font-size: 18px;
+                }
+            }
+            &-price {
+                font-size: 40px;
+                font-weight: 900;
+                letter-spacing: 5px;
+                font-family: $secondaryFont;
+                text-align: center;
+                margin: 40px 0;
+            }
+            &-button {
+                width: 80%;
+            }
+        }
+
+        &-green {
+            background-color: rgba(17, 255, 0, 0.07);
+        }
+        &-orange {
+            background-color: rgba(255, 122, 0, 0.07);
+        }
+        &-red {
+            background-color: rgba(255, 0, 0, 0.07);
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .tariff__page {
+        &-tariff {
+            min-width: 33%;
+
+            &-header {
+                font-size: 16px;
+
+                &-title {
+                    font-size: 22px;
+                }
+                &-texts {
+                    row-gap: 20px;
+                }
+            }
+
+            &-body {
+                &-title {
+                    font-size: 22px;
+                }
+                &-items {
+                    li {
+                        font-size: 16px;
+                    }
+                }
+                &-price {
+                    font-size: 36px;
+                }
+                &-button {
+                    height: 80px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .tariff__page {
+        margin-top: 100px;
+        &-title {
+            margin-bottom: 60px;
+        }
+        &-tariff {
+            &-header {
+                font-size: 14px;
+    
+                &-title {
+                    font-size: 20px;
+                }
+              
+            }
+    
+            &-body {
+                &-title {
+                    font-size: 20px;
+                }
+                &-items {
+                    li {
+                        font-size: 14px;
+                        line-height: 200%;
+                    }
+                }
+                &-price {
+                    font-size: 40px;
+                    font-weight: 900;
+                    letter-spacing: 5px;
+                    font-family: $secondaryFont;
+                    text-align: center;
+                    margin: 40px 0;
+                }
+                &-button {
+                    font-size: 16px;
+                }
+            }
+    
+            &-green {
+                background-color: rgba(17, 255, 0, 0.07);
+            }
+            &-orange {
+                background-color: rgba(255, 122, 0, 0.07);
+            }
+            &-red {
+                background-color: rgba(255, 0, 0, 0.07);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tariff__page {
+        &-tariffs {
+            flex-direction: column;
+            row-gap: 60px;
+        }
+        &-tariff {
+
+           
+            
+            &-header {
+                &-title {
+                    font-size: 24px;
+                }
+              
+            }
+    
+            &-body {
+                &-title {
+                    margin-top: 30px;
+                    font-size: 24px;
+                }
+                
+                &-button {
+                    width: 100%;
+                    display: none;
+
+                    &-last {
+                        display: flex;
+                    }
+                }
+            }
+    
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tariff__page {
+        &-tariff {
+            &-header {
+                &-title {
+                    font-size: 16px;
+                }
+              
+            }
+    
+            &-body {
+                &-title {
+                    font-size: 16px;
+                }
+                
+                &-items {
+                    li {
+                        font-size: 12px;
+                    }
+                }
+            }
+    
+           
+        }
+    }
+}

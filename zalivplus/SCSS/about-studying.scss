@@ -1,0 +1,154 @@
+@import "variables";
+
+.about-studying__page {
+    margin-top: 140px;
+    &-title {
+        margin-bottom: 100px;
+    }
+    &-items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 70px;
+    }
+    &-item {
+        flex: 0 1 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+        &-img {
+            width: 65px;
+            height: 65px;
+            border-radius: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 2px solid $primaryColor;
+        }
+        &-title {
+            font-weight: 900;
+            text-shadow: $orangeTextShadows;
+        }
+        &-text {
+            font-size: 18px;
+            max-width: 250px;
+            font-weight: lighter;
+            text-align: center;
+            line-height: 150%;
+        }
+
+        &:nth-child(4), &:nth-child(5) {
+            flex: 0 1 50%;
+        }   
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-studying__page {
+        margin-top: 100px;
+        &-title {
+            margin-bottom: 50px;
+        }
+        &-items {
+            row-gap: 50px;
+        }
+        &-item {
+            flex: 0 1 50%;
+            row-gap: 0px;
+            &-img {
+             
+            }
+            &-title {
+                margin-top: 10px;
+                font-size: 18px;
+            }
+            &-text {
+                font-size: 16px;
+                max-width: 75%;
+                margin-top: 30px;
+            }
+    
+            &:last-child {
+                flex: 1 1 100%;
+            }   
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-studying__page {
+        &-item {
+            &-img {
+                width: 50px;
+                height: 50px;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            &-title {
+                font-size: 16px;
+            }
+            &-text {
+                font-size: 14px;
+            }
+    
+            &:last-child {
+                flex: 1 1 100%;
+            }   
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-studying__page {
+        &-items {
+            row-gap: 40px;
+        }
+        &-item {
+            flex: 1 1 100% !important;
+            align-items: start;
+            &-img {
+                width: 40px;
+                height: 40px;
+
+                margin: 0 auto;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            &-title {
+                margin-top: 15px;
+                font-size: 16px;
+                margin: 5px auto 0 auto;
+            }
+
+            &-text {
+                font-size: 12px;
+                max-width: 100%;
+                margin-top: 30px;
+                text-align: left;
+            }
+    
+             
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
