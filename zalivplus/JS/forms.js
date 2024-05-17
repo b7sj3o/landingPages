@@ -42,6 +42,7 @@ programBlocks.forEach(block => {
 
 faqBlocks.forEach(block => {
     block.addEventListener('click', e => {
+        block.parentElement.children[0].classList.toggle('active')
         block.parentElement.children[1].classList.toggle('active')
     })
 })
