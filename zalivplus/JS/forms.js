@@ -32,11 +32,13 @@ form.addEventListener('submit', e => {
 
 const programBlocks = document.querySelectorAll('.course-program__page-block')
 const faqBlocks = document.querySelectorAll('.faq__page-item-question')
+const root = document.querySelector(':root')
 
 programBlocks.forEach(block => {
-    block.addEventListener('click', e => {
-        
-        block.children[1].classList.toggle('active')
+    var title = block.children[0]
+    var text = block.children[1]
+    title.addEventListener('click', e => {
+        text.classList.toggle('active')
     })
 })
 

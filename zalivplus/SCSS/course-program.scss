@@ -1,10 +1,25 @@
 @import "variables";
 
+
 .course-program__page {
     --block-padding: 25px;
     margin-top: 130px;
     &-title {
         margin-bottom: 75px;
+        position: relative;
+
+        &::after {
+            content: "( клікабельно )";
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-family: $primaryFont;
+            text-transform: lowercase;
+            letter-spacing: 1px;
+            line-height: 100%;
+        }
     }
     &-blocks {
         display: flex;
@@ -14,7 +29,7 @@
             flex: 0 1 47.5%;
             display: flex;
             flex-direction: column;
-            row-gap: 30px;
+            row-gap: 20px;
         }
 
         &-mobile {
@@ -23,13 +38,18 @@
     }
 
     &-block {
+        transition: all .5s;
+
         &-title {
+            transition: all .3s;
+            user-select:none;
             padding: var(--block-padding);
             display: flex;
             align-items: center;
             background: $primaryGradient;
             border-radius: 33px;
             max-height: calc(var(--block-padding) * 2 + 50px);
+
             cursor: pointer;
             span {
                 &:first-child {
@@ -67,21 +87,34 @@
             }
         }
 
-        
-
         &-texts {
-            display: none;
+            transition: all .3s ease-in;
+
+            visibility: hidden;
             font-size: 18px;
+
+            height: 0;
+            position: absolute;
+            margin-top: -50%;
+
+            opacity: 0;
+            &.active {
+                position: relative;
+                opacity: 1;
+                height: auto;
+                margin-top: 0;
+                visibility: visible;
+                margin-left: var(--block-padding);
+
+            }
+
+         
+
             span {
                 font-weight: bold;
             }
             p {
                 margin-top: 15px;
-            }
-            margin-left: var(--block-padding);
-
-            &.active {
-                display: block;
             }
         }
     }
@@ -94,16 +127,14 @@
 
 @media screen and (max-width: 1440px) {
     .course-program__page {
-
         &-block {
             &-full {
                 width: 100%;
                 &-header {
-                   
                 }
                 &-texts {
                 }
-    
+
                 &-text {
                 }
             }
@@ -138,12 +169,11 @@
             }
             &-full {
                 &-header {
-                   
                 }
                 &-texts {
                     max-width: 90%;
                 }
-    
+
                 &-text {
                     font-size: 16px;
                 }
@@ -170,6 +200,7 @@
         }
         &-block {
             flex: 1 1 100%;
+            width: 90vw;
 
             &-title {
                 span {
@@ -183,16 +214,15 @@
 
             &-full {
                 &-header {
-                   
                 }
                 &-texts {
                     max-width: 95%;
-                    
+
                     &:first-child {
                         margin-top: 40px;
                     }
                 }
-    
+
                 &-text {
                     font-size: 14px;
 
@@ -206,7 +236,7 @@
                     position: relative;
 
                     &::after {
-                        content: '';
+                        content: "";
                         position: absolute;
                         bottom: -20px;
                         left: 0;
@@ -251,13 +281,13 @@
             &-full {
                 padding: 20px 50px;
                 &-header {
-                   justify-content: start;
+                    justify-content: start;
                 }
                 &-texts {
                     max-width: 100%;
                     column-gap: 10px;
                 }
-    
+
                 &-text {
                     font-size: 12px;
                 }
