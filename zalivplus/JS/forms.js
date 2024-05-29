@@ -1,5 +1,5 @@
 const bot_token = '6406654898:AAH01hMh8y8CqJP55D6XtLUYOan7DQh-KeU'
-const chat_id = '928132950'
+const chat_id = '-4256553062'
 
 const form = document.getElementById(`form_1`);
 form.addEventListener('submit', e => {
