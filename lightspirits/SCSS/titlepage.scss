@@ -73,12 +73,10 @@
 }
 
 @media screen and (max-width: 1440px) {
-    
 }
 
 @media screen and (max-width: 1024px) {
     .title__page {
-    
         &-texts {
             row-gap: 0;
         }
@@ -88,13 +86,11 @@
         &-watch {
             margin-top: 30px;
         }
-        
     }
 }
 
 @media screen and (max-width: 768px) {
     .title__page {
-    
         &-title {
             img {
                 width: 70px;
@@ -119,7 +115,6 @@
                 }
             }
         }
-        
     }
 }
 
@@ -149,11 +144,15 @@
 
         &-watch {
             margin: 20px auto 0 auto;
-
         }
 
         &-bg {
-            display: none;
+            // display: none;
+            width: 80%;
+            right: 0;
+            left: 50%;
+            top: 0%;
+            transform: translateX(-50%);
         }
     }
 }

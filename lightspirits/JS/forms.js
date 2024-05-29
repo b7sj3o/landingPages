@@ -15,17 +15,6 @@ form2.addEventListener('submit', (event) => {
 });
 
 
-
-
-// function showThanks() {
-//     document.getElementById('thanks__form').style.display = 'block';
-// }   
-
-// function closeThanks() {
-//     document.getElementById('thanks__form').style.display = 'none';
-//     window.location.reload()
-// }   
-
 function sendToBot(form) {
     const name = form.elements['name'].value;
     const phone = form.elements['phone'].value;

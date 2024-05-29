@@ -30,6 +30,15 @@
 
             object-fit: cover;
             object-position: center;
+
+            &:nth-child(1) {
+                background-color: red;
+                // position: fixed;
+                // left: 50%;
+                // top: 50%;
+                // transform: translate(-50%, -50%);
+
+            }
         }
     }
 
@@ -38,7 +47,6 @@
         position: fixed;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
         z-index: 2;
         user-select: none;
         -webkit-user-drag: none;
@@ -51,6 +59,8 @@
             // display: block;
             opacity: 1;
             visibility: visible;
+            
+            transform: translate(-50%, -50%);
         }
     }
 
