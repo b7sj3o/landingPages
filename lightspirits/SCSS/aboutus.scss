@@ -3,6 +3,10 @@
 
 .aboutus__page {
     display: block;
+    
+    &.container {
+        margin-top: 150px !important;
+    }
 
     text-align: center;
 

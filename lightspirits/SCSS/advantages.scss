@@ -7,11 +7,14 @@
         display: flex;
         flex-direction: column;
         row-gap: 50px;
+        margin-top: 70px;
 	}
 	&-block {
         display: flex;
         gap: 50px;
         width: 100%;
+        align-items: start;
+
 	}
 	&__item {
         display: flex;
