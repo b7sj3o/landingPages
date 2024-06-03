@@ -26,8 +26,8 @@
     }
 	&__block {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        gap: 50px;
         
 	}
 	&__img {
@@ -47,14 +47,18 @@
             
         }
 	}
-	&__texts {
-        width: 40%;
+	&__text {
+        width: 50%;
         font-size: 24px;
         text-align: center;
-	}
-	&__text {
         line-height: 170%;
+
+        p {
+            margin: 0 auto;
+            max-width: 80%;
+        }
 	}
+	
 }
 
 
@@ -80,13 +84,16 @@
                 
             }
         }
-        &__texts {
+        &__text {
             width: 100%;
 
+            p {
+                max-width: 100%;
+                margin: 0;
+            }
+
         }
-        &__text {
-            line-height: 170%;
-        }
+
     }
 }
 

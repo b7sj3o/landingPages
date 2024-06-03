@@ -9,6 +9,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        
+    }
+
+    &__logo {
+        width: 70px;
+        height: 70px;
     }
     &__nav {
         ul {
@@ -69,7 +76,6 @@
                 background-color: rgb(191, 187, 187);
             }
         }
-        
     }
     &__languages {
         display: flex;
@@ -280,20 +286,19 @@
 @media screen and (max-width: 768px) {
     .header {
         .container {
-            justify-content: left;
+            justify-content: center;
+            column-gap: 50px;
+
         }
         &__languages {
             display: none;
         }
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .header {
-        background: none;
-        padding: 0;
+       
+       
         &__nav {
             display: none;
         }
     }
 }
+
+
