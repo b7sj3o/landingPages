@@ -81,7 +81,7 @@
         display: flex;
         height: 30px;
 
-        button {
+        a {
             background: none;
             border: none;
             color: inherit;
@@ -178,7 +178,7 @@
             justify-content: center;
             height: 40px;
 
-            button {
+            a {
                 padding: 0 40px !important;
             }
         }
@@ -251,7 +251,7 @@
             }
         }
         &__languages {
-            button {
+            a {
                 padding: 0 10px;
             }
         }
@@ -273,7 +273,7 @@
             display: none;
         }
         &__languages {
-            button {
+            a {
                 padding: 0 10px;
             }
         }
