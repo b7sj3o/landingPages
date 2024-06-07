@@ -1,30 +1,37 @@
 // CALC HOW MUCH SHOULD IT SCROLL 
-
 const slideInLeft = `${100 / parseInt(getComputedStyle(document.body).getPropertyValue('--slider-items'))}%`;
-console.log(slideInLeft)
 
 // SLIDER 
-
 $(function() {
     var inWrap = $('.main__slider-body-inner');
+    var animating = false;
 
     $('.arrow-left').on('click', function() {
-        inWrap.animate({left: slideInLeft}, 300, function() {
-            $('.main__slider-item').first().before($('.main__slider-item').last())
-
-            inWrap.css('left', '0%');
-
-        }) 
+        if (!animating) {
+            animating = true;
+        
+            $('.main__slider-item').first().before($('.main__slider-item').last());
+        
+            inWrap.css('left', `-${slideInLeft}`);
+        
+            inWrap.animate({'left': '0'}, 300, (e) => {
+                animating = false;
+            });
+        }
     })
 
     $('.arrow-right').on('click', function() {
-        inWrap.animate({left: `-${slideInLeft}`}, 300, function() {
-            inWrap.css('left', '0%');
-
-            $('.main__slider-item').last().after($('.main__slider-item').first())
-        }) 
+        if (!animating) {
+            animating = true;
+            inWrap.animate({left: `-${slideInLeft}`}, 300, function() {
+                inWrap.css('left', '0');
+                $('.main__slider-item').last().after($('.main__slider-item').first());
+                animating = false;
+            });
+        }
     })
 })
+
 
 // ZOOM IMG BY CLICK ON IT
 
