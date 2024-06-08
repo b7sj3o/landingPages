@@ -3148,7 +3148,6 @@ body.overflow {
 .my-form-input select, .my-form-input-between input, .my-form-input-flex input, .my-form-input textarea, .my-form-submit {
     height: 40px;
     width: 100%;
-    padding-left: 10px;
     border: 1px solid #fff;
     background: #29292a;
     color: #fff;
@@ -3158,7 +3157,8 @@ body.overflow {
     -webkit-box-shadow: none;
     box-shadow: none;
     -webkit-appearance: none;
-    z-index: 100;
+    padding: 0 !important;
+    text-indent: 10px;
 }
 .my-form{
     width: 100vw;
@@ -3175,8 +3175,8 @@ body.overflow {
     display: block;
 }
 .my-form-inner{
-    width: 450px;
-    height: 500px;
+    width: 550px;
+    height: 600px;
     
     position: absolute;
     left: 50%;
@@ -3186,7 +3186,7 @@ body.overflow {
     padding: 30px 25px;
     border-radius: 16px;
     font-family:system-ui;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     scrollbar-width: thin;
     scrollbar-color: rgb(167, 167, 167) #161617;
@@ -3220,6 +3220,46 @@ body.overflow {
 }
 
 
+
+.my-form-input-fl {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 85px;
+}
+
+.my-form-input textarea {
+    height: 100px;
+
+    resize:none;
+
+}
+
+.my-form-submit {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.my-form-submit:hover {
+    transition: all .3s;
+    background-color: #fff;
+    color: #000;
+}
+
+.my-form-input-flex input {
+    width: 100%;
+}
+
+.my-form-input-flex{
+    flex: 0 1 50%;
+}
+
+@media (max-width: 768px) {
+    .my-form-inner {
+        width: 90vw;
+    }
+}
+
 @media (max-width: 480px) {
     .some-text {
         font-size: 18px;
@@ -3244,36 +3284,4 @@ body.overflow {
         transform: translateX(-50%);
         top: 800px;
     }
-}
-
-.my-form-input-fl {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    column-gap: 20px;
-}
-
-.my-form-input textarea {
-    width: 100%;
-    height: 100px;
-
-}
-
-.my-form-submit {
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.my-form-submit:hover {
-    transition: all .3s;
-    background-color: #fff;
-    color: #000;
-}
-
-.my-form-input-flex input {
-    width: 95%;
-}
-
-.my-form-input-flex{
-    flex: 0 1 50%;
 }
