@@ -3140,3 +3140,140 @@ img:not([src]) {
     height: 55px;
     z-index: 100;
 }
+
+body.overflow {
+    overflow: hidden;
+}
+
+.my-form-input select, .my-form-input-between input, .my-form-input-flex input, .my-form-input textarea, .my-form-submit {
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    border: 1px solid #fff;
+    background: #29292a;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 3px;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    z-index: 100;
+}
+.my-form{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.my-form.active {
+    display: block;
+}
+.my-form-inner{
+    width: 450px;
+    height: 500px;
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #161617;
+    padding: 30px 25px;
+    border-radius: 16px;
+    font-family:system-ui;
+    overflow-y: scroll;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgb(167, 167, 167) #161617;
+
+}
+.my-form-title{
+    color: #fff;
+    font-size: 24px;
+    font-family:system-ui;
+}
+.my-form-input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.my-form-input label {
+    font-family:system-ui;
+    color: #fff;
+}
+.my-form-input-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+
+}
+.my-form-input-between span {
+    width: 50px;
+    height: 1px;
+    background-color: #fff;
+}
+
+
+@media (max-width: 480px) {
+    .some-text {
+        font-size: 18px;
+        line-height: 120%;
+    }
+    .some-text2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        left: 0 !important;
+        font-size: 36px !important;
+        
+    }
+
+    .some-text3 {
+        font-size: 20px !important;
+    }
+    .some-text4 {
+        font-size: 16px !important;
+    }
+    .btn-form {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 800px;
+    }
+}
+
+.my-form-input-fl {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 20px;
+}
+
+.my-form-input textarea {
+    width: 100%;
+    height: 100px;
+
+}
+
+.my-form-submit {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.my-form-submit:hover {
+    transition: all .3s;
+    background-color: #fff;
+    color: #000;
+}
+
+.my-form-input-flex input {
+    width: 95%;
+}
+
+.my-form-input-flex{
+    flex: 0 1 50%;
+}
