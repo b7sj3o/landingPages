@@ -134,12 +134,16 @@
               Перетворюємо моменти на незабутні спогади
             </div>
             <div class="title__page-watch">
-              <a href="">
-                <img src="img/icons/play_btn.svg" alt="" />
-              </a>
+              <img src="img/icons/play_btn.svg" alt="" class="title__page-watch-link"/>
               <span>Переглянути промо-ролик</span>
             </div>
           </div>
+          <video controls class="title__page-video">
+            <source src="video/lightshow.mov" />
+            Your browser doesn't support video.
+          </video>
+          <div class="title__page-overlay"></div>
+
           <img loading="lazy" src="img/photos/10.JPG" class="title__page-bg" />
         </section>
         <section class="aboutus__page container" id="aboutus__page">
@@ -158,7 +162,7 @@
             готові перевершити ваші очікування та подарувати велику кількість
             яскравих емоцій.
           </div>
-          <a href="" class="aboutus__page__button">
+          <a href="https://youtube.com/@user-sq8so1sc7c?si=ujtTAVyDmcmpgzqV" class="aboutus__page__button">
             <span>Дізнатись більше про наші вистави</span>
             <img src="img/icons/arrow_right.png" alt="" />
           </a>
@@ -547,5 +551,6 @@
     <script src="JS/photoZoom.js"></script>
     <script src="JS/app.js"></script>
     <script src="JS/forms.js"></script>
+    <script src="js/video.js"></script>
   </body>
 </html>

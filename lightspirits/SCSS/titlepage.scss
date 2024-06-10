@@ -52,20 +52,19 @@
         align-items: center;
         column-gap: 25px;
         margin-top: 160px;
-        a {
-            img {
-                --size-play-btn: 70px;
-                --hovered-scale-play-btn: 1.25;
-                transition: all 0.3s;
+        img {
+            --size-play-btn: 70px;
+            --hovered-scale-play-btn: 1.25;
+            transition: all 0.3s;
 
-                width: var(--size-play-btn);
-                height: var(--size-play-btn);
+            width: var(--size-play-btn);
+            height: var(--size-play-btn);
 
-                &:hover {
-                    transform: scale(var(--hovered-scale-play-btn));
-                    width: calc(var(--size-play-btn) * var(--hovered-scale-play-btn));
-                }
+            &:hover {
+                transform: scale(var(--hovered-scale-play-btn));
+                width: calc(var(--size-play-btn) * var(--hovered-scale-play-btn));
             }
+            cursor: pointer;
         }
         span {
             font-size: 30px;
@@ -86,6 +85,41 @@
         object-position: top;
         height: 800px;
         opacity: .4;
+    }
+    &-video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        height: 80vh;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        display: none;
+            
+        source {
+
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+    &-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+        background-color: $overlayColor;
+        opacity: 0;
+        visibility: hidden;
+        
+
+        &.show {
+            opacity: 0.8;
+            visibility: visible;
+        }
     }
 }
 
@@ -129,10 +163,8 @@
         &-watch {
             margin-top: 30px;
 
-            a {
-                img {
-                    --size-play-btn: 60px;
-                }
+            img {
+                --size-play-btn: 60px;
             }
         }
         
