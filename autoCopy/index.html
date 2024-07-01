@@ -1936,12 +1936,37 @@
               data-field-top-res-960-value="74"
               data-field-left-res-960-value="731"
             >
-              <div class="tn-atom">
-                <a href="tel:+48733335797" style="color: inherit"
+              <div class="tn-atom ">
+                <a href="tel:+48733335797" class="phone_header" style="color: inherit"
                   >+48 733 335 797</a
                 >
+                <div class="logo-main2" style="">
+                  <img
+                    src="img/poris_white_logo.png"
+                    alt=""
+                    style="width: 200px;"
+                  />
+                </div>
               </div>
             </div>
+            <style>
+              .phone_header {
+                position: relative;
+              }
+              .phone_header::before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: -40px;
+                background-image: url('img/phone_icon.png');
+                background-size: 60%;
+                background-repeat: no-repeat;
+                width: 50px;
+                height: 50px;
+                z-index: 1000;
+
+              }
+            </style>
 
             <div
               class="t396__elem tn-elem tn-elem__5259811301670860146797"
@@ -1949,8 +1974,8 @@
               data-elem-type="shape"
               data-field-top-value="160"
               data-field-left-value="990"
-              data-field-height-value="46"
-              data-field-width-value="46"
+              data-field-height-value="35"
+              data-field-width-value="35"
               data-field-axisy-value="top"
               data-field-axisx-value="left"
               data-field-container-value="grid"
@@ -1967,7 +1992,7 @@
               <a
                 href="https://www.instagram.com/porispartner/"
                 class="tn-atom t-bgimg"
-                data-original="img/инст.png"
+                data-original="img/instagram.png"
               ></a>
             </div>
             <div
@@ -1976,8 +2001,8 @@
               data-elem-type="shape"
               data-field-top-value="207"
               data-field-left-value="992"
-              data-field-height-value="46"
-              data-field-width-value="46"
+              data-field-height-value="35"
+              data-field-width-value="35"
               data-field-axisy-value="top"
               data-field-axisx-value="left"
               data-field-container-value="grid"
@@ -1993,18 +2018,28 @@
               <a
                 class="tn-atom t-bgimg"
                 href="https://www.facebook.com/porisgroup"
-                data-original="img/фейс.png"
+                data-original="img/facebook.png"
               ></a>
             </div>
-            <div class="logo-main" style="position: absolute;left: 20%; top: 0; width: 100vw; height: 200px; z-index: 1000;">
-                <img src="img/poris_blue_logo.png" alt="" style="width: 200px;">
+            <div class="logo-main" style="">
+              <img src="img/poris_blue_logo.png" alt="" style="width: 200px" />
             </div>
             <style>
-                @media (min-width: 500px) {
-                    .logo-main {
-                        display: none;
-                    }
+              .logo-main2 {
+                margin-left: -30px;
+              }
+              .logo-main {
+                position: absolute;
+                left: 20%;
+                top: 0;
+                z-index: 1000;
+                width: 100%;
+              }
+              @media (min-width: 500px) {
+                .logo-main {
+                  display: none;
                 }
+              }
             </style>
             <div
               class="t396__elem tn-elem tn-elem__5259811301672204964716"
@@ -2030,12 +2065,29 @@
               data-field-left-res-960-value="2000"
             >
               <div class="tn-atom" field="tn_text_1672204964716">
-                <a href="tel:+48731340909" style="color: rgb(4, 78, 244)"
-                  >+48 731 340 909</a
+                <a href="tel:+48733335797" class="phone_header_mobile" style="color: #00226e"
+                  >+48 733 335 797</a
                 >
               </div>
             </div>
           </div>
+          <style>
+            .phone_header_mobile {
+              position: relative;
+            }
+            .phone_header_mobile::before {
+              content: "";
+              position: absolute;
+              top: 0px;
+              left: -40px;
+              background-image: url('img/phone_icon-blue.png');
+              background-size: 60%;
+              background-repeat: no-repeat;
+              width: 50px;
+              height: 50px;
+              z-index: 1000;
+            }
+          </style>
         </div>
         <script>
           t_onReady(function () {
@@ -3276,7 +3328,7 @@
               class="t396__elem tn-elem tn-elem__5266562731670944288955"
               data-elem-id="1670944288955"
               data-elem-type="text"
-              data-field-top-value="60"
+              data-field-top-value="38"
               data-field-left-value="110"
               data-field-width-value="231"
               data-field-axisy-value="top"
@@ -3440,14 +3492,14 @@
               data-field-width-res-960-value="291"
             >
               <div class="tn-atom" field="tn_text_1670945725423">
-                dzięki Poris Auto
+                dzięki Poris Auto W CENIE NIŻSZEJ NIŻ NA POLSKIM RYNKU
               </div>
             </div>
             <div
               class="t396__elem tn-elem tn-elem__5266562731670945590545"
               data-elem-id="1670945590545"
               data-elem-type="text"
-              data-field-top-value="60"
+              data-field-top-value="38"
               data-field-left-value="465"
               data-field-width-value="255"
               data-field-axisy-value="top"
@@ -3468,7 +3520,8 @@
               data-field-width-res-960-value="205"
             >
               <div class="tn-atom" field="tn_text_1670945590545">
-                Oszczędność do 50%
+                Oszczędność do <br />
+                50%
               </div>
             </div>
             <div
@@ -3592,7 +3645,7 @@
               data-elem-type="text"
               data-field-top-value="99"
               data-field-left-value="738"
-              data-field-width-value="270"
+              data-field-width-value="290"
               data-field-axisy-value="top"
               data-field-axisx-value="left"
               data-field-container-value="grid"
@@ -3619,7 +3672,7 @@
               class="t396__elem tn-elem tn-elem__5266562731670946788072"
               data-elem-id="1670946788072"
               data-elem-type="text"
-              data-field-top-value="60"
+              data-field-top-value="38"
               data-field-left-value="808"
               data-field-width-value="255"
               data-field-axisy-value="top"
@@ -3640,7 +3693,8 @@
               data-field-width-res-960-value="236"
             >
               <div class="tn-atom" field="tn_text_1670946788072">
-                Dobry stan samochodów
+                Dobry stan <br />
+                samochodów
               </div>
             </div>
             <div
@@ -5567,8 +5621,7 @@
             >
               <div class="tn-atom">
                 <img
-                  class="tn-atom__img t-img"
-                  style="width: 600px"
+                  class="tn-atom__img t-img usa-flag-img"
                   data-original="img/usa_flag.png"
                   src="img/usa_flag.png"
                   alt="Ключи от автомобиля"
@@ -5577,6 +5630,19 @@
               </div>
             </div>
             <style>
+              .usa-flag-img {
+                width: 500px !important;
+              }
+              @media screen and (max-width: 1500px) {
+                .usa-flag-img {
+                  width: 400px !important;
+                }
+              }
+              @media screen and (max-width: 1220px) {
+                .usa-flag-img {
+                  width: 300px !important;
+                }
+              }
               @media screen and (max-width: 959px) {
                 .usa_flag {
                   display: none;
@@ -5722,7 +5788,7 @@
               data-field-left-res-960-value="467"
             >
               <div class="tn-atom" style="min-width: 350px !important">
-                <a href="" style="color: inherit">"Swoi ludzie"</a>
+                <a href="" style="color: inherit">Swoi ludzie</a>
               </div>
             </div>
             <div
@@ -7219,7 +7285,6 @@
           <div
             class="t396__artboard"
             data-artboard-recid="527814178"
-            style="height: 650px"
             data-artboard-screens="320,480,640,960,1200"
             data-artboard-height="650"
             data-artboard-valign="center"
@@ -7234,7 +7299,7 @@
               data-elem-type="text"
               data-field-top-value="66"
               data-field-left-value="-3"
-              data-field-width-value="700"
+              data-field-width-value="600"
               data-field-axisy-value="top"
               data-field-axisx-value="left"
               data-field-container-value="grid"
@@ -7251,7 +7316,7 @@
               <h2
                 class="tn-atom text_n_container"
                 field="tn_text_1671123452653"
-                style="font-size: 40px"
+                style="font-size: 35px"
               >
                 Wybieramy samochód i obliczamy koszt dostawy
               </h2>
@@ -7342,9 +7407,7 @@
               data-field-top-res-960-value="122"
               data-field-left-res-960-value="558"
               data-field-width-res-960-value="408"
-            >
-              <div class="tn-atom"></div>
-            </div>
+            ></div>
             <div
               class="t396__elem tn-elem tn-elem__5278141781671187054276"
               data-elem-id="1671187054276"
@@ -7455,13 +7518,13 @@
               data-field-left-res-960-value="529"
               data-field-width-res-960-value="125"
             >
-              <div class="tn-atom" field="tn_text_1671196001795">Jesteśmy</div>
+                <div class="tn-atom" field="tn_text_1671196001795">Jesteśmy w branży od</div>
             </div>
             <div
               class="t396__elem tn-elem tn-elem__5278141781671196039248"
               data-elem-id="1671196039248"
               data-elem-type="text"
-              data-field-top-value="350"
+              data-field-top-value="384"
               data-field-left-value="620"
               data-field-width-value="24"
               data-field-axisy-value="top"
@@ -7471,7 +7534,7 @@
               data-field-leftunits-value="px"
               data-field-heightunits-value=""
               data-field-widthunits-value="px"
-              data-field-top-res-320-value="817"
+              data-field-top-res-320-value="835"
               data-field-left-res-320-value="36"
               data-field-top-res-480-value="693"
               data-field-left-res-480-value="51"
@@ -7481,14 +7544,14 @@
               data-field-left-res-960-value="540"
               data-field-width-res-960-value="84"
             >
-              <div class="tn-atom" field="tn_text_1671196039248">10</div>
+              <div class="tn-atom" field="tn_text_1671196039248">3</div>
             </div>
             <div
               class="t396__elem tn-elem tn-elem__5278141781671196336233"
               data-elem-id="1671196336233"
               data-elem-type="text"
-              data-field-top-value="424"
-              data-field-left-value="704"
+              data-field-top-value="447"
+              data-field-left-value="675"
               data-field-width-value="37"
               data-field-axisy-value="top"
               data-field-axisx-value="left"
@@ -7534,7 +7597,6 @@
               data-field-width-res-960-value="94"
             >
               <div class="tn-atom" field="tn_text_1671196356886">
-                w branży od
               </div>
             </div>
             <div
@@ -7622,7 +7684,7 @@
               class="t396__elem tn-elem tn-elem__5278141781671184968726"
               data-elem-id="1671184968726"
               data-elem-type="text"
-              data-field-top-value="233"
+              data-field-top-value="173"
               data-field-left-value="28"
               data-field-width-value="517"
               data-field-axisy-value="top"
@@ -8957,8 +9019,7 @@
               data-field-top-res-960-value="222"
               data-field-left-res-960-value="558"
               data-field-width-res-960-value="408"
-            >
-            </div>
+            ></div>
             <div
               class="t396__elem tn-elem tn-elem__5284194241671187054276"
               data-elem-id="1671187054276"
@@ -9132,7 +9193,7 @@
               class="t396__elem tn-elem tn-elem__5284194241671196356886"
               data-elem-id="1671196356886"
               data-elem-type="text"
-              data-field-top-value="486"
+              data-field-top-value="436"
               data-field-left-value="603"
               data-field-width-value="122"
               data-field-axisy-value="top"
@@ -9142,7 +9203,7 @@
               data-field-leftunits-value="px"
               data-field-heightunits-value=""
               data-field-widthunits-value="px"
-              data-field-top-res-320-value="1211"
+              data-field-top-res-320-value="1165"
               data-field-left-res-320-value="29"
               data-field-top-res-480-value="1021"
               data-field-left-res-480-value="34"
@@ -9152,10 +9213,10 @@
               data-field-left-res-960-value="519"
             >
               <div class="tn-atom" field="tn_text_1671196356886">
-                jednego auta
+                umowa
               </div>
             </div>
-            <div
+            <!-- <div
               class="t396__elem tn-elem tn-elem__5284194241671196336233"
               data-elem-id="1671196336233"
               data-elem-type="text"
@@ -9179,8 +9240,8 @@
               data-field-left-res-960-value="564"
             >
               <div class="tn-atom" field="tn_text_1671196336233">ceny</div>
-            </div>
-            <div
+            </div> -->
+            <!-- <div
               class="t396__elem tn-elem tn-elem__5284194241671196039248"
               data-elem-id="1671196039248"
               data-elem-type="text"
@@ -9204,12 +9265,13 @@
               data-field-left-res-960-value="519"
             >
               <div class="tn-atom" field="tn_text_1671196039248">3</div>
-            </div>
+            </div> -->
+            
             <div
               class="t396__elem tn-elem tn-elem__5284194241671196001795"
               data-elem-id="1671196001795"
               data-elem-type="text"
-              data-field-top-value="355"
+              data-field-top-value="400"
               data-field-left-value="599"
               data-field-width-value="154"
               data-field-axisy-value="top"
@@ -9219,7 +9281,7 @@
               data-field-leftunits-value="px"
               data-field-heightunits-value=""
               data-field-widthunits-value="px"
-              data-field-top-res-320-value="1093"
+              data-field-top-res-320-value="1133"
               data-field-left-res-320-value="28"
               data-field-top-res-480-value="903"
               data-field-left-res-480-value="33"
@@ -9229,9 +9291,10 @@
               data-field-left-res-960-value="518"
             >
               <div class="tn-atom" field="tn_text_1671196001795">
-                Dostępność
+                Wiarygodna
               </div>
             </div>
+            
             <div
               class="t396__elem tn-elem tn-elem__5284194241671195930237"
               data-elem-id="1671195930237"
@@ -10296,7 +10359,6 @@
         <div class="t396">
           <div
             class="t396__artboard"
-            style="height: 730px"
             data-artboard-recid="531568608"
             data-artboard-screens="320,480,640,960,1200"
             data-artboard-height="690"
@@ -10328,7 +10390,7 @@
               <h2
                 class="tn-atom text_n_container"
                 field="tn_text_1671123452653"
-                style="font-size: 40px"
+                style="font-size: 40px; font-size: 35px;"
               >
                 Przeprowadzamy oględziny dokumentacyjne i wizualne samochodu
               </h2>
@@ -10418,8 +10480,7 @@
               data-field-top-res-960-value="244"
               data-field-left-res-960-value="554"
               data-field-width-res-960-value="408"
-            >
-            </div>
+            ></div>
             <div
               class="t396__elem tn-elem tn-elem__5315686081671187054276"
               data-elem-id="1671187054276"
@@ -10528,7 +10589,7 @@
               data-field-left-res-960-value="515"
             >
               <div class="tn-atom" field="tn_text_1671196001795">
-                Niezawodność
+                
               </div>
             </div>
             <div
@@ -10554,8 +10615,8 @@
               data-field-top-res-960-value="480"
               data-field-left-res-960-value="520"
             >
-              <div class="tn-atom" field="tn_text_1671196336233">
-                i gwarancja dostawy
+              <div class="tn-atom" field="tn_text_1671196336233" style="font-size: 22px;">
+                Niezawodność i gwarancja dostawy
               </div>
             </div>
             <div
@@ -10641,7 +10702,7 @@
               class="t396__elem tn-elem tn-elem__5315686081671185142257"
               data-elem-id="1671185142257"
               data-elem-type="text"
-              data-field-top-value="426"
+              data-field-top-value="330"
               data-field-left-value="29"
               data-field-width-value="517"
               data-field-axisy-value="top"
@@ -10664,7 +10725,7 @@
               data-field-width-res-960-value="452"
             >
               <div class="tn-atom" field="tn_text_1671185142257">
-                <span style="background-color: transparent" class="some-text"
+                <span style="background-color: transparent" 
                   >Sprawdzamy auta wizualnie oraz przy pomocy serwisów pod kątem
                   ukrytych usterek. Badamy raporty policji i firm
                   ubezpieczeniowych, abyś poznał historię własnego samochodu.
@@ -11711,7 +11772,6 @@
         <div class="t396">
           <div
             class="t396__artboard"
-            style="height: 730px"
             data-artboard-recid="531576318"
             data-artboard-screens="320,480,640,960,1200"
             data-artboard-height="690"
@@ -11740,7 +11800,11 @@
               data-field-left-res-640-value="15"
               data-field-width-res-640-value="459"
             >
-              <h2 class="tn-atom" field="tn_text_1671123452653">
+              <h2
+                class="tn-atom"
+                field="tn_text_1671123452653"
+                style="font-size: 35px"
+              >
                 Kupujemy samochód na aukcji
               </h2>
             </div>
@@ -11827,8 +11891,7 @@
               data-field-top-res-960-value="187"
               data-field-left-res-960-value="554"
               data-field-width-res-960-value="408"
-            >
-            </div>
+            ></div>
             <div
               class="t396__elem tn-elem tn-elem__5315763181671187054276"
               data-elem-id="1671187054276"
@@ -11938,7 +12001,7 @@
               data-field-width-res-960-value="126"
             >
               <div class="tn-atom" field="tn_text_1671196001795">
-                Wszystkie usługi w jednym
+                najlepsze ceny z
               </div>
             </div>
             <div
@@ -11964,7 +12027,7 @@
               data-field-top-res-960-value="505"
               data-field-left-res-960-value="510"
             >
-              <div class="tn-atom" field="tn_text_1671196336233">miejscu</div>
+              <div class="tn-atom" field="tn_text_1671196336233">aukcji</div>
             </div>
             <div
               class="t396__elem tn-elem tn-elem__5315763181671196451116"
@@ -12049,7 +12112,7 @@
               class="t396__elem tn-elem tn-elem__5315763181671184584128"
               data-elem-id="1671184584128"
               data-elem-type="text"
-              data-field-top-value="285"
+              data-field-top-value="320"
               data-field-left-value="1"
               data-field-width-value="548"
               data-field-axisy-value="top"
@@ -12085,7 +12148,6 @@
         <div class="t396">
           <div
             class="t396__artboard"
-            style="height: 730px"
             data-artboard-recid="531576318"
             data-artboard-screens="320,480,640,960,1200"
             data-artboard-height="690"
@@ -12097,7 +12159,7 @@
           >
             <div class="t396__filter" data-artboard-recid="531576318"></div>
             <div
-              class="t396__elem tn-elem tn-elem__5315763181671123452653 some-text2"
+              class="t396__elem tn-elem tn-elem__5315763181671123452653 left-elem"
               data-elem-id="1671123452653"
               data-elem-type="text"
               data-field-top-value="151"
@@ -12113,17 +12175,19 @@
               data-field-width-res-320-value="314"
               data-field-left-res-640-value="15"
               data-field-width-res-640-value="459"
+              data-fields="top,left,width,container,axisx,axisy,widthunits,leftunits,topunits"
+              style="top: 151px;"
             >
               <h2
-                class="tn-atom text_n_container"
+                class="tn-atom"
                 field="tn_text_1671123452653"
-                style="font-size: 40px"
+                style="font-size: 35px; line-height: 40px"
               >
-                Przygotowanie dokumentów i dostawa do Polski
+                PRZYGOTOWANIE DOKUMENTÓW I DOSTAWA DO POLSKI
               </h2>
             </div>
             <div
-              class="t396__elem tn-elem tn-elem__5315763181671185284216"
+              class="t396__elem tn-elem tn-elem__5315763181671185284216 left-elem-line"
               data-elem-id="1671185284216"
               data-elem-type="shape"
               data-field-top-value="135"
@@ -12205,8 +12269,7 @@
               data-field-top-res-960-value="187"
               data-field-left-res-960-value="554"
               data-field-width-res-960-value="408"
-            >
-            </div>
+            ></div>
             <div
               class="t396__elem tn-elem tn-elem__5315763181671187054276"
               data-elem-id="1671187054276"
@@ -12316,7 +12379,7 @@
               data-field-width-res-960-value="126"
             >
               <div class="tn-atom" field="tn_text_1671196001795">
-                dostawa do
+                Pełen pakiet
               </div>
             </div>
             <div
@@ -12342,8 +12405,21 @@
               data-field-top-res-960-value="505"
               data-field-left-res-960-value="510"
             >
-              <div class="tn-atom" field="tn_text_1671196336233">Polski</div>
+              <div
+                class="tn-atom text-documentov"
+                field="tn_text_1671196336233"
+                style="font-size: 26px"
+              >
+                dokumentów
+              </div>
             </div>
+            <style>
+              @media (max-width: 600px) {
+                .text-documentov {
+                  font-size: 22px !important;
+                }
+              }
+            </style>
             <div
               class="t396__elem tn-elem tn-elem__5315763181671196451116"
               data-elem-id="1671196451116"
@@ -12424,10 +12500,10 @@
             </div>
 
             <div
-              class="t396__elem tn-elem tn-elem__5315763181671184584128"
+              class="t396__elem tn-elem tn-elem__5315763181671184584128 top-elem"
               data-elem-id="1671184584128"
               data-elem-type="text"
-              data-field-top-value="285"
+              data-field-top-value="340"
               data-field-left-value="1"
               data-field-width-value="548"
               data-field-axisy-value="top"
@@ -12440,7 +12516,7 @@
               data-field-top-res-320-value="250"
               data-field-left-res-320-value="5"
               data-field-width-res-320-value="315"
-              data-field-top-res-480-value="228"
+              data-field-top-res-480-value="258"
               data-field-left-res-480-value="11"
               data-field-width-res-480-value="451"
               data-field-top-res-640-value="228"
@@ -12461,7 +12537,6 @@
         <div class="t396">
           <div
             class="t396__artboard"
-            style="height: 730px"
             data-artboard-recid="531576318"
             data-artboard-screens="320,480,640,960,1200"
             data-artboard-height="690"
@@ -12473,7 +12548,7 @@
           >
             <div class="t396__filter" data-artboard-recid="531576318"></div>
             <div
-              class="t396__elem tn-elem tn-elem__5315763181671123452653 some-text2"
+              class="t396__elem tn-elem tn-elem__5315763181671123452653 left-elem"
               data-elem-id="1671123452653"
               data-elem-type="text"
               data-field-top-value="151"
@@ -12489,17 +12564,19 @@
               data-field-width-res-320-value="314"
               data-field-left-res-640-value="15"
               data-field-width-res-640-value="459"
+              data-fields="top,left,width,container,axisx,axisy,widthunits,leftunits,topunits"
+              style="top: 151px;"
             >
               <h2
-                class="tn-atom text_n_container"
+                class="tn-atom"
                 field="tn_text_1671123452653"
-                style="font-size: 40px"
+                style="line-height: 40px; font-size: 32px;"
               >
-                Otrzymujesz samochód z pełnym pakietem dokumentów
+                OTRZYMUJESZ SAMOCHÓD Z PEŁNYM PAKIETEM DOKUMENTÓW
               </h2>
             </div>
             <div
-              class="t396__elem tn-elem tn-elem__5315763181671185284216"
+              class="t396__elem tn-elem tn-elem__5315763181671185284216 left-elem-line"
               data-elem-id="1671185284216"
               data-elem-type="shape"
               data-field-top-value="135"
@@ -12581,8 +12658,7 @@
               data-field-top-res-960-value="187"
               data-field-left-res-960-value="554"
               data-field-width-res-960-value="408"
-            >
-            </div>
+            ></div>
             <div
               class="t396__elem tn-elem tn-elem__5315763181671187054276"
               data-elem-id="1671187054276"
@@ -12803,7 +12879,7 @@
               class="t396__elem tn-elem tn-elem__5315763181671184584128"
               data-elem-id="1671184584128"
               data-elem-type="text"
-              data-field-top-value="285"
+              data-field-top-value="310"
               data-field-left-value="1"
               data-field-width-value="548"
               data-field-axisy-value="top"
@@ -12825,6 +12901,7 @@
               data-field-top-res-960-value="236"
               data-field-left-res-960-value="0"
               data-field-width-res-960-value="482"
+              style="top: 310px;"
             >
               <div class="tn-atom" field="tn_text_1671184584128">
                 Otrzymujesz informację o dostawie samochodu oraz komplet
@@ -13332,7 +13409,7 @@
               class="t396__elem tn-elem tn-elem__6970232401671594513146"
               data-elem-id="1671594513146"
               data-elem-type="text"
-              data-field-top-value="97"
+              data-field-top-value="80"
               data-field-left-value="235"
               data-field-width-value="618"
               data-field-axisy-value="top"
@@ -13353,9 +13430,9 @@
               data-field-width-res-640-value="482"
               data-field-top-res-960-value="65"
               data-field-left-res-960-value="230"
-              data-field-width-res-960-value="494"
+              data-field-width-res-960-value="574"
             >
-              <div class="tn-atom some-text3" field="tn_text_1671594513146">
+              <div class="tn-atom some-text3 some-text3_" field="tn_text_1671594513146">
                 DOBIERZEMY BEZPŁATNIE SAMOCHÓD DO POTRZEB KLIENTA
               </div>
             </div>
@@ -15056,16 +15133,11 @@
                 field="tn_text_1671594513146"
                 style="font-size: 22px !important; line-height: 105% !important"
               >
-                <span
-                  style="
-                    background-color: transparent;
-                    line-height: 105% !important;
-                  "
-                  class="some-text4"
-                  >Zachęcamy do pozostawienia nam swojego numeru telefonu,
+                <span style="background-color: transparent;line-height: 105% !important;" class="some-text4">
+                  Zachęcamy do pozostawienia nam swojego numeru telefonu,
                   chętnie skontaktujemy się z każdą zainteresowaną osobą i
-                  odpowiemy na wszystkie pytania!</span
-                >
+                  odpowiemy na wszystkie pytania!
+                </span>
               </div>
             </div>
             <div
@@ -18283,7 +18355,14 @@
                 field="tn_text_1671633559504"
                 style="line-height: 31px"
               >
-                <span style="background-color: transparent">100 000 $</span>
+              <span
+              style="
+                background-color: transparent;
+                font-size: 40px;
+                font-weight: 700;
+              "
+              >100 000 $</span
+            >
                 <br />
                 Zaoszczędziliśmy naszym klientom
               </div>
@@ -18861,11 +18940,11 @@
               data-animate-prx-dx="20"
               data-field-top-res-320-value="219"
               data-field-left-res-320-value="12"
-              data-field-top-res-480-value="144"
+              data-field-top-res-480-value="74"
               data-field-left-res-480-value="171"
               data-field-height-res-480-value="183"
               data-field-width-res-480-value="332"
-              data-field-top-res-640-value="135"
+              data-field-top-res-640-value="35"
               data-field-left-res-640-value="236"
               data-field-height-res-640-value="239"
               data-field-width-res-640-value="453"
@@ -22498,7 +22577,7 @@
             </div>
             <div class="t396__filter" data-artboard-recid="531484705"></div>
             <div
-              class="t396__elem tn-elem tn-elem__5314847051671123452653"
+              class="t396__elem tn-elem tn-elem__5314847051671123452653 text-center"
               data-elem-id="1671123452653"
               data-elem-type="text"
               data-field-top-value="60"
@@ -22521,7 +22600,7 @@
                 style="line-height: 78px"
               >
                 <span style="background-color: transparent"
-                  >Новости автомира</span
+                  >Często zadawane pytania</span
                 >
               </h2>
             </div>
@@ -24630,34 +24709,18 @@
         <!-- /T396 -->
       </div>
       <section class="map__page">
-        <div
-          style="
-            text-decoration: none;
-            overflow: hidden;
-            max-width: 100%;
-            height: 300px;
-          "
-        >
-          <div
-            id="embed-ded-map-canvas"
-            style="height: 100%; width: 100%; max-width: 100%"
-          >
-            <iframe
-              style="height: 100%; width: 100%; border: 0"
-              frameborder="0"
-              src="https://www.google.com/maps/embed/v1/search?q=Gajowa+4,+20-827+Lublin,+Польша&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-            ></iframe>
+        
+        <div style="max-width:100%;overflow:hidden;color:red;height:300px;">
+          <div id="display-google-map" style="height:100%; width:100%;max-width:100%;">
+            <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=20-030+Lublin,+Obrońców+Pokoju+15/1&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
           </div>
-          <a
-            class="google-map-html"
-            href="https://www.bootstrapskins.com/themes"
-            id="grab-maps-authorization"
-            >premium bootstrap themes</a
-          ><style>
-            #embed-ded-map-canvas img {
-              max-height: none;
-              max-width: none !important;
-              background: none !important;
+          <a class="embedded-map-code" href="https://www.bootstrapskins.com/themes" id="make-map-infor-mation">premium bootstrap themes</a>
+          <style>
+            #display-google-map .text-marker{}
+            .map-generator {
+              max-width: 100%; 
+              max-height: 100%; 
+              background: none;
             }
           </style>
         </div>
@@ -24682,10 +24745,6 @@
         <!-- T457 -->
         <div class="t457">
           <div class="footer-container">
-            <a class="footer-logo" href="/">
-              <img class="" src="img/poris_white_logotype.png" />
-            </a>
-
             <div class="footer-copy">
               <div class="footer-item">
                 <p>Poris Sp. z o.o.</p>
@@ -24707,6 +24766,9 @@
                 <div>NIP: 7123399204</div>
                 <div>REGON: 385518595</div>
               </div>
+            </div>
+
+            <div class="footer-copy footer-bottom" style="margin-top: 50px">
               <div class="footer-item">
                 <div class="footer-item-title">KONTAKT</div>
                 <div class="footer-item-texts">
@@ -24725,6 +24787,11 @@
                 </div>
               </div>
             </div>
+            <div class="footer-copy footer-bottom">
+              <a class="footer-logo" href="/">
+                <img class="" src="img/poris_white_logo.png" />
+              </a>
+            </div>
           </div>
 
           <style>
@@ -24739,6 +24806,10 @@
               font-family: system-ui, -apple-system, BlinkMacSystemFont,
                 "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
                 "Helvetica Neue", sans-serif !important;
+            }
+            .footer-bottom {
+              justify-content: center !important;
+              gap: 150px;
             }
             .footer-container {
               max-width: 80%;
@@ -26234,7 +26305,6 @@ s1.5-0.672,1.5-1.5L25.503,16.881z"
         <div class="t123" style="position: absolute; width: 1px; opacity: 0">
           <div class="t-container_100">
             <div class="t-width t-width_100">
-              <script src="//code.jivo.ru/widget/1xZgzkFrv1" async></script>
             </div>
           </div>
         </div>

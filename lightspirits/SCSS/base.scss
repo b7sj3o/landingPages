@@ -56,6 +56,10 @@ body {
 
 .wrapper {
     min-width: 100%;
+
+    &.hidden {
+        display: none;
+    }
 }
 
 .container {
@@ -72,6 +76,61 @@ body {
     line-height: 150%;
     margin-bottom: 50px;
     text-transform: uppercase;
+}
+
+.preloader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.star {
+	margin: auto;
+	width: 16em;
+	height: 16em;
+
+    &__stroke {
+        --dur: 4s;
+        animation: stroke1 var(--dur) linear infinite;
+
+        &--2 {
+            animation-name: stroke2;
+            animation-delay: calc(var(--dur) / -2);
+        }
+
+        &--3 {
+            animation-name: stroke3;
+            animation-direction: reverse;
+        }
+
+        &--4 {
+            animation-name: stroke4;
+            animation-delay: calc(var(--dur) / -2);
+            animation-direction: reverse;
+        }
+    }
+}
+
+@keyframes stroke1 {
+	from { stroke-dashoffset: 0; }
+	to { stroke-dashoffset: 124; }
+}
+@keyframes stroke2 {
+	from { stroke-dashoffset: 0; }
+	to { stroke-dashoffset: 248; }
+}
+@keyframes stroke3 {
+	from { stroke-dashoffset: 0; }
+	to { stroke-dashoffset: 372; }
+}
+@keyframes stroke4 {
+	from { stroke-dashoffset: 0; }
+	to { stroke-dashoffset: 496; }
 }
 
 section,
@@ -98,7 +157,6 @@ select:-webkit-autofill:focus {
         max-width: 80%;
     }
 }
-
 @media screen and (max-width: 1024px) {
     section,
     footer {
@@ -136,21 +194,4 @@ select:-webkit-autofill:focus {
     .container {
         max-width: 95%;
     }
-}
-
-// FOR COPYING
-//  |
-//  |
-// \ /
-
-@media screen and (max-width: 1440px) {
-}
-
-@media screen and (max-width: 1024px) {
-}
-
-@media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 480px) {
 }

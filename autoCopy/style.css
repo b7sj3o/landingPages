@@ -3254,6 +3254,12 @@ body.overflow {
     flex: 0 1 50%;
 }
 
+@media (max-width: 1100px) {
+    .some-text3_ {
+        font-size: 25px;
+    }
+}
+
 @media (max-width: 768px) {
     .my-form-inner {
         width: 90vw;
@@ -3281,15 +3287,71 @@ body.overflow {
     .some-text4 {
         font-size: 16px !important;
     }
-    .btn-form {
-        left: 50%;
-        transform: translateX(-50%);
-        top: 800px;
-    }
+    
 
     .text_n_container {
         max-width: 80vw !important;
         margin: 0 auto !important;
         font-size: 24px !important;
     }
+}
+
+.left-elem {
+}
+
+@media (max-width: 1700px) {
+    
+    .btn-form {
+        right: 15%; 
+    }
+}
+
+@media (max-width: 960px) {
+    
+    .btn-form {
+        right: 50%;
+        top: 650px;
+        width: 315px;
+        height: 55px;
+        transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        -o-transform: translateX(50%);
+}
+}
+
+@media (max-width: 910px) {
+    .top-elem {
+        top: 300px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .left-elem h2 {
+        font-size: 25px !important;
+
+    }
+    .left-elem {
+        width: 80% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        -webkit-transform: translateX(-50%) !important;
+        -moz-transform: translateX(-50%) !important;
+        -ms-transform: translateX(-50%) !important;
+        -o-transform: translateX(-50%) !important;
+    }
+    .top-elem {
+        top: 300px !important;
+    }
+}
+
+.text-center {
+    text-align: center;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    -webkit-transform: translateX(-50%) !important;
+    -moz-transform: translateX(-50%) !important;
+    -ms-transform: translateX(-50%) !important;
+    -o-transform: translateX(-50%) !important;
 }
