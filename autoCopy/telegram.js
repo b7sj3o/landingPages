@@ -7,14 +7,14 @@ const chat_id = '928132950'
 myForm.addEventListener('submit', (event) => {
   event.preventDefault();   
 
-  const typeAuto = myForm.elements['type-auto'].selected;
-  const yearFrom = myForm.elements['from-year'];
-  const yearTo = myForm.elements['to-year'];
-  const budgetFrom = myForm.elements['from-price'];
-  const budgetTo = myForm.elements['to-price'];
-  const username = myForm.elements['name'];
-  const phoneNumber = myForm.elements['phone'];
-  const comment = myForm.elements['comment'];
+  const typeAuto = myForm.elements['type-auto'].value;
+  const yearFrom = myForm.elements['from-year'].value;
+  const yearTo = myForm.elements['to-year'].value;
+  const budgetFrom = myForm.elements['from-price'].value;
+  const budgetTo = myForm.elements['to-price'].value;
+  const username = myForm.elements['name'].value;
+  const phoneNumber = myForm.elements['phone'].value;
+  const comment = myForm.elements['comment'].value;
 
   const message = `Заявка з сайту:%0AІм'я: ${typeAuto}%0AРік випуску машини: ${yearFrom}-${yearTo}%0AБюджет: ${budgetFrom}-${budgetTo}
   %0AІм'я: ${username}%0AНомер телефону: ${phoneNumber}%0AКоментар: ${comment || 'Відсутній'}`

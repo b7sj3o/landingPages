@@ -3231,6 +3231,7 @@ body.overflow {
 .my-form-exit {
     display: flex;
     justify-content: end;
+    cursor: pointer;
 }
 
 .my-form-exit span {
