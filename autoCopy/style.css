@@ -3147,8 +3147,7 @@ body.overflow {
 
 .my-form-input select, .my-form-input-between input, .my-form-input-flex input, .my-form-input textarea, .my-form-submit {
     height: 40px;
-    width: 100%;
-    border: 1px solid #fff;
+    border: 1px solid #ccc; /* Changed border color for better visibility */
     background: #29292a;
     color: #fff;
     font-size: 16px;
@@ -3157,10 +3156,10 @@ body.overflow {
     -webkit-box-shadow: none;
     box-shadow: none;
     -webkit-appearance: none;
-    padding: 0 !important;
-    text-indent: 10px;
+    padding: 0 10px; /* Added padding for better readability */
 }
-.my-form{
+
+.my-form {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
@@ -3169,15 +3168,18 @@ body.overflow {
     top: 0;
     z-index: 1000;
     display: none;
+    overflow: auto;
 }
 
 .my-form.active {
     display: block;
 }
-.my-form-inner{
-    width: 550px;
-    height: 600px;
-    
+
+.my-form-inner {
+    width: 90%;
+    max-width: 550px;
+    height: auto; /* Allow height to adjust automatically */
+    max-height: 90vh; /* Limit max height */
     position: absolute;
     left: 50%;
     top: 50%;
@@ -3185,54 +3187,85 @@ body.overflow {
     background-color: #161617;
     padding: 30px 25px;
     border-radius: 16px;
-    font-family:system-ui;
+    font-family: system-ui;
     overflow-y: auto;
-
     scrollbar-width: thin;
     scrollbar-color: rgb(167, 167, 167) #161617;
-
 }
-.my-form-title{
+
+.my-form-title {
     color: #fff;
     font-size: 24px;
-    font-family:system-ui;
+    font-family: system-ui;
 }
-.my-form-input{
+
+.my-form-input {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
+
 .my-form-input label {
-    font-family:system-ui;
+    font-family: system-ui;
     color: #fff;
 }
-.my-form-input-between{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 30px;
 
+.my-form-input-between {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px; /* Adjusted column gap */
 }
+
 .my-form-input-between span {
-    width: 50px;
+    width: 30px; /* Adjusted width */
     height: 1px;
     background-color: #fff;
 }
 
 
+.inp-between select, .inp-between input {
+    width: 100%;
+}
+
+.my-form-exit {
+    display: flex;
+    justify-content: end;
+}
+
+.my-form-exit span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+}
+.my-form-exit span:first-child {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.my-form-exit span:last-child {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
 
 .my-form-input-fl {
     display: flex;
     flex-direction: row;
     width: 100%;
-    column-gap: 85px;
+    column-gap: 10px; /* Adjusted column gap */
 }
 
 .my-form-input textarea {
     height: 100px;
-
-    resize:none;
-
+    resize: none;
 }
 
 .my-form-submit {
@@ -3241,18 +3274,30 @@ body.overflow {
 }
 
 .my-form-submit:hover {
-    transition: all .3s;
+    transition: all 0.3s;
     background-color: #fff;
     color: #000;
 }
 
 .my-form-input-flex input {
+}
+
+.my-form-input-flex {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
-.my-form-input-flex{
-    flex: 0 1 50%;
+.my-form-submit {
+    width: 50%;
 }
+
+@media (max-width: 500px) {
+    .my-form-input-fl {
+        flex-direction: column;
+    }
+}
+
 
 @media (max-width: 1100px) {
     .some-text3_ {
@@ -3261,9 +3306,7 @@ body.overflow {
 }
 
 @media (max-width: 768px) {
-    .my-form-inner {
-        width: 90vw;
-    }
+    
     .t-card__col {
         margin-bottom: 20px !important;
     }
@@ -3355,3 +3398,4 @@ body.overflow {
     -ms-transform: translateX(-50%) !important;
     -o-transform: translateX(-50%) !important;
 }
+

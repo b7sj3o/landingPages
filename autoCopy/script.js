@@ -1254,24 +1254,27 @@ function t270_getTarget(hash, offset) {
     return target
 }
 
-const myForm = document.getElementById('my-form')
+const myFormWrapper = document.getElementById('my-form')
+const formExit = document.querySelector('.my-form-exit')
+
+formExit.addEventListener('click', () => {
+    openForm()
+})
 
 document.querySelector('.my-form').addEventListener('click', (e) => {
-    console.log(e.target.className)
     if (e.target.classList.contains('my-form')) {
-        myForm.classList.toggle('active')
+        myFormWrapper.classList.toggle('active')
         document.body.classList.toggle('overflow')
     }
 })
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {  // Check if the pressed key is the spacebar or the Escape key
-        myForm.classList.toggle('active')
-        document.body.classList.toggle('overflow')
+        myFormWrapper.classList.toggle('active')
     }
 })
 
 function openForm() {
-    myForm.classList.toggle('active')
+    myFormWrapper.classList.toggle('active')
     document.body.classList.toggle('overflow')
 }
