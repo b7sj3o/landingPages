@@ -48,11 +48,7 @@ body {
     }
 }
 
-.title-text {
-    font-size: 35px;
-    font-weight: 600;
-    line-height: 150%;
-}
+
 
 .wrapper {
     min-width: 100%;
@@ -85,11 +81,11 @@ body {
     -ms-transition: all .3s;
     -o-transition: all .3s;
 
-    border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 
     cursor: pointer;
 
@@ -99,6 +95,15 @@ body {
     }
 }
 
+.title-text {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 150%;
+    background-color: $black;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
 
 // input:-webkit-autofill,
 // input:-webkit-autofill:hover,
