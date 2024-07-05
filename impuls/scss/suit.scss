@@ -1,0 +1,122 @@
+@import "variables";
+
+.suit {
+    margin-top: $topIndent;
+
+    &-title {
+        text-align: center;
+        margin-bottom: 20px;        
+    }
+
+    &-upper {
+        display: flex;
+        gap: 0 50px;
+    }
+
+	&-images {
+        display: flex;
+        width: 50%;
+        max-height: 400px;
+        column-gap: 10px;
+	}
+	&-image {
+        width: 60%;
+		&-pair {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            width: 40%;
+
+            img {
+                max-width: 100%;
+                height: 50%;
+                object-fit: contain;
+            }
+		}
+
+        img {
+            max-width: 100%;
+            height: calc(100% + 10px);
+            object-fit: contain;
+
+
+        }
+	}
+	&-texts {
+        width: 50%;
+        ul {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            li {
+                list-style-type: disc;
+                font-size: 20px;
+            }
+        }
+	}
+	&-btn {
+        width: 50%;
+        margin: 50px auto 0 auto;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+    .suit {
+        &-upper {
+            flex-direction: column;
+            gap: 30px 0;
+        }
+    
+        &-images {
+            width: 100%;
+            column-gap: 5px;
+        }
+
+        &-image {
+
+            &-pair {
+                row-gap: 5px;
+
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            img {
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+        &-texts {
+            width: 100%;
+            ul {
+                row-gap: 15px;
+                li {
+                    font-size: 18px;
+                }
+            }
+        }
+        &-btn {
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .suit {
+        &-upper {
+            gap: 20px 0;
+        }
+    
+        
+        &-texts > ul > li {
+            font-size: 16px;
+        }
+
+        &-btn {
+            width: 100%;
+        }
+    }
+}
+

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/variables.min.css">
+    <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="css/popup.min.css">
+    <link rel="stylesheet" href="css/product.min.css">
+    <link rel="stylesheet" href="css/details.min.css">
+    <link rel="stylesheet" href="css/power.min.css">
+    <link rel="stylesheet" href="css/suit.min.css">
+    <link rel="stylesheet" href="css/aboutus.min.css">
+
+    <!-- SEO -->
+
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__logo">
+            <!-- <img src="" alt="logo"> -->
+             <span>LOGO</span>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__links">
+              <li class="header__links-item">
+                <a href="#aboutus__page">Про нас</a>
+              </li>
+              <li class="header__links-item">
+                <a href="#contacts__page">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__contactus round-btn" onclick="openForm()">Оформити замовлення</div>
+        </div>
+      </header>
+      <main class="content container">
+        <section class="product" id="product">
+          <div class="product-left">
+            <div class="product-selected-image">
+              <img src="img/product1.png" alt="" id="product-selected-image">
+            </div>
+            <div class="product-images">
+              <img class="product-image" src="img/product2.png" alt="">
+              <img class="product-image" src="img/product3.png" alt="">
+              <img class="product-image" src="img/product4.png" alt="">
+            </div>
+          </div>
+          <div class="product-right">
+            <div class="product-title title-text">Портативна зарядна станція потужністю 1800Вт</div>
+            <div class="product-text">
+              <p>
+                Портативна зарядна станція потужністю 1800Вт створена для вирішення ваших найактуальніших
+                проблем з електропостачанням, особливо у випадку частих відключень світла. Незалежно від
+                того, чи використовуєте ви пристрій високої потужності для домашнього використання, чи 
+                потребуєте надійного джерела живлення на роботі або на відкритому повітрі, Зарядні стації
+                SOUOP забезпечать безперебійне живлення для вашого обладнання.
+              </p>
+              
+              <p>
+                Ці зарядні станції стануть вашим незамінним резервним джерелом живлення під час перебоїв
+                електропостачання вдома, дозволяючи підтримувати роботу побутової техніки, освітлення та
+                навіть медичних приладів. SOUOP app-1800 також підтримує зарядку від сонячних батарей,
+                що дає вам можливість накопичувати енергію у будь-який час і в будь-якому місці, забезпечуючи
+                додаткову автономність та енергонезалежність
+              </p>
+
+              <ul>
+                <li>9 вихідних портів для одночасного живлення декількох пристроїв </li>
+                <li>3 гнучкі способи підзарядки</li>
+                <li>Забезпечує захист від перевантаження по струму, перенапруги та перегріву</li>
+                <li>Безпечний для довкілля/ Не використовує пального / Безшумний / Економічний</li>
+              </ul>
+            </div>
+            <div class="product-bottom">
+              <div class="product-btn round-btn" onclick="openForm()">Замовити</div>
+              <div class="product__prices">
+                <div class="product__prices-old-price product__prices-price">53 000грн</div>
+                <div class="product__prices-new-price product__prices-price">49 999грн</div>
+              </div>
+            </div>
+            <div class="product-gift">Павербанк або безкоштовну достаку в подарунок</div>
+          </div>
+        </section>
+
+        <section class="details" id="details">
+          <nav class="details-nav">
+            <ul>
+              <li><a href="#product-description">Опис</a></li>
+              <li><a href="#product-characteristics">Технічні характери</a></li>
+              <li><a href="#power">Можливості</a></li>
+              <li><a href="#suit">Ідеально підійде</a></li>
+            </ul>
+          </nav>
+          <div class="details-body">
+            <div class="details__description" id="product-description">
+            <div class="details__description-title title-text">Опис</div>
+            <div class="details__description-block">
+              <div class="details__description-subtitle">Ідеальна ємність</div>
+              <div class="details__description-text">Портативна зарядна станція потужністю 1800 Вт порівняно з аналогами потужністю 600 Вт та 1200 Вт має більшу ємність 1488 Вт-год (32 В; 31 А-год); вона також оснащена відмінною системою керування батареями (BMS), що забезпечує контроль температури, захист від напруги, захист від перевантаження по струму та функцію захисту від короткого замикання для захисту обладнання.</div>
+            </div>
+            <div class="details__description-block">
+              <div class="details__description-subtitle">Електроживлення від батареї LiFePO4</div>
+              <div class="details__description-text">Порівняно з іншими літієвими батареями однією з важливих переваг батарей LiFePO4 є термічна стабільність та хімічна стабільність, які можуть підвищити безпеку батареї. Літій-залізо-фосфатний акумулятор забезпечує 2500циклів та термін служби батареї більше 10.</div>
+            </div>
+            <div class="details__description-block">
+              <div class="details__description-subtitle">Подача живлення на 9 пристроїв одночасно</div>
+              <div class="details__description-text">Портативні зарядні станції 1800 Вт потужно живлять до 9 пристроїв, ємність 465 000 мАг. Ця універсальна електростанція дуже підходить для зустрічей на свіжому повітрі, кемпінгу та коли вдома немає електроенергії.</div>
+            </div>
+            <div class="details__description-block">
+              <div class="details__description-subtitle">Зовнішнє резервнє живлення</div>
+              <div class="details__description-text">Легка конструкція – 15 кг, міцна ручка для зручного перенесення. Задня частина оснащена аварійним ліхтариком високої яскравості потужністю 7 Вт, що підходить для освітлення великих площ. Він дуже підходить для кемпінгу на відкритому повітрі та при нестачі електроенергії за різноманітних явищ. Є 3 режими освітлення (Слабке-Повне-SOS), які можна легко перемикати.</div>
+            </div>
+            </div> 
+
+            <div class="details__characteristics" id="product-characteristics">
+              <div class="details__characteristics-title title-text">Технічні характеристики</div>
+
+              <div class="details__characteristics-list">
+                <div class="details__characteristics-item">
+                  <div class="details__characteristics-item-key details-item">Ємність</div>
+                  <div class="details__characteristics-item-value details-item">1488В-г</div>
+                </div>
+                <div class="details__characteristics-item">
+                  <div class="details__characteristics-item-key details-item">Вихід змінного струму</div>
+                  <div class="details__characteristics-item-value details-item">220 В/1800 Вт (номінальне значення), 4000 Вт (пікове значення)</div>
+                </div>
+                <div class="details__characteristics-item">
+                  <div class="details__characteristics-item-key details-item">Вихід постійного струму</div>
+                  <div class="details__characteristics-item-value details-item">12В/10А</div>
+                </div>
+                <div class="details__characteristics-item">
+                  <div class="details__characteristics-item-key details-item">Виходу USB-А</div>
+                  <div class="details__characteristics-item-value details-item">5В/3А, 9В/2А, 12В/1,5А (макс. 18 Вт)</div>
+                </div>
+                <div class="details__characteristics-item">
+                  <div class="details__characteristics-item-key details-item">Вихід USBС</div>
+                  <div class="details__characteristics-item-value details-item">5 В/3 А, 9 В/2 А, 12В/3А, 15В/3А, 20В/3А (макс. 60 Вт)</div>
+                </div>
+                <div class="details__characteristics-item">
+                  <div class="details__characteristics-item-key details-item">Вихід USB-C</div>
+                  <div class="details__characteristics-item-value details-item">5В/3А, 9В/2 А, 12 В/1,5 А (макс. 18 Вт)</div>
+                </div>
+                <div class="details__characteristics-item">
+                  <div class="details__characteristics-item-key details-item">Вхід постійного струму</div>
+                  <div class="details__characteristics-item-value details-item">12~30 В/2*200 Вт Макс</div>
+                </div>
+                <div class="details__characteristics-item">
+                  <div class="details__characteristics-item-key details-item">Світлодіодний ліхтар</div>
+                  <div class="details__characteristics-item-value details-item">7 Вт (слабке-повне-SOS)</div>
+                </div>
+                <div class="details__characteristics-item">
+                  <div class="details__characteristics-item-key details-item">Форма хвилі</div>
+                  <div class="details__characteristics-item-value details-item">Чиста синусоїда</div>
+                </div>
+                <div class="details__characteristics-item">
+                  <div class="details__characteristics-item-key details-item">Вага, кг</div>
+                  <div class="details__characteristics-item-value details-item">15</div>
+                </div>
+                <div class="details__characteristics-item">
+                  <div class="details__characteristics-item-key details-item">Розмір, мм</div>
+                  <div class="details__characteristics-item-value details-item">385*243*340</div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </section>
+
+        <section class="power" id="power">
+          <div class="power-title title-text">Потужність та можливості зарядних станцій SOUOP вражає! 
+            Ваш повністю заряджений SOUOP може продовжити час роботи таких приладів (і не
+            тільки):</div>
+          <div class="power-items">
+            
+            <!-- Phone -->
+            <div class="power-item">
+              <img src="img/icons/phone.png" alt="Phone">
+              <span>3110 mAh<br>Телефон<br>131 раз</span>
+            </div>
+            
+            <!-- Tablet -->
+            <div class="power-item">
+              <img src="img/icons/lamp.png" alt="Tablet">
+              <span>30 Вт<br>Планшетний ПК<br>43,6 разів</span>
+            </div>
+            
+            <!-- Laptop -->
+            <div class="power-item">
+              <img src="img/icons/laptop.png" alt="Laptop">
+              <span>60 Вт<br>Ноутбук<br>22 рази</span>
+            </div>
+            
+            <!-- Lamp -->
+            <div class="power-item">
+              <img src="img/icons/lamp.png" alt="Lamp">
+              <span>10 Вт<br>Ліхтар<br>131 година</span>
+            </div>
+            
+            <!-- Camera -->
+            <div class="power-item">
+              <img src="img/icons/camera.png" alt="Camera">
+              <span>16 Вт<br>Фотокамера<br>82 рази</span>
+            </div>
+            
+            <!-- Drone -->
+            <div class="power-item">
+              <img src="img/icons/drone.svg" alt="Drone">
+              <span>60 Вт<br>Дрон<br>22 рази</span>
+            </div>
+            
+            <!-- Mini Fridge -->
+            <div class="power-item">
+              <img src="img/icons/freezer.svg" alt="Mini Fridge">
+              <span>50 Вт<br>Міні холодильник<br>26 годин</span>
+            </div>
+            
+            <!-- Fan -->
+            <div class="power-item">
+              <img src="img/icons/fan.png" alt="Fan">
+              <span>30 Вт<br>Вентилятор<br>43,6 годин</span>
+            </div>
+            
+            <!-- Power Tool -->
+            <div class="power-item">
+              <img src="img/icons/e-tool.png" alt="Power Tool">
+              <span>300 Вт<br>Електроінструмент<br>4,36 годин</span>
+            </div>
+            
+            <!-- WiFi Router -->
+            <div class="power-item">
+              <img src="img/icons/wifi.svg" alt="WiFi Router">
+              <span>10 Вт<br>WiFi роутер<br>131 година</span>
+            </div>
+            
+            <!-- TV -->
+            <div class="power-item">
+              <img src="img/icons/tv.svg" alt="TV">
+              <span>110 Вт<br>Телевізор<br>12 годин</span>
+            </div>
+            
+            <!-- Fan -->
+            <div class="power-item">
+              <img src="img/icons/fan2.png" alt="Fan">
+              <span>40 Вт<br>Вентилятор<br>33 години</span>
+            </div>
+            
+          </div>
+        </section>
+
+        <section class="suit" id="suit">
+          <div class="suit-title title-text">Ідеально підійде</div>
+          <div class="suit-upper">
+            <div class="suit-images">
+              <div class="suit-image">
+                <img src="img/people.jpg" alt="">
+              </div>
+              <div class="suit-image-pair">
+                <img src="img/on_table.jpg" alt="">
+                <img src="img/3_photos.png" alt="">
+              </div>
+            </div>
+            <div class="suit-texts">
+                <ul>
+                  <li>Тривалі перебої з електроенергією під час блекаутів, природних явищ та для перебування в укритті.</і>
+                  <li>Відключення електроенергії, які викликані перепадами напруги, або віялові відключення.</li>
+                  <li>Резевне живлення під час надзвичайних ситуацій.</li>
+                  <li>Відпочинок або кемпінг на відкритому повітрі та для довгих подорожей.</li>
+                </ul>
+            </div>
+          </div>
+          <div class="suit-btn round-btn" onclick="openForm()">Оформити замовлення</div>
+        </section>
+
+        <section class="aboutus" id="aboutus">
+          <div class="aboutus-title title-text">Про нас</div>
+          <div class="aboutus-text">
+            Ласкаво просимо до нашої компанії IMPULS, де ми прагнемо забезпечити вас
+            надійними та доступними рішеннями для енергозабезпечення. Ми спеціалізуємося
+            на продажу високоякісних зарядних станцій SOUOP, які стануть незамінними у
+            вашому повсякденному житті, особливо в умовах регулярних відключень світла,
+            що стали поширеними в Україні.
+          </div>
+          <div class="aboutus-title title-text">Наші переваги:</div>
+          <ul class="aboutus-texts">
+            <li class="aboutus-text"><span>Нижчі ціни:</span> Ми розуміємо, наскільки важливо знайти якісне обладнання за доступною ціною. Саме тому ми пропонуємо конкурентоспроможні ціни на всі наші зарядні станції SOUOP, щоб кожен міг забезпечити себе надійним джерелом живлення під час блекаутів.</li>
+            <li class="aboutus-text"><span>Якісне обслуговування:</span> Наша команда завжди готова допомогти вам вибрати найбільш підходящу зарядну станцію, відповісти на всі ваші запитання та надати професійну консультацію. Ми пишаємося високим рівнем обслуговування, який отримує кожен наш клієнт.</li>
+            <li class="aboutus-text"><span>Швидке обслуговування:</span> Ми знаємо, як важливо оперативно вирішувати питання енергозабезпечення. Тому ми гарантуємо швидку доставку та оперативне обслуговування кожного замовлення, щоб ви могли отримати свої зарядні станції в найкоротші терміни.</li>
+            <li class="aboutus-text"><span>Швидка і зручна доставка по Україні:</span> Ми забезпечуємо оперативну і зручну доставку зарядних станцій SOUOP по всій Україні, щоб ви могли швидко отримати своє замовлення, незалежно від вашого місця проживання.
+            </li>
+          </ul>
+          <div class="aboutus-text">
+            В умовах частих відключень електроенергії в Україні, надійне джерело енергії стає життєво необхідним.
+            Наші зарядні станції SOUOP забезпечать вам стабільне постачання електроенергії, незалежно від ситуації.
+            Ви зможете продовжувати працювати, навчатися та займатися своїми справами, не переймаючись через відключення світла.
+            Довіртеся нам, і ми допоможемо вам залишатися на зв'язку та забезпечити комфорт у будь-який час.
+          </div>
+          <div class="aboutus-text aboutus-text-last">
+            <span>Обирайте нас для свого енергозабезпечення – ми тут, щоб підтримати вас у будь-якій ситуації!</span>
+          </div>
+        </section>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+
+    <div class="popup-form-wrapper" id="popup-form-wrapper">
+        <div class="popup-form">
+          <div class="popup-form__title">
+            <h2>Замовити</h2>
+            <div class="popup-form__close" id="popup-form-close">&times;</div>
+          </div>
+          <form class="popup-form__form" id="popup-form">
+            <input type="text" name="name" placeholder="* Ім'я" required>
+            <input type="tel" name="phone" placeholder="* Ваш номер телефону" required>
+            <textarea rows="10" name="comment" placeholder="Коментар до замовлення"></textarea>
+            <button type="submit">Надіслати</button>
+          </form>
+        </div>
+    </div>
+
+    <div class="popup-phone" onclick="openForm()">
+      <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+				<rect width="80" height="80" rx="20"></rect>
+				<g clip-path="url(#clip0_1_223)">
+					<path d="M41.25 26.2501C41.25 25.9186 41.3817 25.6007 41.6161 25.3663C41.8505 25.1318 42.1684 25.0001 42.5 25.0001C45.814 25.0038 48.9914 26.3219 51.3348 28.6653C53.6782 31.0087 54.9963 34.186 54.9999 37.5001C54.9999 37.8317 54.8682 38.1496 54.6338 38.384C54.3994 38.6184 54.0815 38.7501 53.7499 38.7501C53.4184 38.7501 53.1005 38.6184 52.8661 38.384C52.6316 38.1496 52.4999 37.8317 52.4999 37.5001C52.497 34.8489 51.4424 32.3071 49.5677 30.4324C47.693 28.5576 45.1512 27.5031 42.5 27.5001C42.1684 27.5001 41.8505 27.3684 41.6161 27.134C41.3817 26.8996 41.25 26.5817 41.25 26.2501ZM42.5 32.5001C43.826 32.5001 45.0978 33.0269 46.0355 33.9646C46.9732 34.9023 47.5 36.1741 47.5 37.5001C47.5 37.8317 47.6316 38.1496 47.8661 38.384C48.1005 38.6184 48.4184 38.7501 48.75 38.7501C49.0815 38.7501 49.3994 38.6184 49.6338 38.384C49.8683 38.1496 50 37.8317 50 37.5001C49.998 35.5116 49.2072 33.6051 47.8011 32.199C46.395 30.7929 44.4885 30.0021 42.5 30.0001C42.1684 30.0001 41.8505 30.1318 41.6161 30.3663C41.3817 30.6007 41.25 30.9186 41.25 31.2501C41.25 31.5817 41.3817 31.8996 41.6161 32.134C41.8505 32.3684 42.1684 32.5001 42.5 32.5001ZM53.8662 45.9239C54.5906 46.6503 54.9974 47.6343 54.9974 48.6601C54.9974 49.686 54.5906 50.67 53.8662 51.3964L52.7287 52.7076C42.4912 62.5089 17.5787 37.6026 27.2287 27.3326L28.6662 26.0826C29.3934 25.3785 30.3686 24.9889 31.3809 24.9983C32.3931 25.0077 33.3609 25.4152 34.075 26.1326C34.1137 26.1714 36.43 29.1801 36.43 29.1801C37.1173 29.9022 37.4998 30.8613 37.4982 31.8581C37.4966 32.855 37.1109 33.8129 36.4212 34.5326L34.9737 36.3526C35.7748 38.299 36.9525 40.0679 38.4394 41.5578C39.9262 43.0476 41.6927 44.2289 43.6375 45.0339L45.4687 43.5776C46.1886 42.8885 47.1463 42.5033 48.1428 42.5019C49.1394 42.5005 50.0981 42.883 50.8199 43.5701C50.8199 43.5701 53.8274 45.8851 53.8662 45.9239ZM52.1462 47.7414C52.1462 47.7414 49.1549 45.4401 49.1162 45.4014C48.8587 45.146 48.5107 45.0028 48.1481 45.0028C47.7854 45.0028 47.4375 45.146 47.18 45.4014C47.1462 45.4364 44.625 47.4451 44.625 47.4451C44.4551 47.5804 44.2529 47.669 44.0383 47.7023C43.8237 47.7357 43.6041 47.7125 43.4012 47.6351C40.8818 46.6971 38.5934 45.2286 36.691 43.329C34.7886 41.4294 33.3167 39.1432 32.375 36.6251C32.2915 36.4195 32.2642 36.1952 32.2961 35.9756C32.328 35.7559 32.4177 35.5486 32.5562 35.3751C32.5562 35.3751 34.565 32.8526 34.5987 32.8201C34.8541 32.5626 34.9973 32.2147 34.9973 31.852C34.9973 31.4894 34.8541 31.1414 34.5987 30.8839C34.56 30.8464 32.2587 27.8526 32.2587 27.8526C31.9973 27.6183 31.6562 27.4928 31.3053 27.5018C30.9543 27.5109 30.6202 27.6538 30.3712 27.9014L28.9337 29.1514C21.8812 37.6314 43.47 58.0226 50.9012 51.0001L52.0399 49.6876C52.3068 49.4405 52.4671 49.0992 52.4869 48.736C52.5067 48.3728 52.3846 48.0161 52.1462 47.7414Z" fill="white"></path>
+				</g>
+				<defs>
+					<clipPath id="clip0_1_223">
+						<rect width="30" height="30" fill="white" transform="translate(25 25)"></rect>
+					</clipPath>
+				</defs>
+			</svg>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="js/popup.js"></script>
+    <script src="js/telegram.js"></script>
+    <script src="js/productImage.js"></script>
+  </body>
+</html>

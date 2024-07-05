@@ -1,0 +1,27 @@
+@import "variables";
+
+.aboutus {
+    margin-top: $topIndent;
+
+	&-title {
+        text-align: center;
+        margin: 20px auto;
+	}
+	&-text {
+        margin: 10px 0;
+
+        span {
+            font-weight: 700;
+        }
+
+        &-last {
+            margin-top: 20px;
+        }
+	}
+	&-texts {
+        margin: 30px 0;
+        li {
+            list-style-type: disc;
+        }
+	}
+}
