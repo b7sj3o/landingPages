@@ -1,0 +1,36 @@
+@import "variables";
+
+.contacts {
+    margin-top: $topIndent;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px -14px 17px rgba(0, 0, 0, 0.05);
+
+    &-number {
+        font-size: 22px;
+
+        a {
+            text-decoration: underline;
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contacts {
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: center;
+    
+        &-number {
+            font-size: 20px;
+        }
+    }
+}
+
+
