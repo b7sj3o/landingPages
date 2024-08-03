@@ -1,9 +1,3 @@
 # freelanceSites
 
-<style>
-              @media screen and (max-width: 480px) {
-                .sec {
-                  top: 709px !important;
-                }
-              }
-            </style>
+<h1>This is my Portfolio</h1>
