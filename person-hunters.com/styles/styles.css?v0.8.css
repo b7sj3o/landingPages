@@ -260,9 +260,11 @@ a{
 .bg1{
 	background-color:rgba(20,20,20,1);
 	background-color:var(--color6);
-	background-image:url('images/bg/489.png');
-	background-size:cover;
-	background-position:center;
+	/* background-image:url('images/bg/489.png'); */
+	background-image: url("images/copy/IMG_4006-removebg-preview.png");
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .bg2{
 	background-color:rgba(217, 207, 119, 1);
