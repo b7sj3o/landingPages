@@ -1,0 +1,169 @@
+.fs1{
+	font-size:6rem;
+}
+.fs2{
+	font-size:1.5rem;
+}
+.fs3{
+	font-size:1rem;
+}
+.fs4{
+	font-size:0.9rem;
+}
+.fs5{
+	font-size:1.4rem;
+}
+.fs6{
+	font-size:1.2rem;
+}
+.fs7{
+	font-size:5rem;
+}
+.fs8{
+	font-size:2rem;
+}
+.fc1{
+	color:rgba(255,255,255,1);
+	color:var(--color1);
+}
+.fc2{
+	color:rgba(0,0,0,0.9);
+	color:var(--color9);
+}
+.fc3{
+	color:rgba(255,255,255,1);
+	color:var(--color1);
+}
+.fc3:hover{
+	color:rgba(0,0,0,0.9);
+	color:var(--color9);
+}
+.fc4{
+	color:rgba(255, 215, 69, 1);
+	color:var(--color14);
+}
+.fc5{
+	color:rgba(255,255,255,0.2);
+	color:var(--color15);
+}
+.fls1{
+	letter-spacing:0.2rem;
+}
+.fls2{
+	letter-spacing:0.1rem;
+}
+.flh1{
+	line-height:1.1rem;
+}
+.flh2{
+	line-height:1.4rem;
+}
+.f-bold{
+	font-weight:bold;
+}
+
+
+.ff-rbt-blk{
+	font-family:'Roboto-Black';
+}
+.ff-rbt-blk-it{
+	font-family:'Roboto-BlackItalic';
+}
+.ff-rbt-bld{
+	font-family:'Roboto-Bold';
+}
+.ff-rbt-bld-it{
+	font-family:'Roboto-BoldItalic';
+}
+.ff-rbt-it{
+	font-family:'Roboto-Italic';
+}
+.ff-rbt-reg{
+	font-family:'Roboto-Regular';
+}
+.ff-rbt-thn{
+	font-family:'Roboto-Thin';
+}
+.ff-rbt-thn-it{
+	font-family:'Roboto-ThinItalic';
+}
+.ff-rbt-md{
+	font-family:'Roboto-Medium';
+}
+.ff-rbt-md-it{
+	font-family:'Roboto-MediumItalic';
+}
+.ff-rbt-lgt{
+	font-family:'Roboto-Light';
+}
+.ff-rbt-lgt-it{
+	font-family:'Roboto-LightItalic';
+}
+.ff-kyiv-type-titl{
+	font-family:'KyivTypeTitling';
+}
+
+@font-face{
+	font-family:'KyivTypeTitling';
+	src:url(fonts/KyivTypeTitling-VarGX.ttf);
+}
+@font-face{
+	font-family:'Roboto-Black';
+	src:url(fonts/Roboto-Black.ttf);
+	src:url(fonts/Roboto-Black.otf);
+}
+@font-face{
+	font-family:'Roboto-BlackItalic';
+	src:url(fonts/Roboto-BlackItalic.ttf);
+	src:url(fonts/Roboto-BlackItalic.otf);
+}
+@font-face{
+	font-family:'Roboto-Bold';
+	src:url(fonts/Roboto-Bold.ttf);
+	src:url(fonts/Roboto-Bold.otf);
+}
+@font-face{
+	font-family:'Roboto-BoldItalic';
+	src:url(fonts/Roboto-BoldItalic.ttf);
+	src:url(fonts/Roboto-BoldItalic.otf);
+}
+@font-face{
+	font-family:'Roboto-Italic';
+	src:url(fonts/Roboto-Italic.ttf);
+	src:url(fonts/Roboto-Italic.otf);
+}
+@font-face{
+	font-family:'Roboto-Light';
+	src:url(fonts/Roboto-Light.ttf);
+	src:url(fonts/Roboto-Light.otf);
+}
+@font-face{
+	font-family:'Roboto-LightItalic';
+	src:url(fonts/Roboto-LightItalic.ttf);
+	src:url(fonts/Roboto-LightItalic.otf);
+}
+@font-face{
+	font-family:'Roboto-Medium';
+	src:url(fonts/Roboto-Medium.ttf);
+	src:url(fonts/Roboto-Medium.otf);
+}
+@font-face{
+	font-family:'Roboto-MediumItalic';
+	src:url(fonts/Roboto-MediumItalic.ttf);
+	src:url(fonts/Roboto-MediumItalic.otf);
+}
+@font-face{
+	font-family:'Roboto-Regular';
+	src:url(fonts/Roboto-Regular.ttf);
+	src:url(fonts/Roboto-Regular.otf);
+}
+@font-face{
+	font-family:'Roboto-Thin';
+	src:url(fonts/Roboto-Thin.ttf);
+	src:url(fonts/Roboto-Thin.otf);
+}
+@font-face{
+	font-family:'Roboto-ThinItalic';
+	src:url(fonts/Roboto-ThinItalic.ttf);
+	src:url(fonts/Roboto-ThinItalic.otf);
+}
