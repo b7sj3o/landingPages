@@ -1,0 +1,38 @@
+@mixin size($amount, $properties...) {
+    @each $property in $properties {
+        #{$property}: calc($amount / 1920 * 100vw);
+
+        // @media (max-width: 768px) {
+        //     #{$property}: calc($amount / 768 * 100vw);
+        // }
+
+        @media (max-width: 480px) {
+            #{$property}: calc($amount / 480 * 100vw);
+        }
+    }
+}
+
+@mixin orangeBtn($fontSize, $width, $height, $isHoverEnabled: true) {
+    @include size($fontSize, font-size);
+    @include size($width, width);
+    @include size($height, height);
+    
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $orange;
+    border-radius: 100px;
+
+    color: #fff;
+
+    @if $isHoverEnabled {
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    
+}

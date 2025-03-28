@@ -1,0 +1,106 @@
+.for-who__page {
+  margin-top: 130px;
+}
+.for-who__page-title {
+  margin-bottom: 70px;
+  text-shadow: 2px 2px 10px #ff7a00;
+}
+.for-who__page-items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.for-who__page-item {
+  padding: 55px 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 47px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  box-shadow: -50px 50px 50px 0 rgba(255, 255, 255, 0.1) inset, 50px -50px 50px 0 rgba(194, 194, 194, 0.1) inset;
+}
+.for-who__page-item-border {
+  border: 3px solid #ff7a00;
+  display: block;
+}
+.for-who__page-item-title {
+  font-size: 24px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.for-who__page-item-title-border {
+  padding: 15px 20px;
+  border-radius: 20px;
+  border: 3px solid #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-shadow: 0 0 72px #ff7a00, 0 0 36px #fff;
+}
+.for-who__page-item-title-green {
+  text-shadow: 0 0 17px #11FF00;
+}
+.for-who__page-item-title-green img {
+  filter: drop-shadow(0 0 17px #11FF00) drop-shadow(0 0 5px #11FF00);
+}
+.for-who__page-item-title-orange {
+  text-shadow: 0 0 17px #ff7a00;
+}
+.for-who__page-item-title-orange img {
+  filter: drop-shadow(0 0 17px #ff7a00) drop-shadow(0 0 5px #ff7a00);
+}
+.for-who__page-item-title-red {
+  text-shadow: 0 0 17px #FF0000;
+}
+.for-who__page-item-title-red img {
+  filter: drop-shadow(0 0 17px #FF0000) drop-shadow(0 0 5px #FF0000);
+}
+.for-who__page-divider {
+  width: 50%;
+  height: 3px;
+  background-color: #ff7a00;
+  margin: 25px 0 20px 0;
+}
+.for-who__page-text {
+  font-weight: lighter;
+  font-size: 18px;
+}
+.for-who__page-text span {
+  color: #ff7a00;
+}
+.for-who__page-button {
+  margin-top: 75px;
+  width: 350px;
+}
+
+@media screen and (max-width: 768px) {
+  .for-who__page {
+    margin-top: 100px;
+  }
+  .for-who__page-title {
+    margin-bottom: 60px;
+  }
+  .for-who__page-item {
+    padding: 40px 25px;
+  }
+  .for-who__page-item-title {
+    font-size: 16px;
+  }
+  .for-who__page-item-title-border {
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .for-who__page-divider {
+    width: 100%;
+    margin: 25px auto 20px auto;
+  }
+  .for-who__page-text {
+    font-size: 16px;
+  }
+  .for-who__page-button {
+    margin-top: 50px;
+    width: 90%;
+  }
+}/*# sourceMappingURL=for-who.css.map */

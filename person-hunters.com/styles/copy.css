@@ -1,0 +1,74 @@
+.about_us_name {
+  font-size: 30px;
+  font-family: "Roboto-Regular";
+}
+.about_us_skills li {
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.popup_form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 300px;
+  margin-right: 50px;
+}
+.popup_form_input {
+  padding: 10px 0;
+  border-radius: 20px;
+  border: 0;
+  text-indent: 20px;
+}
+.popup_form_input:focus {
+  outline: 2px solid #D9CF77;
+}
+.popup_form_submit {
+  padding: 10px 0;
+  border-radius: 16px;
+  background-color: #D9CF77;
+  cursor: pointer;
+}
+
+.aboutus_mobile_image {
+  display: none !important;
+}
+
+.text_aboutus_2 {
+  max-width: 50% !important;
+}
+
+@media screen and (max-width: 800px) {
+  .about_us_name {
+    font-size: 24px;
+    font-family: "Roboto-Regular";
+  }
+  .about_us_skills li {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .aboutus_mobile_image {
+    display: block;
+  }
+  .text_aboutus_2 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    max-width: 80% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .about_us_name {
+    font-size: 18px;
+    font-family: "Roboto-Regular";
+  }
+  .about_us_skills li {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
+@media screen and (max-width: 540px) {
+  .text_aboutus_2 {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=copy.css.map */

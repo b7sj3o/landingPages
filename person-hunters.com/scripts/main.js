@@ -324,10 +324,10 @@ function menu_2_func(){
 	document.getElementById("about_us_block").scrollIntoView({behavior: "smooth"});
 	menu_func();
 }
-function menu_3_func(){
-	document.getElementById("why_us_block").scrollIntoView({behavior: "smooth"});
-	menu_func();
-}
+// function menu_3_func(){
+// 	document.getElementById("why_us_block").scrollIntoView({behavior: "smooth"});
+// 	menu_func();
+// }
 function menu_4_func(){
 	document.getElementById("job_placement_block").scrollIntoView({behavior: "smooth"});
 	menu_func();
@@ -661,14 +661,14 @@ setTimeout(() => {
 // }
 // about_us_block_bg_func();
 
-function why_us_block_bg_func(){
-	if (window.scrollY > 800){
-		why_us_block.classList.add('bg10');
-		return;
-	}
-	setTimeout(why_us_block_bg_func,300);
-}
-why_us_block_bg_func();
+// function why_us_block_bg_func(){
+// 	if (window.scrollY > 800){
+// 		why_us_block.classList.add('bg10');
+// 		return;
+// 	}
+// 	setTimeout(why_us_block_bg_func,300);
+// }
+// why_us_block_bg_func();
 
 function city_block_bg_func(){
 	if (window.scrollY > 2000){
@@ -737,6 +737,8 @@ const mainLanguageButton2 = document.getElementById("main_language_text2");
 
 languageButtons.forEach(languageButton => {
 	languageButton.addEventListener("click", e => {
+		e.preventDefault()
+		
 		const language = languageButton.textContent.toLowerCase();
 	
 		const texts = document.querySelectorAll('[data-' + language + ']');
@@ -751,4 +753,23 @@ languageButtons.forEach(languageButton => {
 		mainLanguageButton1.textContent = languageButton.textContent;
 		mainLanguageButton2.textContent = languageButton.textContent;
 	})
+})
+
+// Start with english language
+document.addEventListener('DOMContentLoaded', () => {
+	const enLanguageButton = document.querySelector('.change_language:nth-child(3)');
+	
+	if (enLanguageButton) {
+		enLanguageButton.click();
+	
+		setTimeout(() => {
+			enLanguageButton.click();
+		}, 400);
+	}
+});
+
+const videos = document.querySelectorAll(".video-element")
+
+videos.forEach(video => {
+	video.volume = 0.4;
 })

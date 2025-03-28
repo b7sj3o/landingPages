@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(function(){
         preloader.style.display = "none";
         document.body.style.overflow = 'visible'
-    }, 2000);
+    }, 1000);
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('hamburger_active');

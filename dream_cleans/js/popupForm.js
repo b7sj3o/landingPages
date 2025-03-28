@@ -1,5 +1,6 @@
 const popupForm = document.getElementById('popup__form');
 const thanksPopup = document.getElementById('thanks__popup');
+const popupFormBlock = document.getElementById('popup__form');
 const popupClose1 = document.getElementById('popupClose1');
 const popupClose2 = document.getElementById('popupClose2');
 const popupClose3 = document.getElementById('popupClose3');
@@ -37,4 +38,11 @@ popupClose3.addEventListener('click', (e) => {
     e.preventDefault();
     thanksPopup.style.display = 'none';
     document.body.style.overflow = 'visible';
+});
+
+popupFormBlock.addEventListener("click", function (event) {
+    if (event.target === popupFormBlock) {
+        popupFormBlock.style.display = "none";
+        document.body.style.overflow = "visible";
+    }
 });

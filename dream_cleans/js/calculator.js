@@ -1,65 +1,61 @@
-const calculatorForm = document.getElementById('calculator__form');
-const popup = document.getElementById('calcPopup');
-const popupPriceField = document.getElementById('popupPrice');
-const popupPricePerMeterField = document.getElementById('popupPricePerMeter');
-const cleanKind = document.getElementById('select-kind');
-const cleanExtra = document.getElementById('select-service');
-const cleanTypeAccomodation = document.getElementById('select-accomodation');
-const cleanArea = document.getElementById('range-number');
-const userPhone = document.getElementById('phone');
-const windowOption = document.getElementById('window_option');
-const popupFormBlock = document.getElementById('popup__form');
-
-
-const dryCleaningPrice = 1300;
+const calculatorForm = document.getElementById("calculator__form");
+const popup = document.getElementById("calcPopup");
+const popupPriceField = document.getElementById("popupPrice");
+const popupPricePerMeterField = document.getElementById("popupPricePerMeter");
+const cleanKind = document.getElementById("select-kind");
+const cleanExtra = document.getElementById("select-service");
+const cleanArea = document.getElementById("range-number");
+const windowOption = document.getElementById("window_option");
 
 const prices = {
-    'supportive': [
-        [27, 45], [22, 42] // [clean < 100m, clean < 100m + window], [clean > 100m, clean > 100m + window]
-    ],
-    'general': [
-        [63, 91], [59, 86]
-    ],
-    'postRenovation': [
-        [72, 94], [68, 89]
-    ],
-    'window': [
-        [75, 75], [75, 75]
-    ]
+    supportive: [45, 95, 75],
+    general: [95, 165, 125],
+    postRenovation: [110, 185, 140],
+    window: [180, 180, 230]
 };
 
-calculatorForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+calculatorForm.addEventListener("submit", handleFormSubmit);
+cleanKind.addEventListener("change", handleCleanKindChange);
 
-    let generalPrice = 0;
-    const cleanAreaValue = parseInt(cleanArea.textContent);
-    const isWindowsCleaning = cleanExtra.value === 'window' ? 1 : 0;
-    const isMoreThan100 = cleanAreaValue === 100 ? 1 : 0;
-    const priceByMeter = prices[cleanKind.value][isMoreThan100][isWindowsCleaning];
-
-    generalPrice += priceByMeter * cleanAreaValue;
+function handleFormSubmit(event) {
+    event.preventDefault();
     
-    if (cleanExtra.value === 'furniture') {
-        generalPrice += dryCleaningPrice;
-        popupPricePerMeterField.textContent = priceByMeter + ` грн / м² (+${dryCleaningPrice}грн хімчистка)`;
-    } else {
-        popupPricePerMeterField.textContent = priceByMeter + ' грн / м²';
+    const cleanAreaValue = parseInt(cleanArea.textContent) || 0;
+    if (cleanAreaValue <= 0) {
+        alert("Будь ласка, введіть коректну площу приміщення.");
+        return;
     }
 
-    popupPriceField.textContent = generalPrice + ' грн';
+    const extraFeatureId = getExtraFeatureId(cleanExtra.value);
+    const priceByMeter = prices[cleanKind.value]?.[extraFeatureId] || 0;
+    const totalPrice = priceByMeter * cleanAreaValue;
 
-    popup.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-});
+    updatePopup(priceByMeter, totalPrice);
+}
 
-cleanKind.addEventListener('change', (e) => {
-    e.preventDefault();
+function getExtraFeatureId(extraService) {
+    const extraFeatures = { "": 0, window: 1, furniture: 2 };
+    return extraFeatures[extraService] ?? 0;
+}
 
-    if (cleanKind.value === 'window') {
+function updatePopup(pricePerMeter, totalPrice) {
+    popupPricePerMeterField.textContent = `${pricePerMeter} грн / м²`;
+    popupPriceField.textContent = `${totalPrice} грн`;
+    popup.style.display = "block";
+    document.body.style.overflow = "hidden";
+}
+
+function handleCleanKindChange() {
+    if (cleanKind.value === "window") {
         windowOption.remove();
-    } else {
-        cleanExtra.appendChild(windowOption);
+    } else if (!cleanExtra.contains(windowOption)) {
+        cleanExtra.insertBefore(windowOption, cleanExtra.firstChild);
+    }
+}
+
+popup.addEventListener("click", function (event) {
+    if (event.target === popup) {
+        popup.style.display = "none";
+        document.body.style.overflow = "visible";
     }
 });
-
-
