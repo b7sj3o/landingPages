@@ -13,9 +13,9 @@
         justify-content: space-between;
         align-items: center;
         background-color: rgba(42, 52, 80, 0.7);
-        border-radius: 40px;
+        @include size(40, border-radius);
         padding: 25px 30px;
-        margin-top: 80px;
+        @include size(80, margin-top);
     }
 
     &-logo {
@@ -56,25 +56,10 @@
     }
 
     &-bottom {
-        margin-top: 95px;
+        @include size(95, margin-top);
 
         &-block {
-            background-image: url("../assets/images/text-bg1.png");
-            background-size: contain; 
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 3vw; 
-            max-width: 70vw;
-            text-align: center;
-            margin: 100px auto;
-            display: flex;
-            justify-content: center;
-            p {
-                font-size: 2.2vw;
-                font-weight: bold;
-                color: #fff;
-                max-width: 1200px;
-            }
+            @include size(100, margin-top, margin-bottom);
         }
     }
 
@@ -88,6 +73,21 @@
         @include size(31, font-size);
         @include size(620, max-width);
         font-weight: 500;
+        transform-style: preserve-3d;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translateZ(-1px);
+            @include size(737, width);
+            @include size(395, height);
+            background-image: url("../assets/images/text-shadow.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
     }
 
     &-image {
@@ -120,23 +120,38 @@
 @media screen and (max-width: 480px) {
     .header {
         &-top {
-            border-radius: 10px;
-            padding: 12px 10px;
+            border-radius: 0;
+            padding: 0;
             margin-top: 40px;
+            background: none;
+            flex-direction: column;
         }
     
         &-logo {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
             img {
-                @include size(103, width);
-                @include size(23, height);
+                @include size(136, width);
+                @include size(30, height);
             }
         }
     
         &-menu {
+            background-color: rgba(42, 52, 80, 0.7);
+            border-radius: 10px;
+            padding: 15px 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            @include size(18, margin-top);
+            
             ul {
                 li {
                     a {
-                        @include size(10, font-size);
+                        @include size(12, font-size);
                     }
     
                     &:not(:last-child)::after {
@@ -151,13 +166,7 @@
             margin-top: 33px;
 
             &-block {
-                max-width: 100vw;
-                margin: 30px auto;
-                p {
-                    @include size(14, font-size);
-                    max-width: 400px;
-                    text-align: left;
-                }
+                margin: 30px auto;   
             }
         }
     
@@ -169,6 +178,13 @@
         &-text {
             @include size(14, font-size);
             max-width: 100%;
+
+            &::before {
+                content: "";
+                @include size(400, width);
+                @include size(200, height);
+                background-size: contain;
+            }
         }
     
         &-image {

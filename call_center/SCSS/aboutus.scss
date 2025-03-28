@@ -1,0 +1,131 @@
+@import "vars";
+@import "mixins";
+
+.aboutus{
+    &__title {
+        background-image: url("../assets/images/text-bg2.png");
+        @include size(80, margin-top);
+        p {
+            @include size(90, font-size);
+        }   
+    }
+    &__inner {
+        background-color: $dark-blue-bg;
+        position: relative;
+        @include size(90, margin-top);
+        @include size(80, border-radius);
+        @include size(60, padding-left, padding-right);
+        @include size(80, padding-top, padding-bottom);
+    }
+    &__blocks {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 2;
+        @include size(1100, max-width);
+        @include size(65, gap);
+    }
+    &__block {
+        background: $block-color;
+        color: #000;
+        @include size(500, width);
+        @include size(40, padding);
+        @include size(36, border-radius);
+        &-title {
+            @include size(31, font-size);
+            @include size(35, line-height);
+            font-weight: 600;
+        }
+        &-text {
+            @include size(25, font-size);
+            @include size(25, margin-top);
+        }
+    }
+    &__image {
+        position: absolute;
+        @include size(60, right);
+        @include size(80, top);
+        z-index: 0;
+        img {
+            @include size(960, width);
+        }
+    }
+    &__result {
+        display: flex;
+        @include size(90, margin-top);
+        @include size(20, column-gap);
+        justify-content: center;
+        align-items: center;
+        span {
+            @include size(85, font-size);
+            @include size(100, line-height);
+            font-weight: 600;
+        }
+        img {
+            @include size(340, width);
+        }
+        p {
+            @include size(25, font-size);
+            @include size(648, max-width);
+        }
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .aboutus{
+        &__title {
+            @include size(50, margin-top);
+            p {
+                @include size(27, font-size);
+            }   
+        }
+        &__inner {
+            @include size(40, margin-top);
+            @include size(25, border-radius);
+            @include size(25, padding-left, padding-right);
+            @include size(20, padding-top, padding-bottom);
+        }
+        &__blocks {
+            max-width: 100%;
+            @include size(25, gap);
+        }
+        &__block {
+            width: 100%;
+            @include size(15, padding, border-radius);
+
+            &-title {
+                @include size(13, font-size);
+                @include size(13, line-height);
+            }
+            &-text {
+                @include size(11, font-size);
+                @include size(10, margin-top);
+            }
+        }
+        &__image {
+            display: none;
+        }
+        &__result {
+            flex-direction: column;
+            @include size(30, margin-top);
+            @include size(20, row-gap);
+            column-gap: 0;
+            justify-content: center;
+            align-items: center;
+            span {
+                @include size(27, font-size);
+                @include size(25, line-height);
+                font-weight: 600;
+            }
+            img {
+                display: none;
+            }
+            p {
+                @include size(12, font-size);
+                max-width: 100%;
+            }
+        }
+    
+    }
+}

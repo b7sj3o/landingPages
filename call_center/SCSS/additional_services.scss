@@ -1,0 +1,183 @@
+@import "vars";
+@import "mixins";
+
+.bg-mobile {
+    display: none;
+}
+
+.additional-services {
+    position: relative;
+    margin-top: 70px;
+
+    &__inner {
+        margin-top: 10vw;
+        padding: 0px 65px 90px 65px;
+    }
+
+    &__arrow {
+        display: none;
+    }
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+
+        &.bg-mobile {
+            height: 100%;
+        }
+    }
+
+    &__title {
+        @include size(90, font-size);
+        text-align: center;
+        font-weight: bold;
+    }
+
+    &__services {
+        display: flex;
+        margin-top: 50px;
+        column-gap: 60px;
+        
+    }
+
+    &__service {
+        @include size(35, padding);
+        @include size(36, border-radius);
+
+        background-color: $block-color;
+        color: #000;
+
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include size(35, row-gap);
+
+        .service { 
+            &__top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__title {
+                @include size(31, font-size);
+                font-weight:600;
+                @include size(300, max-width);
+                @include size(40, line-height);
+            }
+            &__icon {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                @include size(90, width, height);
+                border-color: #000;
+
+                img {
+                    
+                }
+            }
+            &__text { 
+                @include size(25, font-size);
+            }
+            &__button { 
+                @include orangeBtn(36, 291, 64);
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__bottom {
+        margin: 0 auto;
+        @include size(43, font-size);
+        font-weight: 700;
+        color: #fff;
+        @include size(70, line-height);
+        @include size(85, margin-top);
+        @include size(1352, max-width);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bg-mobile {
+        display: block;
+    }
+    .additional-services {
+        margin-top: 10px;
+        @include size(25, padding-bottom);
+    
+        &__inner {
+            padding: 0;
+            margin-top: 3vw;
+        }
+
+        &__bg:not(.bg-mobile) {
+            display: none;
+        }
+
+        &__arrow {
+            display: flex;
+            margin: 0 auto;
+            margin-top: 4vw;
+        }
+    
+    
+        &__title {
+            @include size(27, font-size);
+            max-width: 80vw;
+            margin: 0 auto;
+        }
+    
+        &__services {
+            @include size(20, margin-top);
+            @include size(36, row-gap);
+            @include size(380, max-width);
+            flex-direction: column;
+            column-gap: 0;
+            margin: 0 auto;
+            
+        }
+    
+        &__service {
+            @include size(20, padding);
+            @include size(16, border-radius);
+            @include size(20, row-gap);
+    
+            .service { 
+                &__top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                &__title {
+                    @include size(18, font-size);
+                    @include size(250, max-width);
+                    @include size(18, line-height);
+                }
+                &__icon {
+                    top: 10px;
+                    @include size(40, width, height);
+    
+                    img {
+                        @include size(14, width);
+                        @include size(16, height);
+                    }
+                }
+                &__text { 
+                    @include size(14, font-size);
+                }
+                &__button { 
+                    @include orangeBtn(14, 328, 31);
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &__bottom {
+            display: none;
+        }
+    }
+}
