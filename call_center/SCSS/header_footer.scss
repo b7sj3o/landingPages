@@ -3,7 +3,7 @@
 
 
 .header {
-    background-image: url("/assets/images/bg.png");
+    background-image: url("../assets/images/bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,7 +59,7 @@
         margin-top: 95px;
 
         &-block {
-            background-image: url("/assets/images/text-bg1.png");
+            background-image: url("../assets/images/text-bg1.png");
             background-size: contain; 
             background-position: center;
             background-repeat: no-repeat;
