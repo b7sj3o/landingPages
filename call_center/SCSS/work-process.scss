@@ -1,0 +1,103 @@
+@import "vars";
+@import "mixins";
+
+.work-process {
+    @include size(80, margin-top);
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include size(145, column-gap);
+        img {
+            width: 100%;
+        }
+
+        .work-process-title {
+            @include size(90, font-size);
+            font-weight: bold;
+        }
+    }
+
+    &-items {
+        display: flex;
+        flex-direction: column;
+        @include size(65, row-gap);
+        @include size(70, margin-top);
+
+        .work-process-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $dark-blue-bg;
+            border: 1px solid #fff;
+            @include size(40, border-radius);
+            @include size(20, padding-top, padding-bottom);
+            @include size(100, padding-left, padding-right);
+            @include size(65, column-gap);
+
+            .item-number {
+                @include size(90, font-size);
+                color: $orange;
+                font-weight: bold;
+            }
+
+            .item-text {
+                @include size(31, font-size);
+                font-weight: bold;
+            }
+        }
+    }
+
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: $orange;
+        color: #fff;
+        font-weight: bold;
+        @include size(31, font-size);
+        @include size(25, padding-top, padding-bottom);
+        @include size(40, border-radius);
+        @include size(90, margin-top);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .work-process {
+        @include size(35, margin-top);
+        &-header {
+            @include size(25, column-gap);
+            .work-process-title {
+                @include size(23, font-size);
+            }
+        }
+    
+        &-items {
+            @include size(15, row-gap);
+            @include size(20, margin-top);
+    
+            .work-process-item {
+                @include size(10, border-radius);
+                @include size(10, padding-top, padding-bottom);
+                @include size(25, padding-left, padding-right);
+                @include size(25, column-gap);
+    
+                .item-number {
+                    @include size(23, font-size);
+                }
+    
+                .item-text {
+                    @include size(12, font-size);
+                }
+            }
+        }
+    
+        &-btn {
+            @include size(12, font-size);
+            @include size(10, padding-top, padding-bottom);
+            @include size(25, border-radius);
+            @include size(25, margin-top);
+        }
+    }
+}

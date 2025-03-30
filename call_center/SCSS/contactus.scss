@@ -1,0 +1,81 @@
+@import "vars";
+@import "mixins";
+
+.contactus{
+    @include size(100, margin-top);
+    @include size(80, padding-left, padding-right);
+    @include size(60, padding-top, padding-bottom);
+    @include size(80, border-radius);
+
+    display: flex;
+    justify-content: space-between;
+    @include size(120, column-gap);
+
+    background-color: $dark-blue-bg;
+
+    &-left {
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+        width: 50%;
+        &__advice {
+            @include size(80, border-radius);
+            // @include size(30, padding);
+            padding: 10px 10px 10px 30px;
+            border: 1px solid #fff;
+            .advice-title {
+                @include size(33, font-size);
+                font-weight: 600;
+            }
+            .advice-text {
+                @include size(27, font-size);
+            }
+        }
+        &__text {
+            @include size(45, font-size);
+            @include size(75, line-height);
+            @include size(733, max-width);
+            font-weight: 700;
+            span {
+                @include size(65, font-size);
+            }
+        }
+        &__btn {
+            display: flex;
+            transition: all .3s;
+            span {
+                @include orangeBtn(31, 386, 94, false);
+            }
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &-right {
+        width: 50%;
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 45px;
+        &__group {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            label {
+                font-weight: 600;
+            }
+
+            input {
+                @include size(100, height);
+                @include size(20, border-radius);
+                @include size(24, font-size);
+                text-indent: 20px;
+                border: none;
+                outline: none;
+            }
+        }
+    }
+}

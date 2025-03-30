@@ -1,0 +1,167 @@
+@import "vars";
+@import "mixins";
+
+
+.comparison {
+    @include size(100, margin-top);
+    &-title {
+        @include size(90, font-size);
+        @include size(1444, max-width);
+        margin: 0 auto;
+        @include size(10, margin-top);
+        font-weight: bold;
+    }
+
+    &-inner {
+        @include size(60, padding);
+        @include size(175, margin-top);
+        background-color: $dark-blue-bg;
+        position: relative;
+        @include size(30, border-radius);
+
+        &-top {
+            @include size(240, width);
+            @include size(140, height);
+            @include size(-80, top);
+            
+            border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+            background-color: $dark-blue-bg;
+            
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+
+            display: flex;
+            justify-content: center;
+            .arrow {
+                @include size(140, width, height);
+
+                @include size(20, margin-top);
+                
+                img {
+                    @include size(38, width);
+                    @include size(52, height);
+                }
+            }
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            @include size(70, margin-top);
+    
+            th, td {
+                @include size(130, height);
+            }
+    
+            th {
+                border-bottom: 1px solid #fff;
+                &:not(:last-child) {
+                    border-right: 1px solid #fff;
+                }
+                @include size(35, font-size);
+                text-align: left;
+                @include size(20, padding-left);
+            }
+    
+            tbody {
+                tr {
+                    &:not(:last-child) {
+                        border-bottom: 1px solid #fff;
+                    }
+                    td {
+                        text-align: center;
+                        padding: 0;
+                        @include size(25, font-size);
+                        @include size(20, padding-left, padding-right);
+    
+                        &:not(:last-child) {
+                            border-right: 1px solid #fff;
+                        }
+    
+                        span.emoji {
+                            color: transparent;
+                            text-shadow: 0 0 0 $orange;
+                            @include size(30, font-size);
+                        }
+    
+                        &.orange-text {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
+@media screen and (max-width: 480px) {
+    .comparison {
+        @include size(30, margin-top);
+        &-title {
+            @include size(25, font-size);
+            max-width: 100%;
+            @include size(10, margin-top);
+            font-weight: bold;
+        }
+    
+        &-inner {
+            @include size(20, padding);
+            @include size(90, margin-top);
+            @include size(20, border-radius);
+    
+            &-top {
+                @include size(130, width);
+                @include size(75, height);
+                @include size(-30, top);
+                
+                .arrow {
+                    @include size(70, width, height);
+                    @include size(15, margin-top);
+                    
+                    img {
+                        @include size(22, width);
+                        @include size(30, height);
+                    }
+                }
+            }
+
+            .table-wrapper {
+                overflow: scroll;
+            }
+
+            .comparison-table {
+                @include size(60, margin-top);
+
+                
+                th, td {
+                    @include size(150, min-width);
+                    @include size(60, height);
+                    
+                }
+        
+                th {
+                    @include size(14, font-size);
+                    @include size(10, padding-left);
+                }
+        
+                tbody {
+                    tr {
+                        td {
+                            @include size(10, font-size);
+                            @include size(10, padding-left, padding-right);
+        
+                            span.emoji {
+                                @include size(14, font-size);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        
+    }
+}

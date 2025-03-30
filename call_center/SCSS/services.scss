@@ -1,0 +1,45 @@
+@import "vars";
+@import "mixins";
+
+.services {
+
+    &-block {
+        @include size(492, width);
+        @include size(592, height);
+        @include size(30, padding);
+        background-image: url("../assets/images/brick-white.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .block-title {
+            @include size(42, font-size);
+            @include size(66, line-height);
+            font-weight: bold;
+            color: #000;
+        }
+        
+        .block-list {
+            @include size(50, margin-top);
+            display: flex;
+            flex-direction: column;
+            @include size(25, row-gap);
+            .block-item {
+                @include size(445, max-width);
+                color: #000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                span {
+                    width: 90%;
+                    @include size(27, font-size);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

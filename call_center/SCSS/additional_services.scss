@@ -7,11 +7,12 @@
 
 .additional-services {
     position: relative;
-    margin-top: 70px;
+    @include size(70, margin-top);
 
     &__inner {
         margin-top: 10vw;
-        padding: 0px 65px 90px 65px;
+        @include size(65, padding-left, padding-right);
+        @include size(90, padding-bottom);
     }
 
     &__arrow {
@@ -38,8 +39,8 @@
 
     &__services {
         display: flex;
-        margin-top: 50px;
-        column-gap: 60px;
+        @include size(50, margin-top);
+        @include size(60, column-gap);
         
     }
 
@@ -71,8 +72,8 @@
             }
             &__icon {
                 position: absolute;
-                top: 15px;
-                right: 15px;
+                @include size(15, top);
+                @include size(15, right);
                 @include size(90, width, height);
                 border-color: #000;
 
@@ -106,7 +107,7 @@
         display: block;
     }
     .additional-services {
-        margin-top: 10px;
+        @include size(10, margin-top);
         @include size(25, padding-bottom);
     
         &__inner {
@@ -158,7 +159,7 @@
                     @include size(18, line-height);
                 }
                 &__icon {
-                    top: 10px;
+                    @include size(10, top);
                     @include size(40, width, height);
     
                     img {
