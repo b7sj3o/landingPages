@@ -97,6 +97,12 @@
             color: #fff;
             @include size(20, font-size);
             font-weight: bold;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
         }
     }
 }

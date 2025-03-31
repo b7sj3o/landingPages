@@ -632,18 +632,18 @@
                     </div>
                 </div>
                 <div class="contactus-right">
-                    <form class="contactus-form">
+                    <form class="contactus-form" id="form">
                         <div class="contactus-form__group">
                             <label for="name">Ваше имя</label>
-                            <input type="text" name="name" placeholder="Имя" />
+                            <input type="text" name="name" placeholder="Имя" required/>
                         </div>
                         <div class="contactus-form__group">
                             <label for="phone">Ваш номер телефона</label>
-                            <input type="tel" name="phone" placeholder="+38 (000) 000-00-00" />
+                            <input type="tel" name="phone" placeholder="+38 (000) 000-00-00" required/>
                         </div>
                         <div class="contactus-form__group">
                             <label for="username">Ваш Telegram / Whatsapp</label>
-                            <input type="text" name="username" placeholder="@nickname" />
+                            <input type="text" name="username" placeholder="@nickname" required/>
                         </div>
                         <button type="submit" class="contactus-form__submit">Отправить</button>
                     </form>
@@ -698,5 +698,6 @@
             </div>
         </footer>
         <script src="JS/lang.js"></script>
+        <script src="JS/tg.js"></script>
     </body>
 </html>
