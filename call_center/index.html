@@ -21,13 +21,26 @@
         <link rel="stylesheet" href="CSS/services.min.css" />
 
         <!-- FONTS -->
+
+        <script>
+            window.gtranslateSettings = {
+                default_language: "ru",
+                native_language_names: true,
+                languages: ["ru", "uk", "en"],
+                wrapper_selector: ".gtranslate_wrapper",
+            };
+        </script>
+        <script src="https://cdn.gtranslate.net/widgets/latest/lc.js" defer></script>
     </head>
     <body>
         <div class="header">
             <div class="container">
                 <div class="header-top">
                     <div class="header-logo">
-                        <img src="assets/images/logo.png" alt="Логотип Kalaba" />
+                        <div class="header-logo-wrapper">
+                            <img src="assets/images/logo.png" alt="Логотип Kalaba" />
+                        </div>
+                        <div class="gtranslate_wrapper mobile"></div>
                     </div>
                     <nav class="header-menu">
                         <ul class="header-links">
@@ -41,10 +54,11 @@
                                 <a href="#work-process" class="header-link">Как мы работаем?</a>
                             </li>
                             <li class="header-item">
-                                <a href="#comparison" class="header-link">Тарифы</a>
+                                <a href="#services" class="header-link">Тарифы</a>
                             </li>
                         </ul>
                     </nav>
+                    <div class="gtranslate_wrapper"></div>
                 </div>
                 <div class="header-bottom">
                     <div class="header-texts">
@@ -81,12 +95,15 @@
 
         <main class="main">
             <section class="additional-services container" id="additional-services">
-                <img class="additional-services__bg" src="assets/images/bg-services.png" alt="" />
-                <img
-                    class="additional-services__bg bg-mobile"
-                    src="assets/images/bg-services-480.png"
-                    alt=""
-                />
+                <picture>
+                    <source media="(min-width: 481px)" srcset="assets/images/bg-services.png" />
+                    <source media="(min-width: 320px)" srcset="assets/images/bg-services-480.png" />
+                    <img
+                        class="additional-services__bg"
+                        src="assets/images/bg-services.png"
+                        alt=""
+                    />
+                </picture>
                 <div class="additional-services__arrow arrow">
                     <img src="assets/icons/arrow-bottom.png" alt="" />
                 </div>
@@ -459,34 +476,151 @@
                 <a href="#" class="work-process-btn">Оставить заявку</a>
             </section>
             <section class="services container" id="services">
-                <!-- <div class="services-title text-with-bg">
-                    НАШИ <span class="orange-text">ПАКЕТЫ УСЛУГ</span>
-                </div> -->
-                <div class="services-block">
-                    <div class="block-title">Пакет <br> “СТАРТОВЫЙ”</div>
-                    <div class="block-list">
-                        <div class="block-item">
-                            <div>
-                                <img src="assets/icons/tick-black.png" alt="" />
-                            </div>
-                            <span>10 сотрудников для онлайн-работы</span>
+                <div class="services-title text-with-bg">
+                    <p>НАШИ <span class="orange-text"> ПАКЕТЫ УСЛУГ</span></p>
+                </div>
+                <div class="services-blocks">
+                    <!-- 1 column -->
+                    <div class="services-block-column">
+                        <div class="services-block img">
+                            <img src="assets/images/man2.png" alt="" />
                         </div>
-                        <div class="block-item">
-                            <div>
-                                <img src="assets/icons/tick-black.png" alt="" />
+                    </div>
+                    <!-- 2 column -->
+                    <div class="services-block-column block">
+                        <!-- row 1 (white - dark-blue) -->
+                        <div class="services-block-row">
+                            <div class="services-block white">
+                                <div class="block-title">
+                                    Пакет <br />
+                                    “СТАРТОВЫЙ”
+                                </div>
+                                <div class="block-list">
+                                    <div class="block-item">
+                                        <div>
+                                            <img src="assets/icons/tick-black.png" alt="" />
+                                        </div>
+                                        <span>10 сотрудников для онлайн-работы</span>
+                                    </div>
+                                    <div class="block-item">
+                                        <div>
+                                            <img src="assets/icons/tick-black.png" alt="" />
+                                        </div>
+                                        <span>методичка по управлению командой</span>
+                                    </div>
+                                    <div class="block-item">
+                                        <div>
+                                            <img src="assets/icons/tick-black.png" alt="" />
+                                        </div>
+                                        <span
+                                            >гарантия 3 дня на каждого сотрудника после начала
+                                            работы</span
+                                        >
+                                    </div>
+                                </div>
                             </div>
-                            <span>методичка по управлению командой</span>
+                            <div class="services-block dark-blue">
+                                <div class="block-title">
+                                    Пакет <br />
+                                    “БИЗНЕС”
+                                </div>
+                                <div class="block-list">
+                                    <div class="block-item">
+                                        <div>
+                                            <img src="assets/icons/tick-white.png" alt="" />
+                                        </div>
+                                        <span>10 сотрудников с углубленной адаптацией</span>
+                                    </div>
+                                    <div class="block-item">
+                                        <div>
+                                            <img src="assets/icons/tick-white.png" alt="" />
+                                        </div>
+                                        <span>индивидуальные тренинги</span>
+                                    </div>
+                                    <div class="block-item">
+                                        <div>
+                                            <img src="assets/icons/tick-white.png" alt="" />
+                                        </div>
+                                        <span>гарантия 7 дней после начала работы</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="block-item">
-                            <div>
-                                <img src="assets/icons/tick-black.png" alt="" />
+                        <!-- row 2 ((light-blue + btn) - dark-blue) -->
+                        <div class="services-block-row">
+                            <div class="services-block-row-inner">
+                                <div class="services-block light-blue">
+                                    <div class="block-title">
+                                        Пакет <br />
+                                        “ПРЕМИУМ”
+                                    </div>
+                                    <div class="block-list">
+                                        <div class="block-item">
+                                            <div>
+                                                <img src="assets/icons/tick-white.png" alt="" />
+                                            </div>
+                                            <span>10 сотрудников с полным сопровождением</span>
+                                        </div>
+                                        <div class="block-item">
+                                            <div>
+                                                <img src="assets/icons/tick-white.png" alt="" />
+                                            </div>
+                                            <span>регулярные отчёты и корректировка работы</span>
+                                        </div>
+                                        <div class="block-item">
+                                            <div>
+                                                <img src="assets/icons/tick-white.png" alt="" />
+                                            </div>
+                                            <span>гарантия 14 дней после начала работы</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="services-block btn">
+                                    <a href="#">
+                                        <span>Узнать больше</span>
+                                        <div class="arrow">
+                                            <img src="assets/icons/arrow-rotated.png" alt="" />
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                            <span>гарантия 3 дня на каждого сотрудника после начала работы</span>
+                            <div class="services-block orange">
+                                <div class="block-title">
+                                    Пакет <br />
+                                    “ЭКСПЕРТ”
+                                </div>
+                                <div class="block-list">
+                                    <div class="block-item">
+                                        <div>
+                                            <img src="assets/icons/tick-white.png" alt="" />
+                                        </div>
+                                        <span>обучение сотрудников с нуля под вашу сферу</span>
+                                    </div>
+                                    <div class="block-item">
+                                        <div>
+                                            <img src="assets/icons/tick-white.png" alt="" />
+                                        </div>
+                                        <span>минимальный заказ – от 5 сотрудников</span>
+                                    </div>
+                                    <div class="block-item">
+                                        <div>
+                                            <img src="assets/icons/tick-white.png" alt="" />
+                                        </div>
+                                        <span>гарантия 21 день после начала работы</span>
+                                    </div>
+                                    <div class="block-item">
+                                        <div>
+                                            <img src="assets/icons/tick-white.png" alt="" />
+                                        </div>
+                                        <span>полная адаптация и индивидуальная подготовка</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- <section class="contactus container" id="contactus">
+            <section class="contactus container" id="contactus">
                 <div class="contactus-left">
                     <div class="contactus-left__advice">
                         <div class="advice-title">Не нашли нужный вариант?</div>
@@ -496,18 +630,12 @@
                         <span class="orange-text">ОСТАВЬТЕ ЗАЯВКУ</span>
                         И ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ
                     </div>
-                    <a href="" class="contactus-left__btn">
-                        <span>Связаться с нами</span>
-                        <div class="arrow">
-                            <img src="assets/icons/arrow-rotated.png" alt="" />
-                        </div>
-                    </a>
                 </div>
                 <div class="contactus-right">
                     <form class="contactus-form">
                         <div class="contactus-form__group">
                             <label for="name">Ваше имя</label>
-                            <input type="text" name="name" placeholder="Иван"/>
+                            <input type="text" name="name" placeholder="Имя" />
                         </div>
                         <div class="contactus-form__group">
                             <label for="phone">Ваш номер телефона</label>
@@ -517,12 +645,58 @@
                             <label for="username">Ваш Telegram / Whatsapp</label>
                             <input type="text" name="username" placeholder="@nickname" />
                         </div>
+                        <button type="submit" class="contactus-form__submit">Отправить</button>
                     </form>
                 </div>
-            </section> -->
+            </section>
         </main>
-        <footer class="footer"></footer>
-        <script src="JS/script.js"></script>
+        <footer class="footer container">
+            <div class="footer-blocks">
+                <div class="footer-block block1">
+                    <div class="footer-block__title">Контакты</div>
+                    <div class="footer-block__content">
+                        <a href="tel:380975550022" class="footer-block__link">+38 097 555 00 22</a>
+                    </div>
+                    <div class="footer-block__icons">
+                        <div class="arrow"><img src="assets/icons/phone.png" alt="" /></div>
+                        <div class="arrow"><img src="assets/icons/mail.png" alt="" /></div>
+                    </div>
+                </div>
+                <div class="footer-block block2">
+                    <div class="footer-block__title">Социальные сети</div>
+                    <div class="footer-block__content">
+                        <div class="footer-block__links">
+                            <a href="https://t.me/" class="footer-block__link arrow" arrow>
+                                <img src="assets/icons/telegram.png" alt="Telegram" />
+                            </a>
+                            <a href="https://www.instagram.com/" class="footer-block__link arrow">
+                                <img src="assets/icons/instagram.png" alt="Instagram" />
+                            </a>
+                            <a href="viber://chat" class="footer-block__link arrow">
+                                <img src="assets/icons/viber.png" alt="Viber" />
+                            </a>
+                            <a href="https://wa.me/" class="footer-block__link arrow">
+                                <img src="assets/icons/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-block block3">
+                    <div class="footer-block__title">Наш адрес</div>
+                    <div class="footer-block__content">
+                        <a
+                            href="https://maps.app.goo.gl/yqJk2ktRExhM4M1H7"
+                            class="footer-block__link"
+                        >
+                            <p>г. Киев, ул.Болсуновская, 13-15, (IQ Business Center)</p>
+                        </a>
+                    </div>
+                    <div class="footer-block__icons arrow">
+                        <img src="assets/icons/location.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="JS/lang.js"></script>
     </body>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </html>

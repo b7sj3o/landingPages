@@ -1,10 +1,6 @@
 @import "vars";
 @import "mixins";
 
-.bg-mobile {
-    display: none;
-}
-
 .additional-services {
     position: relative;
     @include size(70, margin-top);
@@ -26,9 +22,6 @@
         top: 0;
         z-index: -1;
 
-        &.bg-mobile {
-            height: 100%;
-        }
     }
 
     &__title {
@@ -103,9 +96,6 @@
 }
 
 @media screen and (max-width: 480px) {
-    .bg-mobile {
-        display: block;
-    }
     .additional-services {
         @include size(10, margin-top);
         @include size(25, padding-bottom);
@@ -115,35 +105,36 @@
             margin-top: 3vw;
         }
 
-        &__bg:not(.bg-mobile) {
-            display: none;
-        }
-
         &__arrow {
             display: flex;
             margin: 0 auto;
-            margin-top: 4vw;
+            margin-top: 3vw;
+
+            img {
+                width: 15px;
+                height: 18px;
+            }
         }
-    
-    
+
         &__title {
-            @include size(27, font-size);
+            @include size(25, font-size);
             max-width: 80vw;
             margin: 0 auto;
         }
     
         &__services {
-            @include size(20, margin-top);
-            @include size(36, row-gap);
+            @include size(15, margin-top);
+            @include size(30, row-gap);
             @include size(380, max-width);
             flex-direction: column;
             column-gap: 0;
             margin: 0 auto;
             
         }
-    
+
         &__service {
-            @include size(20, padding);
+            @include size(15, padding-top, padding-bottom);
+            @include size(20, padding-left, padding-right);
             @include size(16, border-radius);
             @include size(20, row-gap);
     

@@ -1,6 +1,28 @@
 @import "vars";
 @import "mixins";
 
+.gtranslate_wrapper {
+    display: flex;
+    @include size(20, column-gap);
+    
+    .glink {
+        &.nturl {
+            @include size(30, font-size);
+            font-weight: bold;
+            &.notranslate {
+    
+            }
+            &.gt-current-lang {
+                color: $orange;
+            }
+        } 
+    }
+
+    &.mobile {
+        display: none;
+    }
+}
+
 
 .header {
     background-image: url("../assets/images/bg.png");
@@ -14,7 +36,8 @@
         align-items: center;
         background-color: rgba(42, 52, 80, 0.7);
         @include size(40, border-radius);
-        padding: 25px 30px;
+        @include size(25, padding-top, padding-bottom);
+        @include size(30, padding-left, padding-right);
         @include size(80, margin-top);
     }
 
@@ -22,8 +45,8 @@
         display: flex;
         align-items: center;
         img {
-            @include size(481, width);
-            @include size(108, height);
+            @include size(303, width);
+            @include size(67, height);
         }
     }
 
@@ -35,7 +58,7 @@
                 align-items: center;
 
                 a {
-                    @include size(30, font-size);
+                    @include size(31, font-size);
                     transition: all 0.3s;
                     &:hover {
                         color: $gray;
@@ -118,6 +141,21 @@
 }
 
 @media screen and (max-width: 480px) {
+    .gtranslate_wrapper {
+        display: none;
+        @include size(10, column-gap);
+        
+        .glink {
+            &.nturl {
+                @include size(16, font-size);
+            } 
+        }
+    
+        &.mobile {
+            display: flex;
+        }
+    }
+
     .header {
         &-top {
             border-radius: 0;
@@ -125,18 +163,43 @@
             margin-top: 40px;
             background: none;
             flex-direction: column;
+            align-items: start;
         }
     
         &-logo {
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: end;
+            justify-content: space-between;
+            padding-right: 20px;
 
-            img {
-                @include size(136, width);
-                @include size(30, height);
+            &-wrapper {
+                padding: 0 10px;
+                img {
+                    @include size(136, width);
+                    @include size(30, height);
+                }
+    
+                transform-style: preserve-3d;
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) translateZ(-1px);
+                    @include size(167, width);
+                    @include size(97, height);
+                    background-image: url("../assets/images/text-shadow.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    opacity: 0.7;
+                }
             }
+            
+
+            
         }
     
         &-menu {
@@ -151,11 +214,11 @@
             ul {
                 li {
                     a {
-                        @include size(12, font-size);
+                        @include size(13, font-size);
                     }
     
                     &:not(:last-child)::after {
-                        @include size(5, margin-right, margin-left);
+                        @include size(8, margin-right, margin-left);
                         @include size(4, width, height);
                     }
                 }
@@ -202,4 +265,134 @@
             }
         }
     }
+}
+
+.footer{
+    @include size(110, margin-top);
+    @include size(230, padding-bottom);
+
+    &-blocks {
+        display: flex;
+        @include size(60, column-gap);
+    }
+
+    &-block {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include size(545, width);
+        @include size(357, height);
+        @include size(20, padding);
+
+        .arrow, &.arrow {
+            @include size(85, width, height);
+            
+        }
+
+        &__title {
+            @include size(35, font-size);
+            @include size(70, line-height);
+            font-weight: bold;
+        }
+        &__content {
+            @include size(50, margin-top);
+            @include size(440, max-width);
+        }
+        &__link {
+            @include size(35, font-size);
+            @include size(50, line-height);
+        }
+        &__icons {
+            position: absolute;
+            top: 0;
+            @include size(30, right);
+            display: flex;
+            @include size(30, column-gap);
+        } 
+        &__links {
+            display: flex;
+            @include size(32, column-gap);
+
+            img {
+                @include size(40, width, height);
+            }
+        }
+
+        &.block1 {
+            background-image: url("../assets/images/footer-block-1.png");
+        }
+        &.block2 {
+            background-image: url("../assets/images/footer-block-2.png");
+
+        }
+        &.block3 {
+            background-image: url("../assets/images/footer-block-3.png");
+        }
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .footer{
+        @include size(35, margin-top);
+        @include size(60, padding-bottom);
+    
+        &-blocks {
+            @include size(15, column-gap);
+        }
+    
+        &-block {
+            @include size(138, width);
+            @include size(94, height);
+            @include size(10, padding);
+    
+            .arrow, &.arrow {
+                @include size(23, width, height);
+                
+            }
+    
+            &__title {
+                @include size(10, font-size);
+                @include size(20, line-height);
+            }
+            &__content {
+                @include size(20, margin-top);
+                @include size(115, max-width);
+            }
+            &__link {
+                @include size(9, font-size);
+                @include size(15, line-height);
+            }
+            &__icons {
+                top: 0;
+                @include size(5, right);
+                @include size(5, column-gap);
+
+                img {
+                    @include size(12, width, height);
+                }
+            } 
+            &__links {
+                @include size(8, column-gap);
+    
+                img {
+                    @include size(12, width, height);
+                }
+            }
+    
+            
+            &.block3 {
+                background-image: url("../assets/images/footer-block-3.png");
+                .footer-block__content {
+                    @include size(5, margin-top);
+                }
+            }
+        }
+    
+    
+    
+    }    
 }

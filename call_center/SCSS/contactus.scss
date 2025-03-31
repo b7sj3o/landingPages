@@ -6,6 +6,7 @@
     @include size(80, padding-left, padding-right);
     @include size(60, padding-top, padding-bottom);
     @include size(80, border-radius);
+    border: 1px solid #fff;
 
     display: flex;
     justify-content: space-between;
@@ -16,12 +17,14 @@
     &-left {
         display: flex;
         flex-direction: column;
-        row-gap: 60px;
+        @include size(80, row-gap);
         width: 50%;
         &__advice {
+            width: 80%;
             @include size(80, border-radius);
             // @include size(30, padding);
-            padding: 10px 10px 10px 30px;
+            @include size(20, padding-top, padding-bottom);
+            @include size(40, padding-left);
             border: 1px solid #fff;
             .advice-title {
                 @include size(33, font-size);
@@ -29,6 +32,7 @@
             }
             .advice-text {
                 @include size(27, font-size);
+                @include size(432, max-width);
             }
         }
         &__text {
@@ -59,22 +63,116 @@
     &-form {
         display: flex;
         flex-direction: column;
-        row-gap: 45px;
+        @include size(45, row-gap);
         &__group {
             display: flex;
             flex-direction: column;
-            row-gap: 10px;
+            @include size(10, row-gap);
             label {
+                @include size(31, font-size);
                 font-weight: 600;
+                color: $gray2;
             }
 
             input {
                 @include size(100, height);
                 @include size(20, border-radius);
                 @include size(24, font-size);
-                text-indent: 20px;
+                @include size(20, text-indent);
                 border: none;
                 outline: none;
+                background-color: $gray2;
+
+                &::placeholder {
+                    font-family: "Ruberoid";
+                }
+            }
+        }
+        &__submit {
+            @include size(65, height);
+            width: 100%;
+            border: 0;
+            @include size(25, border-radius);
+            background-color: $orange;
+            color: #fff;
+            @include size(20, font-size);
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contactus{
+        @include size(45, margin-top);
+        @include size(20, padding);
+        @include size(20, border-radius);
+        @include size(40, column-gap);
+
+        flex-direction: column;
+        @include size(25, row-gap);
+    
+        &-left {
+            width: 100%;
+            @include size(25, row-gap);
+            &__advice {
+                width: 90%;    
+                @include size(100, border-radius);
+                @include size(10, padding-top, padding-bottom);
+                @include size(30, padding-left);
+
+                .advice-title {
+                    @include size(14, font-size);
+                }
+                .advice-text {
+                    @include size(12, font-size);
+                    max-width: 100%;
+                }
+            }
+            &__text {
+                @include size(18, font-size);
+                @include size(20, line-height);
+                span {
+                    @include size(22, font-size);
+                }
+            }
+            &__btn {
+                // span {
+                //     @include orangeBtn(13, 162, 36, false);
+                // }
+                // &:hover {
+                //     transform: scale(1.05);
+                // }
+                display: none;
+            }
+        }
+    
+        &-right {
+            width: 100%;
+            margin: 0 auto;
+        }
+    
+        &-form {
+            @include size(20, row-gap);
+            &__group {
+                display: flex;
+                flex-direction: column;
+                @include size(5, row-gap);
+                label {
+                    @include size(10, font-size);
+                }
+    
+                input {
+                    @include size(25, height);
+                    @include size(5, border-radius);
+                    @include size(10, font-size);
+                    @include size(15, text-indent);
+                }
+            }
+
+            &__submit {
+                @include size(30, height);
+                @include size(5, border-radius);
+                @include size(14, font-size);
             }
         }
     }

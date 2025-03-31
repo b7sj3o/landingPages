@@ -2,43 +2,224 @@
 @import "mixins";
 
 .services {
+    @include size(70, margin-top);
+    &-title {
+        p {
+            @include size(80, font-size);
+            font-weight: bold;
+        }
+    }
+
+    &-blocks {
+        display: flex;
+        @include size(80, column-gap);
+        @include size(80, margin-top);
+    }
 
     &-block {
-        @include size(492, width);
-        @include size(592, height);
+        color: #fff;
         @include size(30, padding);
-        background-image: url("../assets/images/brick-white.png");
-        background-size: cover;
+        background-size: contain;
+        background-position: top;
         background-repeat: no-repeat;
+
+
+        &.white {
+            color: #000;
+        }
+
+        &-column {
+            display: flex;
+
+            &.block {
+                flex-direction: column;
+                @include size(65, row-gap);
+            }
+        }
+
+        &-row {
+            display: flex;
+            @include size(40, column-gap);
+
+            &-inner {
+                display: flex;
+                flex-direction: column;
+                @include size(40, row-gap);
+            }
+        }
 
         .block-title {
             @include size(42, font-size);
             @include size(66, line-height);
             font-weight: bold;
-            color: #000;
         }
         
         .block-list {
-            @include size(50, margin-top);
+            @include size(40, margin-top);
+            @include size(35, row-gap);
             display: flex;
             flex-direction: column;
-            @include size(25, row-gap);
             .block-item {
-                @include size(445, max-width);
-                color: #000;
+                @include size(400, max-width);
                 display: flex;
-                justify-content: space-between;
+                @include size(25, column-gap);
                 align-items: center;
 
                 img {
-                    width: 100%;
-                    height: 100%;
+                    @include size(29, width, height);
                 }
                 span {
-                    width: 90%;
+
                     @include size(27, font-size);
                     font-weight: bold;
                 }
+            }
+        }
+
+        &.img {
+            padding: 0;
+
+            img {
+                @include size(625, width);
+                @include size(1378, height);
+                @include size(60, border-radius);
+                object-fit: contain;
+            }
+        }
+        &.white {
+            background-image: url("../assets/images/brick-white.png");
+
+        }
+        &.light-blue {
+            background-image: url("../assets/images/brick-light-blue.png");
+        }
+        &.btn {
+            display: flex;
+            align-items: end;
+            padding: 0;
+            a {
+                display: flex;
+                transition: all .3s;
+
+                span {
+                    @include orangeBtn(31, 386, 94, false)
+                }
+
+                .arrow {
+                    @include size(98, width, height);
+                }
+               
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+        &.dark-blue {
+            background-image: url("../assets/images/brick-dark-blue.png");
+        }
+        &.orange {
+            background-image: url("../assets/images/brick-orange.png");
+            height: 100%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .services {
+        @include size(30, margin-top);
+        &-title {
+            p {
+                @include size(27, font-size);
+            }
+        }
+    
+        &-blocks {
+            @include size(0, column-gap);
+            @include size(37, margin-top);
+        }
+    
+        &-block {
+            &:not(.btn) {
+                @include size(201, width);
+                @include size(231, height);
+            }
+            @include size(12, padding);
+    
+            &-column {
+                &.block {
+                    @include size(25, row-gap);
+                }
+            }
+    
+            &-row {
+                @include size(20, column-gap);
+    
+                &-inner {
+                    @include size(20, row-gap);
+                }
+            }
+    
+            .block-title {
+                @include size(16, font-size);
+                @include size(25, line-height);
+            }
+            
+            .block-list {
+                @include size(20, margin-top);
+                @include size(10, row-gap);
+                .block-item {
+                    @include size(175, max-width);
+                    @include size(8, column-gap);
+    
+                    img {
+                        @include size(11, width, height);
+                    }
+                    span {
+                        @include size(11, font-size);
+                        font-weight: 500;
+                    }
+                }
+            }
+    
+            &.img {
+                display: none;
+                img {
+                }
+            }
+            &.white {
+                background-image: url("../assets/images/brick-white.png");
+    
+            }
+            &.light-blue {
+                background-image: url("../assets/images/brick-light-blue.png");
+            }
+            &.btn {
+                a {
+                    span {
+                        @include orangeBtn(13, 162, 36, false)
+                    }
+    
+                    .arrow {
+                        @include size(37, width, height);
+
+                        img {
+                            @include size(12, width);
+                            @include size(15, height);
+                        }
+                    }
+                   
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            &.dark-blue {
+                background-image: url("../assets/images/brick-dark-blue.png");
+            }
+            &.orange {
+                background-image: url("../assets/images/brick-orange.png");
+                height: 100%;
             }
         }
     }
