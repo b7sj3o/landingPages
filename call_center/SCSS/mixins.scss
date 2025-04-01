@@ -28,6 +28,8 @@
 
     color: #fff;
 
+    cursor: pointer;
+
     @if $isHoverEnabled {
         &:hover {
             transform: scale(1.05);

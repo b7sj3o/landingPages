@@ -78,12 +78,12 @@
                                 alt=""
                                 class="header-image-main"
                             />
-                            <a href="#">
-                                <span>Узнать больше</span>
+                            <div class="header-btn">
+                                <span class="modalBtn">Узнать больше</span>
                                 <div class="arrow">
                                     <img src="assets/icons/arrow-rotated.png" alt="" />
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
                     <div class="header-bottom-block text-with-bg wow" data-anim="animate__bounceInUp" data-mobile-anim="animate__bounceInUp">
@@ -128,7 +128,7 @@
                                 стратегии, которые разрабатывают, наращивают рекламу и повышают вашу
                                 узнаваемость.
                             </div>
-                            <a href="#" class="service__button">Заказать</a>
+                            <div class="service__button modalBtn">Заказать</div>
                         </div>
                         <div class="additional-services__service wow" data-anim="animate__flipInX animate__delay-1s" data-mobile-anim="animate__bounceInRight">
                             <div class="service__top">
@@ -144,7 +144,7 @@
                                 подписчиками. Реклама в каналах. Боты и чаты – продвижение через
                                 чат-ботов, автоворонки.
                             </div>
-                            <a href="#" class="service__button">Заказать</a>
+                            <div class="service__button modalBtn">Заказать</div>
                         </div>
                         <div class="additional-services__service wow" data-anim="animate__flipInX animate__delay-2s" data-mobile-anim="animate__bounceInLeft">
                             <div class="service__top">
@@ -158,7 +158,7 @@
                                 функциональные веб-решения, что помогают вам привлекать больше
                                 клієнтов.
                             </div>
-                            <a href="#" class="service__button">Заказать</a>
+                            <div class="service__button modalBtn">Заказать</div>
                         </div>
                     </div>
                 </div>
@@ -232,12 +232,12 @@
                         <span class="orange-bg-text">7 ПРИЧИН</span> ВЫБРАТЬ УДАЛЕННЫЙ CALL-ЦЕНТР
                         ВМЕСТО ОФИСНОГО
                     </div>
-                    <a href="#" class="advantages-header__btn wow" data-anim="animate__fadeInRightBig" data-mobile-anim="animate__fadeInRightBig">
-                        <span>Оставить заявку</span>
+                    <div class="advantages-header__btn wow" data-anim="animate__fadeInRightBig" data-mobile-anim="animate__fadeInRightBig">
+                        <span class="modalBtn">Оставить заявку</span>
                         <div class="arrow">
                             <img src="assets/icons/arrow-rotated.png" alt="" />
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="advantages-items">
                     <div class="advantages-item wow" data-anim="animate__jackInTheBox" data-mobile-anim="animate__jackInTheBox">
@@ -320,12 +320,12 @@
                     </div>
                 </div>
 
-                <a href="#" class="advantages-header__btn mobile wow" data-anim="animate__bounceInUp" data-mobile-anim="animate__bounceInUp">
-                    <span>Оставить заявку</span>
+                <div class="advantages-header__btn mobile wow" data-anim="animate__bounceInUp" data-mobile-anim="animate__bounceInUp">
+                    <span class="modalBtn">Оставить заявку</span>
                     <div class="arrow">
                         <img src="assets/icons/arrow-rotated.png" alt="" />
                     </div>
-                </a>
+                </div>
 
                 <div class="advantages-bottom text-with-bg wow" data-anim="animate__bounceInUp" data-mobile-anim="animate__bounceInUp">
                     <div class="advantages-bottom__inner">
@@ -477,7 +477,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="work-process-btn wow" data-anim="animate__lightSpeedInRight" data-mobile-anim="animate__lightSpeedInRight">Оставить заявку</a>
+                <div class="work-process-btn wow modalBtn" data-anim="animate__lightSpeedInRight" data-mobile-anim="animate__lightSpeedInRight">Оставить заявку</div>
             </section>
             <section class="services container" id="services">
                 <div class="services-title text-with-bg wow" data-anim="animate__bounceInLeft" data-mobile-anim="animate__bounceInLeft">
@@ -580,12 +580,10 @@
                                     </div>
                                 </div>
                                 <div class="services-block btn">
-                                    <a href="#">
-                                        <span>Узнать больше</span>
-                                        <div class="arrow">
-                                            <img src="assets/icons/arrow-rotated.png" alt="" />
-                                        </div>
-                                    </a>
+                                    <span class="modalBtn">Узнать больше</span>
+                                    <div class="arrow">
+                                        <img src="assets/icons/arrow-rotated.png" alt="" />
+                                    </div>
                                 </div>
                             </div>
                             <div class="services-block orange wow" data-anim="animate__flipInX" data-mobile-anim="animate__flipInX">
@@ -701,6 +699,28 @@
                 </div>
             </div>
         </footer>
+
+        <div class="modal-container">
+            <div class="modal-content">
+                <div class="modal-content__title">Заполните форму</div>
+                <form action="" class="modal-content__form" id="modal-form">
+                    <div class="form-group">
+                        <label for="">Имя</label>
+                        <input type="text" name="name" placeholder="Имя" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Телефон</label>
+                        <input type="tel" name="phone" placeholder="+38 (000) 000-00-00" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Telegram / Whatsapp</label>
+                        <input type="text" name="username" placeholder="@nickname" required/>
+                    </div>
+                    <button type="submit" class="modal-content__submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+
         <script src="JS/lang.js"></script>
         <script src="JS/tg.js"></script>
         <script src="JS/anim.js"></script>
@@ -708,5 +728,6 @@
         <script>
               new WOW().init();
         </script>
+        <script src="JS/modal.js"></script>
     </body>
 </html>

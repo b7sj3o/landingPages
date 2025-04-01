@@ -121,7 +121,7 @@
             width: 50vw;
         }
 
-        a {
+        .header-btn {
             position: absolute;
             top: 0;
             @include size(25, right);
@@ -265,7 +265,7 @@
                 width: 100%;
             }
     
-            a {
+            .header-btn {
                 @include size(15, right);
                 span {
                     @include size(14, font-size);

@@ -96,22 +96,19 @@
         &.btn {
             display: flex;
             align-items: end;
+            transition: all .3s;
             padding: 0;
-            a {
-                display: flex;
-                transition: all .3s;
 
-                span {
-                    @include orangeBtn(31, 386, 94, false)
-                }
+            span {
+                @include orangeBtn(31, 386, 94, false)
+            }
 
-                .arrow {
-                    @include size(98, width, height);
-                }
-               
-                &:hover {
-                    transform: scale(1.05);
-                }
+            .arrow {
+                @include size(98, width, height);
+            }
+            
+            &:hover {
+                transform: scale(1.05);
             }
         }
         &.dark-blue {
@@ -194,24 +191,22 @@
             &.light-blue {
                 background-image: url("../assets/images/brick-light-blue.png");
             }
-            &.btn {
-                a {
-                    span {
-                        @include orangeBtn(13, 162, 36, false)
-                    }
-    
-                    .arrow {
-                        @include size(37, width, height);
+            &.btn { 
+                span {
+                    @include orangeBtn(13, 162, 36, false)
+                }
 
-                        img {
-                            @include size(12, width);
-                            @include size(15, height);
-                        }
+                .arrow {
+                    @include size(37, width, height);
+
+                    img {
+                        @include size(12, width);
+                        @include size(15, height);
                     }
-                   
-                    &:hover {
-                        transform: scale(1.05);
-                    }
+                }
+                
+                &:hover {
+                    transform: scale(1.05);
                 }
             }
             &.dark-blue {

@@ -56,6 +56,7 @@
         background-color: $orange;
         color: #fff;
         font-weight: bold;
+        cursor: pointer;
         @include size(31, font-size);
         @include size(25, padding-top, padding-bottom);
         @include size(40, border-radius);
