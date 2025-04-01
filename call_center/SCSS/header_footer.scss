@@ -96,7 +96,7 @@
         @include size(31, font-size);
         @include size(620, max-width);
         font-weight: 500;
-        transform-style: preserve-3d;
+        transform-style: preserve-3d !important;
         &::before {
             content: "";
             display: block;
@@ -110,6 +110,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
+            animation: animateBefore 5s ease-in-out forwards;
         }
     }
 
@@ -137,6 +138,15 @@
                 transform: scale(1.05);
             }
         }
+    }
+}
+
+@keyframes animateBefore {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
