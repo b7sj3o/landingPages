@@ -5,7 +5,7 @@
 .comparison {
     @include size(100, margin-top);
     &-title {
-        @include size(90, font-size);
+        @include size(80, font-size);
         @include size(1444, max-width);
         margin: 0 auto;
         @include size(10, margin-top);
@@ -14,7 +14,7 @@
 
     &-inner {
         @include size(60, padding);
-        @include size(175, margin-top);
+        @include size(130, margin-top);
         background-color: $dark-blue-bg;
         position: relative;
         @include size(30, border-radius);
@@ -33,14 +33,30 @@
 
             display: flex;
             justify-content: center;
-            .arrow {
-                @include size(140, width, height);
 
-                @include size(20, margin-top);
-                
+            .arrow {
                 img {
-                    @include size(38, width);
-                    @include size(52, height);
+                    @include size(30, width);
+                    @include size(45, height);
+                }
+            }
+
+            .rotated_text {
+                @include size(150, width, height);
+                @include size(20, margin-top);
+
+                .circle-text {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    animation: rotateText 12s linear infinite;
+
+                    text {
+                        font-size: 6.5px;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        fill: rgb(255, 255, 255);
+                    }
                 }
             }
         }
@@ -97,19 +113,23 @@
     
 }
 
+@keyframes rotateText {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 @media screen and (max-width: 480px) {
     .comparison {
-        @include size(30, margin-top);
+        @include size(40, margin-top);
         &-title {
             @include size(25, font-size);
             max-width: 100%;
-            @include size(10, margin-top);
             font-weight: bold;
         }
     
         &-inner {
             @include size(20, padding);
-            @include size(90, margin-top);
+            @include size(50, margin-top);
             @include size(20, border-radius);
     
             &-top {
@@ -118,12 +138,21 @@
                 @include size(-30, top);
                 
                 .arrow {
-                    @include size(70, width, height);
-                    @include size(15, margin-top);
-                    
                     img {
                         @include size(22, width);
                         @include size(30, height);
+                    }
+                }
+
+                .rotated_text {
+                    @include size(80, width, height);
+                    @include size(15, margin-top);
+    
+                    .circle-text {
+                        text {
+                            font-size: 6.5px;
+                            letter-spacing: 1px;
+                        }
                     }
                 }
             }

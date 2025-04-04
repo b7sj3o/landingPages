@@ -21,12 +21,12 @@ body {
     font-size: 16px;
     color: $white;
     background-color: $dark-blue;
+    overflow: hidden;
 }
 
-body, html {
-    scroll-behavior: smooth;
-    
-}
+// body, html {
+//     scroll-behavior: smooth;    
+// }
 
 .container {
     max-width: 90%;
@@ -47,8 +47,8 @@ body, html {
 }
 
 .orange-bg {
-    background-color: $orange !important;
-    color: #fff !important;
+    background-color: $orange;
+    color: #fff;
 }
 
 .arrow {
@@ -88,10 +88,18 @@ body, html {
     align-items: center;
     
     p {
-        @include size(42, font-size);
+        @include size(38, font-size);
         font-weight: bold;
         color: #fff;
         @include size(1200, max-width);
+    }
+
+}
+
+.hover-glow {
+    transition: all 0.2s;
+    &:hover {
+        text-shadow: 0 0 10px #ffffff96;
     }
 }
 
@@ -186,6 +194,59 @@ body, html {
     }
 }
 
+.loader {
+    &-container {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: $dark-blue;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s;
+    }
+
+    font-size: 35px;
+    display: flex;
+    gap: 10px;
+    
+    &-timer {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        font-family: sans-serif;
+        font-weight: bold;
+        color: #aa41fe;
+        background-color: #dbd5f3;
+        border-radius: 8px;
+        min-width: 60px;
+        min-height: 60px;
+        animation: peek 1s both infinite;
+        animation-delay: var(--d);
+    }
+}
+
+@keyframes peek {
+    25% {
+      transform: rotateX(30deg) rotate(-13deg);
+    }
+    50% {
+      transform: translateY(-22px) rotate(3deg) scale(1.1);
+      color: #6a45ed;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     .container {
@@ -208,6 +269,24 @@ body, html {
             @include size(14, font-size);
             max-width: 400px;
             text-align: left;
+        }
+    }
+    .loader {
+        @include size(25, font-size);
+        @include size(10, gap);
+        
+        &-timer {
+            @include size(35, font-size);
+        }
+    
+        &-container {
+            @include size(40, row-gap);
+        }
+    
+        span {
+            @include size(8, border-radius);
+            @include size(40, min-width);
+            @include size(40, min-height);
         }
     }
 }

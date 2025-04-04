@@ -13,7 +13,7 @@
         }
 
         .work-process-title {
-            @include size(90, font-size);
+            @include size(80, font-size);
             font-weight: bold;
         }
     }
@@ -26,6 +26,8 @@
 
         .work-process-item {
             display: flex;
+            width: 95%;
+            margin: 0 auto;
             align-items: center;
             justify-content: center;
             background-color: $dark-blue-bg;
@@ -34,6 +36,7 @@
             @include size(20, padding-top, padding-bottom);
             @include size(100, padding-left, padding-right);
             @include size(65, column-gap);
+            transition: all 0.3s;
 
             .item-number {
                 @include size(90, font-size);
@@ -45,6 +48,10 @@
                 @include size(31, font-size);
                 font-weight: bold;
             }
+
+            &:hover {
+                transform: scale(1.05);
+            }
         }
     }
 
@@ -52,7 +59,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        margin: 0 auto;
+        width: 95%;
         background-color: $orange;
         color: #fff;
         font-weight: bold;
@@ -61,6 +69,11 @@
         @include size(25, padding-top, padding-bottom);
         @include size(40, border-radius);
         @include size(90, margin-top);
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 }
 
@@ -83,6 +96,7 @@
                 @include size(10, padding-top, padding-bottom);
                 @include size(25, padding-left, padding-right);
                 @include size(25, column-gap);
+                width: 100%;
     
                 .item-number {
                     @include size(23, font-size);
@@ -99,6 +113,7 @@
             @include size(10, padding-top, padding-bottom);
             @include size(25, border-radius);
             @include size(25, margin-top);
+            width: 100%;
         }
     }
 }

@@ -6,6 +6,34 @@
         <title>Kalaba - Удаленный колл-центр</title>
 
         <!-- SEO -->
+        <meta name="description" content="Удаленный колл-центр Kalaba - это экономия, контроль и высокие результаты без границ!" />
+        <meta name="keywords" content="Удаленный колл-центр, Kalaba, экономия, контроль, высокие результаты" />
+        <meta name="author" content="Kalaba" />
+        <meta name="robots" content="index, follow" />
+        <meta name="google-site-verification" content="your-google-site-verification-code" />
+        <meta name="theme-color" content="#ffffff" />
+        
+        <link rel="icon" href="assets/icons/kalaba_short1.svg" type="image/svg" sizes="16x16" />
+        <link rel="apple-touch-icon" href="assets/icons/kalaba_short1.svg" type="image/svg" sizes="16x16" />
+        <link rel="canonical" href="https://kalaba01.com/" />
+        
+        <meta property="og:title" content="Kalaba - Удаленный колл-центр" />
+        <meta property="og:description" content="Удаленный колл-центр Kalaba - это экономия, контроль и высокие результаты без границ!" />
+        <meta property="og:image" content="https://kalaba.com/assets/images/logo.png" />
+        <meta property="og:url" content="https://kalaba.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Kalaba" />
+        <meta property="og:locale" content="ru_RU" />
+        <meta property="og:locale:alternate" content="uk_UA" />
+        <meta property="og:locale:alternate" content="en_US" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="Kalaba - Удаленный колл-центр" />
+        <meta property="twitter:description" content="Удаленный колл-центр Kalaba - это экономия, контроль и высокие результаты без границ!" />
+        <meta property="twitter:image" content="https://kalaba.com/assets/images/logo.png" />
+        <meta property="twitter:url" content="https://kalaba.com/" />
+        <meta property="twitter:site" content="@kalaba" />
+        <meta property="twitter:creator" content="@kalaba" />
 
         <!-- CSS -->
         <link rel="stylesheet" href="CSS/base.min.css" />
@@ -19,9 +47,9 @@
         <link rel="stylesheet" href="CSS/comparison.min.css" />
         <link rel="stylesheet" href="CSS/work-process.min.css" />
         <link rel="stylesheet" href="CSS/services.min.css" />
+        <link rel="stylesheet" href="CSS/else.min.css" />
 
-        <!-- FONTS -->
-
+        <!-- TRANSLATION -->
         <script>
             window.gtranslateSettings = {
                 default_language: "ru",
@@ -31,12 +59,26 @@
             };
         </script>
         <script src="https://cdn.gtranslate.net/widgets/latest/lc.js" defer></script>
-
-        <link rel="stylesheet" href="CSS/animate.css">
-
         
+        <!-- ANIMATIONS -->
+        <link rel="stylesheet" href="CSS/animate.css">
     </head>
     <body>
+
+        <div class="loader-container" id="loader">
+            <!-- <div class="loader-timer" id="loader-timer">0%</div> -->
+            <div class="loader">
+                <span style="--d:150ms">k</span>
+                <span style="--d:300ms">a</span>
+                <span style="--d:450ms">l</span>
+                <span style="--d:600ms">a</span>
+                <span style="--d:750ms">b</span>
+                <span style="--d:900ms">a</span>
+                <span style="--d:1050ms">0</span>
+                <span style="--d:1200ms;">1</span>
+            </div>
+        </div>
+
         <div class="header">
             <div class="container">
                 <div class="header-top wow" data-anim="animate__bounceInDown", data-mobile-anim="animate__bounceInDown">
@@ -86,7 +128,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="header-bottom-block text-with-bg wow" data-anim="animate__bounceInUp" data-mobile-anim="animate__bounceInUp">
+                    <div class="header-bottom-block text-with-bg hover-glow wow" data-anim="animate__bounceInUp" data-mobile-anim="animate__bounceInUp">
                         <p>
                             УДАЛЁННЫЙ КОЛЛ-ЦЕНТР – ЭТО
                             <span class="orange-text">ЭКОНОМИЯ, КОНТРОЛЬ И ВЫСОКИЕ РЕЗУЛЬТАТЫ</span>
@@ -96,10 +138,9 @@
                 </div>
             </div>
         </div>
-
         <main class="main">
             <section class="additional-services container" id="additional-services">
-                <picture>
+                <!-- <picture>
                     <source media="(min-width: 481px)" srcset="assets/images/bg-services.png" />
                     <source media="(min-width: 320px)" srcset="assets/images/bg-services-480.png" />
                     <img
@@ -107,12 +148,23 @@
                         src="assets/images/bg-services.png"
                         alt=""
                     />
-                </picture>
-                <div class="additional-services__arrow arrow">
+                </picture> -->
+                <!-- <div class="additional-services__arrow arrow">
                     <img src="assets/icons/arrow-bottom.png" alt="" />
-                </div>
+                </div> -->
                 <div class="additional-services__inner">
-                    <div class="additional-services__title wow" data-anim="animate__backInDown" data-mobile-anim="animate__backInDown">
+                    <div class="additional-services__inner-top">
+                        <div class="rotated_text arrow wow">
+                            <svg viewBox="0 0 100 100" class="circle-text">
+                                <path id="textPath" fill="none" d="M 50,50 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"/>
+                                <text>
+                                    <textPath xlink:href="#textPath">ДІЗНАТИСЯ ДЕТАЛЬНІШЕ - ДІЗНАТИСЯ ДЕТАЛЬНІШЕ -</textPath>
+                                </text>
+                            </svg>
+                            <img src="assets/icons/arrow-bottom.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="additional-services__title hover-glow wow" data-anim="animate__backInDown" data-mobile-anim="animate__backInDown">
                         <span class="orange-text">ДОПОЛНИТЕЛЬНЫЕ</span> УСЛУГИ
                     </div>
                     <div class="additional-services__services">
@@ -163,13 +215,13 @@
                     </div>
                 </div>
                 <div class="additional-services__bottom wow" data-anim="animate__lightSpeedInLeft" data-mobile-anim="animate__lightSpeedInLeft">
-                    МЫ СОЗДАЕМ <span class="orange-bg-text">СИСТЕМУ УПРАВЛЕНИЯ УДАЛЕННОЙ</span>
-                    <span class="orange-bg-text">КОМАНДОЙ</span>, КОТОРАЯ ДЕЛАЕТ РАБОТУ ПРОЗРАЧНОЙ,
+                    МЫ СОЗДАЕМ <span class="orange-bg-text hover-glow">СИСТЕМУ УПРАВЛЕНИЯ УДАЛЕННОЙ</span>
+                    <span class="orange-bg-text hover-glow">КОМАНДОЙ</span>, КОТОРАЯ ДЕЛАЕТ РАБОТУ ПРОЗРАЧНОЙ,
                     КОНТРОЛИРУЕМОЙ И ЭФФЕКТИВНОЙ
                 </div>
             </section>
             <section class="aboutus container" id="aboutus">
-                <div class="aboutus__title text-with-bg wow" data-anim="animate__lightSpeedInRight" data-mobile-anim="animate__lightSpeedInRight">
+                <div class="aboutus__title text-with-bg hover-glow wow" data-anim="animate__lightSpeedInRight" data-mobile-anim="animate__lightSpeedInRight">
                     <p><span class="orange-text">КАК </span> МЫ ЭТО ДЕЛАЕМ</p>
                 </div>
                 <div class="aboutus__inner">
@@ -217,7 +269,7 @@
                         <img src="assets/images/gear-1920.png" alt="" />
                     </div>
                     <div class="aboutus__result wow" data-anim="animate__lightSpeedInLeft" data-mobile-anim="animate__lightSpeedInLeft">
-                        <span class="orange-text">РЕЗУЛЬТАТ</span>
+                        <span class="orange-text hover-glow">РЕЗУЛЬТАТ</span>
                         <img src="assets/icons/arrow-long.png" alt="" />
                         <p>
                             Вы получаете надёжную, дисциплинированную и мотивированную команду,
@@ -229,7 +281,7 @@
             <section class="advantages container" id="advantages">
                 <div class="advantages-header">
                     <div class="advantages-header__title wow" data-anim="animate__fadeInDownBig" data-mobile-anim="animate__fadeInDownBig">
-                        <span class="orange-bg-text">7 ПРИЧИН</span> ВЫБРАТЬ УДАЛЕННЫЙ CALL-ЦЕНТР
+                        <span class="orange-bg-text hover-glow">7 ПРИЧИН</span> ВЫБРАТЬ УДАЛЕННЫЙ CALL-ЦЕНТР
                         ВМЕСТО ОФИСНОГО
                     </div>
                     <div class="advantages-header__btn wow" data-anim="animate__fadeInRightBig" data-mobile-anim="animate__fadeInRightBig">
@@ -327,7 +379,7 @@
                     </div>
                 </div>
 
-                <div class="advantages-bottom text-with-bg wow" data-anim="animate__bounceInUp" data-mobile-anim="animate__bounceInUp">
+                <div class="advantages-bottom text-with-bg hover-glow wow" data-anim="animate__bounceInUp" data-mobile-anim="animate__bounceInUp">
                     <div class="advantages-bottom__inner">
                         <p>Удаленный формат = <span class="orange-text">Меньшие затраты</span></p>
                         <div class="flex">
@@ -339,18 +391,24 @@
             </section>
             <section class="comparison container" id="comparison">
                 <div class="comparison-title wow" data-anim="animate__bounceInLeft" data-mobile-anim="animate__bounceInLeft">
-                    ОФИСНЫЙ VS <span class="orange-bg-text">УДАЛЕННЫЙ</span>
+                    ОФИСНЫЙ VS <span class="orange-bg-text hover-glow">УДАЛЕННЫЙ</span>
                     СОТРУДНИК
                 </div>
                 <div class="comparison-inner">
                     <div class="comparison-inner-top">
-                        <div class="arrow wow" data-anim="animate__bounceInDown" data-mobile-anim="animate__bounceInDown">
+                        <div class="rotated_text arrow wow">
+                            <svg viewBox="0 0 100 100" class="circle-text">
+                                <path id="textPath" fill="none" d="M 50,50 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"/>
+                                <text>
+                                    <textPath xlink:href="#textPath">ДІЗНАТИСЯ ДЕТАЛЬНІШЕ - ДІЗНАТИСЯ ДЕТАЛЬНІШЕ -</textPath>
+                                </text>
+                            </svg>
                             <img src="assets/icons/arrow-bottom.png" alt="" />
                         </div>
                     </div>
 
                     <div class="table-wrapper">
-                        <table class="comparison-table wow" data-anim="animate__zoomIn" data-mobile-anim="animate__zoomIn">
+                        <table class="comparison-table wow">
                             <thead>
                                 <tr>
                                     <th>КАТЕГОРИЯ</th>
@@ -435,7 +493,7 @@
                         <source media="(min-width: 320px)" srcset="assets/images/woman2-480.png" />
                         <img class="wow" data-anim="animate__bounceInLeft" data-mobile-anim="animate__bounceInLeft" src="assets/images/woman2-1920.png" alt="" />
                     </picture>
-                    <div class="work-process-title wow" data-anim="animate__bounceInRight" data-mobile-anim="animate__bounceInRight">
+                    <div class="work-process-title hover-glow wow" data-anim="animate__bounceInRight" data-mobile-anim="animate__bounceInRight">
                         <span class="orange-text">КАК</span> МЫ РАБОТАЕМ
                     </div>
                 </div>
@@ -480,7 +538,7 @@
                 <div class="work-process-btn wow modalBtn" data-anim="animate__lightSpeedInRight" data-mobile-anim="animate__lightSpeedInRight">Оставить заявку</div>
             </section>
             <section class="services container" id="services">
-                <div class="services-title text-with-bg wow" data-anim="animate__bounceInLeft" data-mobile-anim="animate__bounceInLeft">
+                <div class="services-title text-with-bg hover-glow wow" data-anim="animate__bounceInLeft" data-mobile-anim="animate__bounceInLeft">
                     <p>НАШИ <span class="orange-text"> ПАКЕТЫ УСЛУГ</span></p>
                 </div>
                 <div class="services-blocks">
@@ -629,7 +687,7 @@
                         <div class="advice-text">Мы готовы подстроить пакет под ваш бизнес!</div>
                     </div>
                     <div class="contactus-left__text">
-                        <span class="orange-text">ОСТАВЬТЕ ЗАЯВКУ</span>
+                        <span class="orange-text hover-glow">ОСТАВЬТЕ ЗАЯВКУ</span>
                         И ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ
                     </div>
                 </div>
@@ -719,6 +777,10 @@
                     <button type="submit" class="modal-content__submit">Отправить</button>
                 </form>
             </div>
+        </div>
+
+        <div class="circle-btn modalBtn">
+            <button>Получить консультацию</button>
         </div>
 
         <script src="JS/lang.js"></script>

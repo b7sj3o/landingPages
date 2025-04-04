@@ -13,7 +13,7 @@
         justify-content: space-between;
         align-items: center;
         &__title {
-            @include size(44, font-size);
+            @include size(40, font-size);
             @include size(70, line-height);
             @include size(854, max-width);
             font-weight: bold;
@@ -45,6 +45,7 @@
             @include size(25, padding);
             border: 1px solid $block-color;
             @include size(38, border-radius);
+            transition: all .3s;
 
             &__header {
                 display: flex;
@@ -85,20 +86,32 @@
                 }
             }
 
+            &:hover:not(.large) {
+                background-color: $block-color;
+                color: #000;
+            }
+
             &.highlight {
                 border: 0;
                 background-color: $block-color;
                 color: #000;
 
+                &:hover {
+                    background-color: transparent;
+                    color: #fff;
+                    border: 1px solid $block-color;
+                }
             }
+            
+            
         }
     }
 
     &-bottom {
-        @include size(100, margin-top);
+        @include size(90, margin-top);
         &__inner {
             p {
-                @include size(43, font-size);
+                @include size(40, font-size);
                 span {
     
                 }

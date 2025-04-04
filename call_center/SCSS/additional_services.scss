@@ -6,26 +6,58 @@
     @include size(70, margin-top);
 
     &__inner {
-        margin-top: 10vw;
-        @include size(65, padding-left, padding-right);
-        @include size(90, padding-bottom);
-    }
+        @include size(60, padding);
+        @include size(130, margin-top);
+        background-color: $dark-blue-bg;
+        position: relative;
+        @include size(30, border-radius);
 
-    &__arrow {
-        display: none;
-    }
+        &-top {
+            @include size(240, width);
+            @include size(140, height);
+            @include size(-80, top);
+            
+            border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+            background-color: $dark-blue-bg;
+            
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
 
-    &__bg {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -1;
+            display: flex;
+            justify-content: center;
 
+            .arrow {
+                img {
+                    @include size(30, width);
+                    @include size(45, height);
+                }
+            }
+
+            .rotated_text {
+                @include size(150, width, height);
+                @include size(20, margin-top);
+
+                .circle-text {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    animation: rotateText 12s linear infinite;
+
+                    text {
+                        font-size: 6.5px;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        fill: rgb(255, 255, 255);
+                    }
+                }
+            }
+        }
     }
 
     &__title {
-        @include size(90, font-size);
+        @include size(80, font-size);
+        @include size(45, margin-top);
         text-align: center;
         font-weight: bold;
     }
@@ -50,7 +82,8 @@
         flex-direction: column;
         justify-content: space-between;
         @include size(35, row-gap);
-
+        transition: all .3s;
+        
         .service { 
             &__top {
                 display: flex;
@@ -82,11 +115,15 @@
                 font-weight: 500;
             }
         }
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 
     &__bottom {
         margin: 0 auto;
-        @include size(43, font-size);
+        @include size(40, font-size);
         font-weight: 700;
         color: #fff;
         @include size(70, line-height);
@@ -101,23 +138,39 @@
         @include size(25, padding-bottom);
     
         &__inner {
-            padding: 0;
-            margin-top: 3vw;
-        }
+            @include size(20, padding);
+            @include size(50, margin-top);
+            @include size(20, border-radius);
+    
+            &-top {
+                @include size(130, width);
+                @include size(75, height);
+                @include size(-30, top);
+                
+                .arrow {
+                    img {
+                        @include size(22, width);
+                        @include size(30, height);
+                    }
+                }
 
-        &__arrow {
-            display: flex;
-            margin: 0 auto;
-            margin-top: 3vw;
-
-            img {
-                width: 15px;
-                height: 18px;
+                .rotated_text {
+                    @include size(80, width, height);
+                    @include size(15, margin-top);
+    
+                    .circle-text {
+                        text {
+                            font-size: 6.5px;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
             }
-        }
+        }     
 
         &__title {
             @include size(25, font-size);
+            @include size(50, margin-top);
             max-width: 80vw;
             margin: 0 auto;
         }

@@ -1,0 +1,52 @@
+@import "vars";
+@import "mixins";
+
+.circle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    
+    button {
+        border: none;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 16px;
+        font-family: "Ruberoid";
+        width: 130px;
+        height: 130px;
+        border-radius: 100%;
+        background-color: $orange;
+        animation: rotation 60s linear infinite;
+        transition: all .3s;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($color: $orange, $amount: 10);
+            transform: rotate(0deg) !important;
+            animation-play-state: paused;
+        }
+    }
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@media screen and (max-width: 480px) {
+    .circle-btn {
+        bottom: 10px;
+        right: 10px;
+        button {
+            font-size: 10px;
+            width: 90px;
+            height: 90px;
+        }
+    }
+}
