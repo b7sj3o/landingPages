@@ -1,0 +1,49 @@
+@keyframes blickButton {
+    0%{
+        left: -50%;
+    }
+    100% {
+      left: 110%;
+    }
+}
+
+@keyframes peek {
+    25% {
+      transform: rotateX(30deg) rotate(-13deg);
+    }
+    50% {
+      transform: translateY(-22px) rotate(3deg) scale(1.1);
+      color: #6a45ed;
+    }
+}
+
+@keyframes rotateText {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes bouncing {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes animateBefore {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

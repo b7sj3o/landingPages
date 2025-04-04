@@ -1,5 +1,7 @@
 @import "vars";
 @import "mixins";
+@import "keyframes";
+
 
 .contactus{
     @include size(100, margin-top);
@@ -106,6 +108,92 @@
     }
 }
 
+.contactus2 {
+    @include size(50, margin-top);
+    @include size(30, padding);
+    @include size(30, border-radius);
+    background-color: $dark-blue-bg;
+    position: relative;
+
+    &.container {
+        overflow: visible;
+    }
+
+    &__title {
+        @include size(40, font-size);
+        font-weight: bold;
+        text-align: center;
+        margin: 0 auto;
+        text-transform: uppercase;
+    }
+    &__icon {
+        position: absolute;
+        @include size(-80, top);
+        @include size(-60, right);
+        @include size(180, width);
+        animation: bouncing 5s linear infinite
+    }
+    &-form {
+        @include size(40, margin-top);
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        @include size(30, column-gap);
+        width: 100%;
+        &__group {
+            width: calc(100% / 3);
+            display: flex;
+            flex-direction: column;
+            @include size(15, row-gap);
+            label {
+                @include size(22, font-size);
+                @include size(15, margin-left);
+                font-weight: 600;
+                color: $gray2;
+            }
+
+            input {
+                @include size(80, height);
+                @include size(100, border-radius);
+                @include size(24, font-size);
+                @include size(20, text-indent);
+                border: none;
+                outline: none;
+                background-color: $gray2;
+                font-family: "Ruberoid";
+
+                &::placeholder {
+                    font-family: "Ruberoid";
+                }
+            }
+        }
+        &__submit {
+            width: calc(100% / 3);
+            @include size(80, height);
+            @include size(100, border-radius);
+            @include size(24, font-size);
+            border: 0;
+            background-color: $orange;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    &__bottom {
+        @include size(50, margin-top);
+        @include size(28, font-size);
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+
+
 @media screen and (max-width: 480px) {
     .contactus{
         @include size(45, margin-top);
@@ -179,6 +267,46 @@
                 @include size(5, border-radius);
                 @include size(14, font-size);
             }
+        }
+    }
+
+    .contactus2 {
+        @include size(30, margin-top);
+        @include size(20, padding);
+        @include size(20, border-radius);
+    
+        &__title {
+            @include size(25, font-size);
+        }
+        &__icon {
+            @include size(-40, top);
+            @include size(-30, right);
+            @include size(100, width);
+        }
+        &-form {
+            @include size(20, margin-top);
+            @include size(20, row-gap);
+            flex-direction: column;
+            &__group {
+                width: 100%;
+                @include size(10, row-gap);
+                label {
+                    @include size(16, font-size);
+                }
+    
+                input {
+                    @include size(50, height);
+                    @include size(16, font-size);
+                }
+            }
+            &__submit {
+                width: 100%;
+                @include size(50, height);
+            }
+        }
+        &__bottom {
+            @include size(30, margin-top);
+            @include size(20, font-size);
         }
     }
 }

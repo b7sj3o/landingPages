@@ -1,5 +1,7 @@
 @import "vars";
 @import "mixins";
+@import "keyframes";
+
 
 *, *::before, *::after {
     margin: 0;
@@ -207,6 +209,7 @@ body {
         justify-content: center;
         align-items: center;
         transition: all 1s;
+        display: none;
     }
 
     font-size: 35px;
@@ -237,15 +240,6 @@ body {
     }
 }
 
-@keyframes peek {
-    25% {
-      transform: rotateX(30deg) rotate(-13deg);
-    }
-    50% {
-      transform: translateY(-22px) rotate(3deg) scale(1.1);
-      color: #6a45ed;
-    }
-}
 
 
 @media screen and (max-width: 768px) {

@@ -17,3 +17,12 @@ modal.addEventListener("click", (e) => {
         document.body.style.overflow = "auto";
     }
 });
+
+const circleBtn = document.querySelector(".circle-btn");
+window.addEventListener("scroll", () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+        circleBtn.style.display = "none";
+    } else {
+        circleBtn.style.display = "block";
+    }
+});

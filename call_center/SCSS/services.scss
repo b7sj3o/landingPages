@@ -100,7 +100,7 @@
             padding: 0;
 
             span {
-                @include orangeBtn(31, 386, 94, false)
+                @include orangeBtn(31, 386, 94, false, true)
             }
 
             .arrow {
@@ -193,7 +193,7 @@
             }
             &.btn { 
                 span {
-                    @include orangeBtn(13, 162, 36, false)
+                    @include orangeBtn(13, 162, 36, false, true)
                 }
 
                 .arrow {

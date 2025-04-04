@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => {
                 loader.style.display = "none";
                 document.body.style.overflow = "auto";
-            }, 1000);
-        }, remainingTime);
+            }, 1);
+        }, 1);
     });
     
     const elements = document.querySelectorAll(".wow");

@@ -1,5 +1,7 @@
 @import "vars";
 @import "mixins";
+@import "keyframes";
+
 
 
 .comparison {
@@ -113,10 +115,7 @@
     
 }
 
-@keyframes rotateText {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
+
 
 @media screen and (max-width: 480px) {
     .comparison {

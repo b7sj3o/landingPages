@@ -1,5 +1,6 @@
 @import "vars";
 @import "mixins";
+@import "keyframes";
 
 .gtranslate_wrapper {
     display: flex;
@@ -154,22 +155,13 @@
             transition: all .3s;
 
             span {
-                @include orangeBtn(31, 386, 94, false);
+                @include orangeBtn(31, 386, 94, false, true);
             }
 
             &:hover {
                 transform: scale(1.05);
             }
         }
-    }
-}
-
-@keyframes animateBefore {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }
 
@@ -327,10 +319,9 @@
         @include size(545, width);
         @include size(357, height);
         @include size(20, padding);
-
-        .arrow, &.arrow {
-            @include size(85, width, height);
-            
+        
+        img:hover {
+            filter: drop-shadow(0 0 10px $orange);
         }
 
         &__title {
@@ -341,6 +332,12 @@
         &__content {
             @include size(50, margin-top);
             @include size(440, max-width);
+
+        }
+        &__links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         &__link {
             @include size(35, font-size);
@@ -353,31 +350,54 @@
             display: flex;
             @include size(30, column-gap);
         } 
-        &__links {
-            display: flex;
-            @include size(32, column-gap);
-
-            img {
-                @include size(40, width, height);
-            }
-        }
+        
 
         &.block1 {
             background-image: url("../assets/images/footer-block-1.png");
+
+
+            .footer-block__icons {
+                @include size(10, top);
+                @include size(30, right);
+                @include size(30, column-gap);
+
+                img {
+                    @include size(80, width, height);
+                }
+            }
         }
         &.block2 {
             background-image: url("../assets/images/footer-block-2.png");
 
+            .footer-block__title {
+                text-align: center;
+            }
+
+            .footer-block__links {
+                @include size(30, column-gap);
+
+                a {
+                    img {
+                        @include size(80, width, height);
+                    }
+                }
+
+            }
         }
         &.block3 {
             background-image: url("../assets/images/footer-block-3.png");
+
+            .footer-block__icons {
+                top: 0;
+                @include size(20, right);
+
+                img {
+                    @include size(90, width, height);
+                }
+            }
         }
     }
-
-
-
 }
-
 
 @media screen and (max-width: 480px) {
     .footer{
@@ -393,17 +413,12 @@
             @include size(94, height);
             @include size(10, padding);
     
-            .arrow, &.arrow {
-                @include size(23, width, height);
-                
-            }
-    
             &__title {
                 @include size(10, font-size);
                 @include size(20, line-height);
             }
             &__content {
-                @include size(20, margin-top);
+                @include size(10, margin-top);
                 @include size(115, max-width);
             }
             &__link {
@@ -428,10 +443,53 @@
             }
     
             
+            &.block1 {
+                background-image: url("../assets/images/footer-block-1.png");
+    
+    
+                .footer-block__icons {
+                    @include size(5, top);
+                    @include size(10, right);
+                    @include size(10, column-gap);
+    
+                    img {
+                        @include size(20, width, height);
+                    }
+                }
+            }
+            &.block2 {
+                background-image: url("../assets/images/footer-block-2.png");
+    
+                .footer-block__title {
+                    text-align: center;
+                }
+    
+                .footer-block__links {
+                    @include size(5, column-gap);
+    
+                    a {
+                        img {
+                            @include size(25, width, height);
+                        }
+                    }
+    
+                }
+            }
             &.block3 {
                 background-image: url("../assets/images/footer-block-3.png");
+    
+                .footer-block__icons {
+                    top: 0;
+                    @include size(5, right);
+    
+                    img {
+                        @include size(25, width, height);
+                    }
+                }
+
                 .footer-block__content {
                     @include size(5, margin-top);
+
                 }
             }
         }

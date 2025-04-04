@@ -56,24 +56,11 @@
     }
 
     &-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include orangeBtn(31, auto, auto, true, true);
         margin: 0 auto;
         width: 95%;
-        background-color: $orange;
-        color: #fff;
-        font-weight: bold;
-        cursor: pointer;
-        @include size(31, font-size);
         @include size(25, padding-top, padding-bottom);
-        @include size(40, border-radius);
-        @include size(90, margin-top);
-        transition: all 0.3s;
-
-        &:hover {
-            transform: scale(1.05);
-        }
+        @include size(50, margin-top);
     }
 }
 

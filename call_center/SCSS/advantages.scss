@@ -23,7 +23,7 @@
             display: flex;
             transition: all .3s;
             span {
-                @include orangeBtn(31, 487, 94, false);
+                @include orangeBtn(31, 487, 94, false, true);
             }
             &:hover {
                 transform: scale(1.05);
@@ -161,7 +161,7 @@
                     @include size(30, margin-top);
                     
                     span {
-                        @include orangeBtn(14, 181, 41, false);
+                        @include orangeBtn(14, 181, 41, false, true);
                     }
                 }
             }
