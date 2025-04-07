@@ -81,9 +81,12 @@
         <link rel="stylesheet" href="CSS/animate.css" />
     </head>
     <body>
-        <div class="loader-container" id="loader">
+        <div class="loader-container" id="loader-container">
+            <!-- <div class="loader-logo">
+                <img src="assets/icons/kalaba_full1.svg" alt="">
+            </div> -->
             <!-- <div class="loader-timer" id="loader-timer">0%</div> -->
-            <div class="loader">
+            <!-- <div class="loader">
                 <span style="--d: 150ms">k</span>
                 <span style="--d: 300ms">a</span>
                 <span style="--d: 450ms">l</span>
@@ -92,10 +95,20 @@
                 <span style="--d: 900ms">a</span>
                 <span style="--d: 1050ms">0</span>
                 <span style="--d: 1200ms">1</span>
+            </div> -->
+            <div class="loader-texts">
+                <div class="loader-text">KALABA</div>
+                <div class="loader-numbers">
+                    <span class="digit first">0</span>
+                    <span class="digit second">1</span>
+                </div>
             </div>
+            <a href="#header" class="loader-arrow">
+                <img src="assets/icons/arrow-down.png" alt="" />
+            </a>
         </div>
 
-        <div class="header">
+        <div class="header" id="header">
             <div class="container">
                 <div
                     class="header-top wow"
@@ -173,18 +186,6 @@
         </div>
         <main class="main">
             <section class="additional-services container" id="additional-services">
-                <!-- <picture>
-                    <source media="(min-width: 481px)" srcset="assets/images/bg-services.png" />
-                    <source media="(min-width: 320px)" srcset="assets/images/bg-services-480.png" />
-                    <img
-                        class="additional-services__bg"
-                        src="assets/images/bg-services.png"
-                        alt=""
-                    />
-                </picture> -->
-                <!-- <div class="additional-services__arrow arrow">
-                    <img src="assets/icons/arrow-bottom.png" alt="" />
-                </div> -->
                 <div class="additional-services__inner">
                     <div class="additional-services__inner-top">
                         <div class="rotated_text arrow wow">
@@ -984,7 +985,7 @@
                 >
                     <div class="footer-block__title">Контакты</div>
                     <div class="footer-block__content">
-                        <a href="tel:380975550022" class="footer-block__link">+38 097 555 00 22</a>
+                        <a href="tel:34662606390" class="footer-block__link">+34 662 606 390</a>
                     </div>
                     <div class="footer-block__icons">
                         <div><img src="assets/icons/phone.png" alt="" /></div>
@@ -999,7 +1000,11 @@
                     <div class="footer-block__title">Социальные сети</div>
                     <div class="footer-block__content">
                         <div class="footer-block__links">
-                            <a href="https://t.me/" target="_blank" class="footer-block__link">
+                            <a
+                                href="https://t.me/kalaba01"
+                                target="_blank"
+                                class="footer-block__link"
+                            >
                                 <img src="assets/icons/telegram.png" alt="Telegram" />
                             </a>
                             <a
@@ -1009,10 +1014,14 @@
                             >
                                 <img src="assets/icons/instagram.png" alt="Instagram" />
                             </a>
-                            <a href="viber://chat" target="_blank" class="footer-block__link">
+                            <!-- <a href="viber://chat" target="_blank" class="footer-block__link">
                                 <img src="assets/icons/viber.png" alt="Viber" />
-                            </a>
-                            <a href="https://wa.me/" target="_blank" class="footer-block__link">
+                            </a> -->
+                            <a
+                                href="https://wa.me/+34662606390"
+                                target="_blank"
+                                class="footer-block__link"
+                            >
                                 <img src="assets/icons/whatsapp.png" alt="WhatsApp" />
                             </a>
                         </div>
@@ -1026,15 +1035,18 @@
                     <div class="footer-block__title">Наш адрес</div>
                     <div class="footer-block__content">
                         <a
-                            href="https://maps.app.goo.gl/yqJk2ktRExhM4M1H7"
+                            href="https://maps.app.goo.gl/xmLa3RfHL7d5WkUP7?g_st=it"
                             target="_blank"
                             class="footer-block__link"
                         >
-                            <p>г. Киев, ул.Болсуновская, 13-15, (IQ Business Center)</p>
+                            <p>
+                                Al Saqr Business Tower 91 Sheikh Zayed Rd - Trade Centre - DIFC -
+                                Dubai - Обʼєднані Арабські Емірати
+                            </p>
                         </a>
                     </div>
                     <a
-                        href="https://maps.app.goo.gl/yqJk2ktRExhM4M1H7"
+                        href="https://maps.app.goo.gl/xmLa3RfHL7d5WkUP7?g_st=it"
                         target="_blank"
                         class="footer-block__icons"
                     >

@@ -280,7 +280,7 @@
         }
         &__icon {
             @include size(-40, top);
-            @include size(-30, right);
+            @include size(-20, right);
             @include size(100, width);
         }
         &-form {

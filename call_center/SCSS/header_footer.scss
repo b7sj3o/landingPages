@@ -387,6 +387,17 @@
         &.block3 {
             background-image: url("../assets/images/footer-block-3.png");
 
+            .footer-block__content {
+                max-width: 100%;
+                a {
+
+                    p {
+                        @include size(30, font-size);
+                        line-height: 130%;
+                    }
+                }
+            }
+
             .footer-block__icons {
                 top: 0;
                 @include size(20, right);
@@ -490,6 +501,13 @@
                 .footer-block__content {
                     @include size(5, margin-top);
 
+                    a {
+
+                        p {
+                            @include size(7.5, font-size);
+                            line-height: 150%;
+                        }
+                    }
                 }
             }
         }
