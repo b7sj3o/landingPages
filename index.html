@@ -1,47 +1,97 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head><meta charset="UTF‑8"><meta name="viewport" content="width=device‑width,initial‑scale=1.0">
+<head>
+  <meta charset="UTF-8">
   <title>Галерея Brawl Stars 2025</title>
   <style>
-    body { font-family:sans-serif; background:#f0f0f0; padding:20px; }
-    .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:15px; }
-    .card { perspective:800px; cursor:pointer; width:150px; height:150px; }
-    .inner { position:relative; width:100%;height:100%;transform-style:preserve-3d;transition:transform .6s; }
-    .flipped .inner { transform:rotateY(180deg); }
-    .front, .back { position:absolute; width:100%;height:100%;top:0;left:0; backface-visibility:hidden; border-radius:8px; overflow:hidden; }
-    .front img { width:100%;height:100%;object-fit:cover; }
-    .name { position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:#fff;text-align:center;font-size:14px;padding:4px 0; }
-    .back { background:#000; transform:rotateY(180deg); }
+    body {
+      background: #1b1b1b;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      perspective: 1000px;
+      cursor: pointer;
+    }
+    .inner {
+      position: relative;
+      width: 100%;
+      padding-top: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .card.flipped .inner {
+      transform: rotateY(180deg);
+    }
+    .front, .back {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      backface-visibility: hidden;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .front {
+      background: #2e2e2e;
+      border: 2px solid #444;
+    }
+    .back {
+      background: #000;
+      transform: rotateY(180deg);
+    }
   </style>
 </head>
 <body>
-  <h1>Галерея Brawl Stars 2025</h1>
+  <h1>Галерея всіх персонажів Brawl Stars (2025)</h1>
   <div class="gallery" id="gallery"></div>
+
   <script>
     const brawlers = [
-      { name: "Shelly", img: "https://static.wikia.nocookie.net/brawlstars/images/…/Shelly.png" },
-      { name: "Nita", img: "https://static.wikia.nocookie.net/brawlstars/images/…/Nita.png" },
-      { name: "Colt", img: "https://static.wikia.nocookie.net/brawlstars/images/…/Colt.png" },
-      // …
-      { name: "Spike", img: "https://static.wikia.nocookie.net/brawlstars/images/…/Spike.png" },
-      { name: "Crow", img: "https://static.wikia.nocookie.net/brawlstars/images/…/Crow.png" },
-      { name: "Leon", img: "https://static.wikia.nocookie.net/brawlstars/images/…/Leon.png" },
-      // добавте всіх 88 персонажів
+      "Shelly","Nita","Colt","Bull","Brock","El Primo","Barley","Poco","Rosa","Jessie",
+      "Dynamike","Tick","8-Bit","Rico","Darryl","Penny","Carl","Jacky","Gus","Bo",
+      "Emz","Stu","Piper","Pam","Frank","Bibi","Bea","Nani","Edgar","Griff",
+      "Grom","Bonnie","Hank","Pearl","Mandy","Maisie","Sam","Lola","Ash","Belle",
+      "Gale","Colette","Mortis","Tara","Gene","Max","Mr. P","Sprout","Byron","Squeak",
+      "Gray","Willow","Doug","Chuck","Lou","Ruffs","Buzz","Fang","Janet","Otis",
+      "R-T","Charlie","Eve","Buster","Spike","Crow","Leon","Sandy","Amber","Meg",
+      "Chester","Surge","Cordelius","Alli","Trunk","Kaze","Jae-Yong","Fin","Lumi","Ollie",
+      "MeeMoo","Juju","Shade","Kenji","Moe","Clancy","Berry","Lily","Draco","Angelo","Melodie"
     ];
 
-    const gallery = document.getElementById("gallery");
-    brawlers.forEach(b => {
-      const card = document.createElement("div");
-      card.className = "card";
+    const gallery = document.getElementById('gallery');
+
+    brawlers.forEach(name => {
+      const card = document.createElement('div');
+      card.className = 'card';
       card.innerHTML = `
         <div class="inner">
-          <div class="front">
-            <img src="${b.img}" alt="${b.name}">
-            <div class="name">${b.name}</div>
-          </div>
+          <div class="front">${name}</div>
           <div class="back"></div>
-        </div>`;
-      card.addEventListener("click", () => card.classList.toggle("flipped"));
+        </div>
+      `;
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
       gallery.appendChild(card);
     });
   </script>
