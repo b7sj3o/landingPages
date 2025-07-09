@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF‑8"><meta name="viewport" content="width=device‑width,initial‑scale=1.0">
+  <title>Галерея Brawl Stars 2025</title>
+  <style>
+    body { font-family:sans-serif; background:#f0f0f0; padding:20px; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:15px; }
+    .card { perspective:800px; cursor:pointer; width:150px; height:150px; }
+    .inner { position:relative; width:100%;height:100%;transform-style:preserve-3d;transition:transform .6s; }
+    .flipped .inner { transform:rotateY(180deg); }
+    .front, .back { position:absolute; width:100%;height:100%;top:0;left:0; backface-visibility:hidden; border-radius:8px; overflow:hidden; }
+    .front img { width:100%;height:100%;object-fit:cover; }
+    .name { position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.5);color:#fff;text-align:center;font-size:14px;padding:4px 0; }
+    .back { background:#000; transform:rotateY(180deg); }
+  </style>
+</head>
+<body>
+  <h1>Галерея Brawl Stars 2025</h1>
+  <div class="gallery" id="gallery"></div>
+  <script>
+    const brawlers = [
+      { name: "Shelly", img: "https://static.wikia.nocookie.net/brawlstars/images/…/Shelly.png" },
+      { name: "Nita", img: "https://static.wikia.nocookie.net/brawlstars/images/…/Nita.png" },
+      { name: "Colt", img: "https://static.wikia.nocookie.net/brawlstars/images/…/Colt.png" },
+      // …
+      { name: "Spike", img: "https://static.wikia.nocookie.net/brawlstars/images/…/Spike.png" },
+      { name: "Crow", img: "https://static.wikia.nocookie.net/brawlstars/images/…/Crow.png" },
+      { name: "Leon", img: "https://static.wikia.nocookie.net/brawlstars/images/…/Leon.png" },
+      // добавте всіх 88 персонажів
+    ];
+
+    const gallery = document.getElementById("gallery");
+    brawlers.forEach(b => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <div class="inner">
+          <div class="front">
+            <img src="${b.img}" alt="${b.name}">
+            <div class="name">${b.name}</div>
+          </div>
+          <div class="back"></div>
+        </div>`;
+      card.addEventListener("click", () => card.classList.toggle("flipped"));
+      gallery.appendChild(card);
+    });
+  </script>
+</body>
+</html>
